@@ -1,0 +1,32 @@
+﻿<VSTemplateManifest Version="1.0" Locale="1033" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\1033\MBRDCMDMI</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{2f100ea3-7972-47fb-a086-2fffd5f53e39}</TemplateID>
+        <Name Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="103" />
+        <Description Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="102" />
+        <Icon Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="201" />
+        <ProjectType>CSharp</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MBRDCMDMI.MBRDCMDMI_DSLPracticaMDDIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>VisualBasic\1033\MBRDCMDMI</RelativePathOnDisk>
+    <TemplateFileName>VisualBasic.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <TemplateID>{9d882572-c74c-44b0-967e-03cb3b8689c2}</TemplateID>
+        <Name Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="103" />
+        <Description Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="102" />
+        <Icon Package="{7a02d929-fdb9-43c6-a963-58daf1971f30}" ID="201" />
+        <ProjectType>VisualBasic</ProjectType>
+        <SortOrder>360</SortOrder>
+        <DefaultName>MBRDCMDMI.MBRDCMDMI_DSLPracticaMDDIPS</DefaultName>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>
