@@ -47,6 +47,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// item filters.
 		/// </remarks>
 		public const string ToolboxFilterString = "MBRDCMDMI.1.0";
+		/// <summary>
+		/// Toolbox item filter string used to identify RATool connector tool.
+		/// </summary>
+		public const string RAToolFilterString = "RATool.1.0";
 
 	
 		private global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem> toolboxItemCache = new global::System.Collections.Generic.Dictionary<string, DslDesign::ModelingToolboxItem>();
@@ -157,6 +161,24 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 						CreateElementToolPrototype(store, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal.DomainClassId), // ElementGroupPrototype (data object) representing model element on the toolbox.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
 						new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require) 
+						});
+					break;
+				case "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RAToolToolboxItem":
+
+					// Add RATool connector tool.
+					result = new DslDesign::ModelingToolboxItem(
+						"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RAToolToolboxItem", // Unique identifier (non-localized) for the toolbox item.
+						1, // Position relative to other items in the same toolbox tab.
+						resourceManager.GetString("RAToolToolboxItem", resourceCulture), // Localized display name for the item.
+						(global::System.Drawing.Bitmap)DslDiagrams::ImageHelper.GetImage(resourceManager.GetObject("RAToolToolboxBitmap", resourceCulture)), // Image displayed next to the toolbox item.				
+						"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab", // Unique identifier (non-localized) for the toolbox item tab.
+						resourceManager.GetString("RelacionesToolboxTab", resourceCulture), // Localized display name for the toolbox tab.
+						"RATool", // F1 help keyword for the toolbox item.
+						resourceManager.GetString("RAToolToolboxTooltip", resourceCulture), // Localized tooltip text for the toolbox item.
+						null, // Connector toolbox items do not have an underlying data object.
+						new global::System.ComponentModel.ToolboxItemFilterAttribute[] { // Collection of ToolboxItemFilterAttribute objects that determine visibility of the toolbox item.
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(ToolboxFilterString, global::System.ComponentModel.ToolboxItemFilterType.Require), 
+							new global::System.ComponentModel.ToolboxItemFilterAttribute(RAToolFilterString)
 						});
 					break;
 				default:

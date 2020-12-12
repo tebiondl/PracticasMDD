@@ -59,6 +59,22 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="c4464b28-088e-4240-a8b9-fdf26de9a9b7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP" Name="CPReferenciasCP" DisplayName="CPReferencias CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Source>
+        <DomainRole Id="2fa78c96-c379-48de-97d4-d311329c5b5b" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.OrigenClasePrincipal" Name="OrigenClasePrincipal" DisplayName="Origen Clase Principal" PropertyName="DestinoClasePrincipal" PropertyDisplayName="Destino Clase Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="d76bb62d-0b68-47dd-b56b-94297505f93a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DestinoClasePrincipal" Name="DestinoClasePrincipal" DisplayName="Destino Clase Principal" PropertyName="OrigenClasePrincipal" PropertyDisplayName="Origen Clase Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -84,6 +100,16 @@
       </ShapeHasDecorators>
     </CompartmentShape>
   </Shapes>
+  <Connectors>
+    <Connector Id="6bc285a9-9068-4991-9bc7-17bfa621639c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Connector1">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="CardO" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardD" DisplayName="Card D" DefaultText="CardD" />
+      </ConnectorHasDecorators>
+    </Connector>
+  </Connectors>
   <XmlSerializationBehavior Name="MBRDCMDMISerializationBehavior" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
     <ClassData>
       <XmlClassData TypeName="TapizProyectos" MonikerAttributeName="" SerializeId="true" MonikerElementName="exampleModelMoniker" ElementName="tapizProyectos" MonikerTypeName="ExampleModelMoniker">
@@ -117,14 +143,44 @@
           <XmlPropertyData XmlName="nombreClase">
             <DomainPropertyMoniker Name="ClasePrincipal/nombreClase" />
           </XmlPropertyData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="destinoClasePrincipal">
+            <DomainRelationshipMoniker Name="CPReferenciasCP" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="CompartmentShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCompartmentShape1" ElementName="compartmentShape1" MonikerTypeName="MonikerCompartmentShape1">
         <CompartmentShapeMoniker Name="CompartmentShape1" />
       </XmlClassData>
+      <XmlClassData TypeName="CPReferenciasCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPReferenciasCP" ElementName="cPReferenciasCP" MonikerTypeName="MonikerCPReferenciasCP">
+        <DomainRelationshipMoniker Name="CPReferenciasCP" />
+      </XmlClassData>
+      <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="connector1" MonikerTypeName="MonikerConnector1">
+        <ConnectorMoniker Name="Connector1" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MBRDCMDMIExplorer" />
+  <ConnectionBuilders>
+    <ConnectionBuilder Name="GeneradorCPReferenciasCP">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CPReferenciasCP" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+  </ConnectionBuilders>
   <Diagram Id="9ec49d44-c4cc-4250-98f9-9cddb6a945c0" Description="Description for UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDiagram" Name="MBRDCMDMIDiagram" DisplayName="Minimal Language Diagram" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FillColor="Silver">
     <Class>
       <DomainClassMoniker Name="TapizProyectos" />
@@ -146,6 +202,12 @@
         <CompartmentShapeMoniker Name="CompartmentShape1" />
       </CompartmentShapeMap>
     </ShapeMaps>
+    <ConnectorMaps>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Connector1" />
+        <DomainRelationshipMoniker Name="CPReferenciasCP" />
+      </ConnectorMap>
+    </ConnectorMaps>
   </Diagram>
   <Designer CopyPasteGeneration="CopyPasteOnly" FileExtension="MBRDCMDMI_DSLPracticaMDDIPS" EditorGuid="3bf5f4be-ebdb-4a75-b685-c3723eed8fc7">
     <RootClass>
@@ -158,6 +220,11 @@
       <ElementTool Name="ClaseTool" ToolboxIcon="Resources\ClassItem.bmp" Caption="ClasePrincipal" Tooltip="Crear clase" HelpKeyword="ClaseTool">
         <DomainClassMoniker Name="ClasePrincipal" />
       </ElementTool>
+    </ToolboxTab>
+    <ToolboxTab TabText="Relaciones">
+      <ConnectionTool Name="RATool" ToolboxIcon="Resources\RAItem.bmp" Caption="RATool" Tooltip="Crear relación de asociación" HelpKeyword="RATool">
+        <ConnectionBuilderMoniker Name="MBRDCMDMI/GeneradorCPReferenciasCP" />
+      </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />
     <DiagramMoniker Name="MBRDCMDMIDiagram" />

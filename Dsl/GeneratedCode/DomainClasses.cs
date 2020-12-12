@@ -516,5 +516,37 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		#endregion
+		#region DestinoClasePrincipal opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.OrigenClasePrincipal
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClasePrincipal> DestinoClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.OrigenClasePrincipalDomainRoleId);
+			}
+		}
+		#endregion
+		#region OrigenClasePrincipal opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of OrigenClasePrincipal.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DestinoClasePrincipal
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClasePrincipal> OrigenClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DestinoClasePrincipalDomainRoleId);
+			}
+		}
+		#endregion
 	}
 }
