@@ -40,6 +40,59 @@
           </Type>
         </DomainProperty>
       </Properties>
+      <ElementMergeDirectives>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Identificador" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClasePrincipalTieneIdentificador.Identificador</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Atributos" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClasePrincipalTieneAtributos.Atributos</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+        <ElementMergeDirective>
+          <Index>
+            <DomainClassMoniker Name="Operaciones" />
+          </Index>
+          <LinkCreationPaths>
+            <DomainPath>ClasePrincipalTieneOperaciones.Operaciones</DomainPath>
+          </LinkCreationPaths>
+        </ElementMergeDirective>
+      </ElementMergeDirectives>
+    </DomainClass>
+    <DomainClass Id="35d404c9-0d88-4efd-8473-2aecc6abc2f3" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador" Name="Identificador" DisplayName="Identificador" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="b54f01a6-0766-4adb-8751-bcca3a85eaec" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.Identificador" Name="identificador" DisplayName="Identificador">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="407f5efe-c7da-42fc-b3f9-6060ddc9cf18" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos" Name="Atributos" DisplayName="Atributos" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="cd339bfb-8df2-4bd1-bd41-089db3d7e7be" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.Atributo" Name="atributo" DisplayName="Atributo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+    </DomainClass>
+    <DomainClass Id="bc739245-00e6-424b-a26d-c51362bc1db2" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones" Name="Operaciones" DisplayName="Operaciones" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="2855af9b-0fb4-4fc4-a129-611d1ac355a8" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.Operacion" Name="operacion" DisplayName="Operacion">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
     </DomainClass>
   </Classes>
   <Relationships>
@@ -60,6 +113,18 @@
       </Target>
     </DomainRelationship>
     <DomainRelationship Id="c4464b28-088e-4240-a8b9-fdf26de9a9b7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP" Name="CPReferenciasCP" DisplayName="CPReferencias CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen" Name="CardinalidadOrigen" DisplayName="Cardinalidad Origen">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="e283e3d4-33d6-4215-8e49-d4b54df5f964" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino" Name="CardinalidadDestino" DisplayName="Cardinalidad Destino">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
       <Source>
         <DomainRole Id="2fa78c96-c379-48de-97d4-d311329c5b5b" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.OrigenClasePrincipal" Name="OrigenClasePrincipal" DisplayName="Origen Clase Principal" PropertyName="DestinoClasePrincipal" PropertyDisplayName="Destino Clase Principal">
           <RolePlayer>
@@ -71,6 +136,54 @@
         <DomainRole Id="d76bb62d-0b68-47dd-b56b-94297505f93a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DestinoClasePrincipal" Name="DestinoClasePrincipal" DisplayName="Destino Clase Principal" PropertyName="OrigenClasePrincipal" PropertyDisplayName="Origen Clase Principal">
           <RolePlayer>
             <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="15aa1b1a-b2ee-45c7-9a51-3b6486456236" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador" Name="ClasePrincipalTieneIdentificador" DisplayName="Clase Principal Tiene Identificador" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="fb532f65-017a-413c-9c30-bf3c2c1e9ea5" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.ClasePrincipal" Name="ClasePrincipal" DisplayName="Clase Principal" PropertyName="Identificador" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Identificador">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="9bc45808-de1f-4793-8c7a-83d1ad894a33" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.Identificador" Name="Identificador" DisplayName="Identificador" PropertyName="ClasePrincipal" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="Identificador" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="b7535f5f-e255-431d-9070-aebec3882f72" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos" Name="ClasePrincipalTieneAtributos" DisplayName="Clase Principal Tiene Atributos" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="922762f4-6bbf-419a-baf0-aa9c92da20f0" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipal" Name="ClasePrincipal" DisplayName="Clase Principal" PropertyName="Atributos" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Atributos">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="72a19558-64f3-450f-bdd9-9608e74e362f" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Atributos" Name="Atributos" DisplayName="Atributos" PropertyName="ClasePrincipal" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="Atributos" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="05635368-67ce-4003-bc64-6641832b0780" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones" Name="ClasePrincipalTieneOperaciones" DisplayName="Clase Principal Tiene Operaciones" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" IsEmbedding="true">
+      <Source>
+        <DomainRole Id="2942f9f2-dede-46e5-8a4d-2b22da8eae6e" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipal" Name="ClasePrincipal" DisplayName="Clase Principal" PropertyName="Operaciones" PropagatesCopy="PropagatesCopyToLinkAndOppositeRolePlayer" PropertyDisplayName="Operaciones">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="b1f67328-f059-497b-ad10-1bca3dc1ccb7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Operaciones" Name="Operaciones" DisplayName="Operaciones" PropertyName="ClasePrincipal" Multiplicity="One" PropagatesDelete="true" PropertyDisplayName="Clase Principal">
+          <RolePlayer>
+            <DomainClassMoniker Name="Operaciones" />
           </RolePlayer>
         </DomainRole>
       </Target>
@@ -95,18 +208,21 @@
   </Types>
   <Shapes>
     <CompartmentShape Id="19e1bb28-44d7-4044-ac5b-451063a8e63d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1" Name="CompartmentShape1" DisplayName="Compartment Shape1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Compartment Shape1" FillColor="Orange" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
-      <ShapeHasDecorators Position="InnerTopLeft" HorizontalOffset="0" VerticalOffset="0">
+      <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
         <TextDecorator Name="nombreClase" DisplayName="Nombre Clase" DefaultText="nombreClase" />
       </ShapeHasDecorators>
+      <Compartment Name="identificador" Title="Identificador" />
+      <Compartment Name="atributos" Title="Atributos" />
+      <Compartment Name="operaciones" Title="Operaciones" />
     </CompartmentShape>
   </Shapes>
   <Connectors>
     <Connector Id="6bc285a9-9068-4991-9bc7-17bfa621639c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Connector1">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="CardO" />
+        <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="1..1" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
-        <TextDecorator Name="CardD" DisplayName="Card D" DefaultText="CardD" />
+        <TextDecorator Name="CardD" DisplayName="Card D" DefaultText="1..1" />
       </ConnectorHasDecorators>
     </Connector>
   </Connectors>
@@ -146,6 +262,15 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="destinoClasePrincipal">
             <DomainRelationshipMoniker Name="CPReferenciasCP" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="identificador">
+            <DomainRelationshipMoniker Name="ClasePrincipalTieneIdentificador" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="atributos">
+            <DomainRelationshipMoniker Name="ClasePrincipalTieneAtributos" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="operaciones">
+            <DomainRelationshipMoniker Name="ClasePrincipalTieneOperaciones" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="CompartmentShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCompartmentShape1" ElementName="compartmentShape1" MonikerTypeName="MonikerCompartmentShape1">
@@ -153,9 +278,50 @@
       </XmlClassData>
       <XmlClassData TypeName="CPReferenciasCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPReferenciasCP" ElementName="cPReferenciasCP" MonikerTypeName="MonikerCPReferenciasCP">
         <DomainRelationshipMoniker Name="CPReferenciasCP" />
+        <ElementData>
+          <XmlPropertyData XmlName="cardinalidadOrigen">
+            <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadOrigen" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="cardinalidadDestino">
+            <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadDestino" />
+          </XmlPropertyData>
+        </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="connector1" MonikerTypeName="MonikerConnector1">
         <ConnectorMoniker Name="Connector1" />
+      </XmlClassData>
+      <XmlClassData TypeName="Identificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerIdentificador" ElementName="identificador" MonikerTypeName="MonikerIdentificador">
+        <DomainClassMoniker Name="Identificador" />
+        <ElementData>
+          <XmlPropertyData XmlName="identificador">
+            <DomainPropertyMoniker Name="Identificador/identificador" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Atributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerAtributos" ElementName="atributos" MonikerTypeName="MonikerAtributos">
+        <DomainClassMoniker Name="Atributos" />
+        <ElementData>
+          <XmlPropertyData XmlName="atributo">
+            <DomainPropertyMoniker Name="Atributos/atributo" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="Operaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerOperaciones" ElementName="operaciones" MonikerTypeName="MonikerOperaciones">
+        <DomainClassMoniker Name="Operaciones" />
+        <ElementData>
+          <XmlPropertyData XmlName="operacion">
+            <DomainPropertyMoniker Name="Operaciones/operacion" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="ClasePrincipalTieneIdentificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerClasePrincipalTieneIdentificador" ElementName="clasePrincipalTieneIdentificador" MonikerTypeName="MonikerClasePrincipalTieneIdentificador">
+        <DomainRelationshipMoniker Name="ClasePrincipalTieneIdentificador" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClasePrincipalTieneAtributos" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerClasePrincipalTieneAtributos" ElementName="clasePrincipalTieneAtributos" MonikerTypeName="MonikerClasePrincipalTieneAtributos">
+        <DomainRelationshipMoniker Name="ClasePrincipalTieneAtributos" />
+      </XmlClassData>
+      <XmlClassData TypeName="ClasePrincipalTieneOperaciones" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerClasePrincipalTieneOperaciones" ElementName="clasePrincipalTieneOperaciones" MonikerTypeName="MonikerClasePrincipalTieneOperaciones">
+        <DomainRelationshipMoniker Name="ClasePrincipalTieneOperaciones" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -200,12 +366,61 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <CompartmentShapeMoniker Name="CompartmentShape1" />
+        <CompartmentMap>
+          <CompartmentMoniker Name="CompartmentShape1/atributos" />
+          <ElementsDisplayed>
+            <DomainPath>ClasePrincipalTieneAtributos.Atributos/!Atributos</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Atributos/atributo" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="CompartmentShape1/identificador" />
+          <ElementsDisplayed>
+            <DomainPath>ClasePrincipalTieneIdentificador.Identificador/!Identificador</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Identificador/identificador" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
+        <CompartmentMap>
+          <CompartmentMoniker Name="CompartmentShape1/operaciones" />
+          <ElementsDisplayed>
+            <DomainPath>ClasePrincipalTieneOperaciones.Operaciones/!Operaciones</DomainPath>
+          </ElementsDisplayed>
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="Operaciones/operacion" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </CompartmentMap>
       </CompartmentShapeMap>
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
         <ConnectorMoniker Name="Connector1" />
         <DomainRelationshipMoniker Name="CPReferenciasCP" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="Connector1/CardD" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadDestino" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="Connector1/CardO" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadOrigen" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>

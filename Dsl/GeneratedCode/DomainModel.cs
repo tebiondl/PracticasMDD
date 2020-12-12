@@ -70,13 +70,25 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				typeof(TapizProyectos),
 				typeof(Clase),
 				typeof(ClasePrincipal),
+				typeof(Identificador),
+				typeof(Atributos),
+				typeof(Operaciones),
 				typeof(TapizProyectosTieneClase),
 				typeof(CPReferenciasCP),
+				typeof(ClasePrincipalTieneIdentificador),
+				typeof(ClasePrincipalTieneAtributos),
+				typeof(ClasePrincipalTieneOperaciones),
 				typeof(MBRDCMDMIDiagram),
 				typeof(Connector1),
 				typeof(CompartmentShape1),
 				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.FixUpDiagram),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.DecoratorPropertyChanged),
 				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ConnectorRolePlayerChanged),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemAddRule),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemDeleteRule),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerChangeRule),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerPositionChangeRule),
+				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemChangeRule),
 			};
 		}
 		/// <summary>
@@ -91,6 +103,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainMemberInfo(typeof(TapizProyectos), "SolucionProyectos", TapizProyectos.SolucionProyectosDomainPropertyId, typeof(TapizProyectos.SolucionProyectosPropertyHandler)),
 				new DomainMemberInfo(typeof(Clase), "nombre", Clase.nombreDomainPropertyId, typeof(Clase.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClasePrincipal), "nombreClase", ClasePrincipal.nombreClaseDomainPropertyId, typeof(ClasePrincipal.nombreClasePropertyHandler)),
+				new DomainMemberInfo(typeof(Identificador), "identificador", Identificador.identificadorDomainPropertyId, typeof(Identificador.identificadorPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributos), "atributo", Atributos.atributoDomainPropertyId, typeof(Atributos.atributoPropertyHandler)),
+				new DomainMemberInfo(typeof(Operaciones), "operacion", Operaciones.operacionDomainPropertyId, typeof(Operaciones.operacionPropertyHandler)),
+				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadOrigen", CPReferenciasCP.CardinalidadOrigenDomainPropertyId, typeof(CPReferenciasCP.CardinalidadOrigenPropertyHandler)),
+				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadDestino", CPReferenciasCP.CardinalidadDestinoDomainPropertyId, typeof(CPReferenciasCP.CardinalidadDestinoPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -105,6 +122,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainRolePlayerInfo(typeof(TapizProyectosTieneClase), "Clase", TapizProyectosTieneClase.ClaseDomainRoleId),
 				new DomainRolePlayerInfo(typeof(CPReferenciasCP), "OrigenClasePrincipal", CPReferenciasCP.OrigenClasePrincipalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(CPReferenciasCP), "DestinoClasePrincipal", CPReferenciasCP.DestinoClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneIdentificador), "ClasePrincipal", ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneIdentificador), "Identificador", ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributos), "ClasePrincipal", ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributos), "Atributos", ClasePrincipalTieneAtributos.AtributosDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperaciones), "ClasePrincipal", ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperaciones), "Operaciones", ClasePrincipalTieneOperaciones.OperacionesDomainRoleId),
 			};
 		}
 		#endregion
@@ -126,12 +149,15 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementMap.Add(typeof(TapizProyectos), 0);
 				createElementMap.Add(typeof(ClasePrincipal), 1);
-				createElementMap.Add(typeof(MBRDCMDMIDiagram), 2);
-				createElementMap.Add(typeof(Connector1), 3);
-				createElementMap.Add(typeof(CompartmentShape1), 4);
+				createElementMap.Add(typeof(Identificador), 2);
+				createElementMap.Add(typeof(Atributos), 3);
+				createElementMap.Add(typeof(Operaciones), 4);
+				createElementMap.Add(typeof(MBRDCMDMIDiagram), 5);
+				createElementMap.Add(typeof(Connector1), 6);
+				createElementMap.Add(typeof(CompartmentShape1), 7);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -147,9 +173,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				case 0: return new TapizProyectos(partition, propertyAssignments);
 				case 1: return new ClasePrincipal(partition, propertyAssignments);
-				case 2: return new MBRDCMDMIDiagram(partition, propertyAssignments);
-				case 3: return new Connector1(partition, propertyAssignments);
-				case 4: return new CompartmentShape1(partition, propertyAssignments);
+				case 2: return new Identificador(partition, propertyAssignments);
+				case 3: return new Atributos(partition, propertyAssignments);
+				case 4: return new Operaciones(partition, propertyAssignments);
+				case 5: return new MBRDCMDMIDiagram(partition, propertyAssignments);
+				case 6: return new Connector1(partition, propertyAssignments);
+				case 7: return new CompartmentShape1(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -172,9 +201,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(2);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
 				createElementLinkMap.Add(typeof(TapizProyectosTieneClase), 0);
 				createElementLinkMap.Add(typeof(CPReferenciasCP), 1);
+				createElementLinkMap.Add(typeof(ClasePrincipalTieneIdentificador), 2);
+				createElementLinkMap.Add(typeof(ClasePrincipalTieneAtributos), 3);
+				createElementLinkMap.Add(typeof(ClasePrincipalTieneOperaciones), 4);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -191,6 +223,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				case 0: return new TapizProyectosTieneClase(partition, roleAssignments, propertyAssignments);
 				case 1: return new CPReferenciasCP(partition, roleAssignments, propertyAssignments);
+				case 2: return new ClasePrincipalTieneIdentificador(partition, roleAssignments, propertyAssignments);
+				case 3: return new ClasePrincipalTieneAtributos(partition, roleAssignments, propertyAssignments);
+				case 4: return new ClasePrincipalTieneOperaciones(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -311,7 +346,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.FixUpDiagram));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.DecoratorPropertyChanged));
 			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ConnectorRolePlayerChanged));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemAddRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemDeleteRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.EnableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemChangeRule));
 		}
 		
 		/// <summary>
@@ -323,7 +364,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			
 			DslModeling::RuleManager ruleManager = store.RuleManager;
 			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.FixUpDiagram));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.DecoratorPropertyChanged));
 			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ConnectorRolePlayerChanged));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemAddRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemDeleteRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemRolePlayerPositionChangeRule));
+			ruleManager.DisableRule(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentItemChangeRule));
 		}
 		#endregion
 	}
@@ -360,6 +407,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		{
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectosTieneClase.ClaseDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

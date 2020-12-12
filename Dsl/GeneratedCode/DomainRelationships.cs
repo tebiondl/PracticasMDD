@@ -409,6 +409,182 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(element, OrigenClasePrincipalDomainRoleId);
 		}
 		#endregion
+		#region CardinalidadOrigen domain property code
+		
+		/// <summary>
+		/// CardinalidadOrigen domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalidadOrigenDomainPropertyId = new global::System.Guid(0x1c5bf7d7, 0x7f72, 0x4ae5, 0xb7, 0xd0, 0x2e, 0xde, 0x86, 0x71, 0xb5, 0x4a);
+		
+		/// <summary>
+		/// Storage for CardinalidadOrigen
+		/// </summary>
+		private global::System.String cardinalidadOrigenPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalidadOrigen domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a")]
+		public global::System.String CardinalidadOrigen
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidadOrigenPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalidadOrigenPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPReferenciasCP.CardinalidadOrigen domain property.
+		/// </summary>
+		internal sealed partial class CardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, global::System.String>
+		{
+			private CardinalidadOrigenPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPReferenciasCP.CardinalidadOrigen domain property value handler.
+			/// </summary>
+			public static readonly CardinalidadOrigenPropertyHandler Instance = new CardinalidadOrigenPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPReferenciasCP.CardinalidadOrigen domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalidadOrigenDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPReferenciasCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalidadOrigenPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPReferenciasCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalidadOrigenPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region CardinalidadDestino domain property code
+		
+		/// <summary>
+		/// CardinalidadDestino domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalidadDestinoDomainPropertyId = new global::System.Guid(0xe283e3d4, 0x33d6, 0x4215, 0x8e, 0x49, 0xd4, 0xb5, 0x4d, 0xf5, 0xf9, 0x64);
+		
+		/// <summary>
+		/// Storage for CardinalidadDestino
+		/// </summary>
+		private global::System.String cardinalidadDestinoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalidadDestino domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("e283e3d4-33d6-4215-8e49-d4b54df5f964")]
+		public global::System.String CardinalidadDestino
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidadDestinoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalidadDestinoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPReferenciasCP.CardinalidadDestino domain property.
+		/// </summary>
+		internal sealed partial class CardinalidadDestinoPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, global::System.String>
+		{
+			private CardinalidadDestinoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPReferenciasCP.CardinalidadDestino domain property value handler.
+			/// </summary>
+			public static readonly CardinalidadDestinoPropertyHandler Instance = new CardinalidadDestinoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPReferenciasCP.CardinalidadDestino domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalidadDestinoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPReferenciasCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalidadDestinoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPReferenciasCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalidadDestinoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region OrigenClasePrincipal link accessor
 		/// <summary>
 		/// Get the list of CPReferenciasCP links to a ClasePrincipal.
@@ -462,6 +638,732 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP link in links )
 			{
 				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship ClasePrincipalTieneIdentificador
+	/// Descripción de
+	/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("15aa1b1a-b2ee-45c7-9a51-3b6486456236")]
+	public partial class ClasePrincipalTieneIdentificador : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClasePrincipalTieneIdentificador domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x15aa1b1a, 0xb2ee, 0x45c7, 0x9a, 0x51, 0x3b, 0x64, 0x86, 0x45, 0x62, 0x36);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClasePrincipalTieneIdentificador link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">Identificador to use as the target of the relationship.</param>
+		public ClasePrincipalTieneIdentificador(ClasePrincipal source, Identificador target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneIdentificador(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneIdentificador(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneIdentificador(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneIdentificador(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClasePrincipal domain role code
+		
+		/// <summary>
+		/// ClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClasePrincipalDomainRoleId = new global::System.Guid(0xfb532f65, 0x017a, 0x413c, 0x9c, 0x30, 0xbf, 0x3c, 0x2c, 0x1e, 0x9e, 0xa5);
+		
+		/// <summary>
+		/// DomainRole ClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.ClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/ClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/ClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Identificador", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/ClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("fb532f65-017a-413c-9c30-bf3c2c1e9ea5")]
+		public virtual ClasePrincipal ClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClasePrincipal of a Identificador
+		/// <summary>
+		/// Gets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetClasePrincipal(Identificador element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, IdentificadorDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClasePrincipal(Identificador element, ClasePrincipal newClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, IdentificadorDomainRoleId, newClasePrincipal);
+		}
+		#endregion
+		#region Identificador domain role code
+		
+		/// <summary>
+		/// Identificador domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid IdentificadorDomainRoleId = new global::System.Guid(0x9bc45808, 0xde1f, 0x4793, 0x8c, 0x7a, 0x83, 0xd1, 0xad, 0x89, 0x4a, 0x33);
+		
+		/// <summary>
+		/// DomainRole Identificador
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.Identificador
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/Identificador.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/Identificador.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClasePrincipal", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador/Identificador.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("9bc45808-de1f-4793-8c7a-83d1ad894a33")]
+		public virtual Identificador Identificador
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Identificador)DslModeling::DomainRoleInfo.GetRolePlayer(this, IdentificadorDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, IdentificadorDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Identificador of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of Identificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Identificador> GetIdentificador(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Identificador>, Identificador>(element, ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region ClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of ClasePrincipalTieneIdentificador links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> GetLinksToIdentificador ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal clasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador>(clasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region Identificador link accessor
+		/// <summary>
+		/// Get the ClasePrincipalTieneIdentificador link to a Identificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador GetLinkToClasePrincipal (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador identificadorInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador>(identificadorInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Identificador not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClasePrincipalTieneIdentificador instance accessors
+		
+		/// <summary>
+		/// Get any ClasePrincipalTieneIdentificador links between a given ClasePrincipal and a Identificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador link in links )
+			{
+				if ( target.Equals(link.Identificador) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClasePrincipalTieneIdentificador link between a given ClasePrincipaland a Identificador.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador link in links )
+			{
+				if ( target.Equals(link.Identificador) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship ClasePrincipalTieneAtributos
+	/// Descripción de
+	/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("b7535f5f-e255-431d-9070-aebec3882f72")]
+	public partial class ClasePrincipalTieneAtributos : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClasePrincipalTieneAtributos domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xb7535f5f, 0xe255, 0x431d, 0x90, 0x70, 0xae, 0xbe, 0xc3, 0x88, 0x2f, 0x72);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClasePrincipalTieneAtributos link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">Atributos to use as the target of the relationship.</param>
+		public ClasePrincipalTieneAtributos(ClasePrincipal source, Atributos target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(ClasePrincipalTieneAtributos.AtributosDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneAtributos(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneAtributos(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneAtributos(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneAtributos(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClasePrincipal domain role code
+		
+		/// <summary>
+		/// ClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClasePrincipalDomainRoleId = new global::System.Guid(0x922762f4, 0x6bbf, 0x419a, 0xba, 0xf0, 0xaa, 0x9c, 0x92, 0xda, 0x20, 0xf0);
+		
+		/// <summary>
+		/// DomainRole ClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Atributos", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("922762f4-6bbf-419a-baf0-aa9c92da20f0")]
+		public virtual ClasePrincipal ClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClasePrincipal of a Atributos
+		/// <summary>
+		/// Gets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetClasePrincipal(Atributos element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, AtributosDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClasePrincipal(Atributos element, ClasePrincipal newClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, AtributosDomainRoleId, newClasePrincipal);
+		}
+		#endregion
+		#region Atributos domain role code
+		
+		/// <summary>
+		/// Atributos domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid AtributosDomainRoleId = new global::System.Guid(0x72a19558, 0x64f3, 0x450f, 0xbd, 0xd9, 0x96, 0x08, 0xe7, 0x4e, 0x36, 0x2f);
+		
+		/// <summary>
+		/// DomainRole Atributos
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Atributos
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClasePrincipal", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("72a19558-64f3-450f-bdd9-9608e74e362f")]
+		public virtual Atributos Atributos
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Atributos)DslModeling::DomainRoleInfo.GetRolePlayer(this, AtributosDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, AtributosDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Atributos of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of Atributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Atributos> GetAtributos(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Atributos>, Atributos>(element, ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region ClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of ClasePrincipalTieneAtributos links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> GetLinksToAtributos ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal clasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos>(clasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region Atributos link accessor
+		/// <summary>
+		/// Get the ClasePrincipalTieneAtributos link to a Atributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos GetLinkToClasePrincipal (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos atributosInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos>(atributosInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Atributos not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClasePrincipalTieneAtributos instance accessors
+		
+		/// <summary>
+		/// Get any ClasePrincipalTieneAtributos links between a given ClasePrincipal and a Atributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos link in links )
+			{
+				if ( target.Equals(link.Atributos) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClasePrincipalTieneAtributos link between a given ClasePrincipaland a Atributos.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos link in links )
+			{
+				if ( target.Equals(link.Atributos) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship ClasePrincipalTieneOperaciones
+	/// Descripción de
+	/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship(IsEmbedding=true)]
+	[DslModeling::DomainObjectId("05635368-67ce-4003-bc64-6641832b0780")]
+	public partial class ClasePrincipalTieneOperaciones : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// ClasePrincipalTieneOperaciones domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x05635368, 0x67ce, 0x4003, 0xbc, 0x64, 0x66, 0x41, 0x83, 0x2b, 0x07, 0x80);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a ClasePrincipalTieneOperaciones link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">Operaciones to use as the target of the relationship.</param>
+		public ClasePrincipalTieneOperaciones(ClasePrincipal source, Operaciones target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(ClasePrincipalTieneOperaciones.OperacionesDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneOperaciones(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneOperaciones(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public ClasePrincipalTieneOperaciones(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public ClasePrincipalTieneOperaciones(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region ClasePrincipal domain role code
+		
+		/// <summary>
+		/// ClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid ClasePrincipalDomainRoleId = new global::System.Guid(0x2942f9f2, 0xdede, 0x46e5, 0x8a, 0x4d, 0x2b, 0x22, 0xda, 0x8e, 0xae, 0x6e);
+		
+		/// <summary>
+		/// DomainRole ClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "Operaciones", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.PropagatesCopyToLinkAndOppositeRolePlayer, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("2942f9f2-dede-46e5-8a4d-2b22da8eae6e")]
+		public virtual ClasePrincipal ClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, ClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, ClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access ClasePrincipal of a Operaciones
+		/// <summary>
+		/// Gets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetClasePrincipal(Operaciones element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, OperacionesDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetClasePrincipal(Operaciones element, ClasePrincipal newClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, OperacionesDomainRoleId, newClasePrincipal);
+		}
+		#endregion
+		#region Operaciones domain role code
+		
+		/// <summary>
+		/// Operaciones domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OperacionesDomainRoleId = new global::System.Guid(0xb1f67328, 0xf059, 0x497b, 0xad, 0x10, 0x1b, 0xca, 0x3d, 0xc1, 0xcc, 0xb7);
+		
+		/// <summary>
+		/// DomainRole Operaciones
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Operaciones
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "ClasePrincipal", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.PropertyDisplayName", PropagatesDelete = true,  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("b1f67328-f059-497b-ad10-1bca3dc1ccb7")]
+		public virtual Operaciones Operaciones
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (Operaciones)DslModeling::DomainRoleInfo.GetRolePlayer(this, OperacionesDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OperacionesDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access Operaciones of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<Operaciones> GetOperaciones(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(element, ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region ClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of ClasePrincipalTieneOperaciones links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> GetLinksToOperaciones ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal clasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones>(clasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region Operaciones link accessor
+		/// <summary>
+		/// Get the ClasePrincipalTieneOperaciones link to a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones GetLinkToClasePrincipal (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones operacionesInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones>(operacionesInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of Operaciones not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region ClasePrincipalTieneOperaciones instance accessors
+		
+		/// <summary>
+		/// Get any ClasePrincipalTieneOperaciones links between a given ClasePrincipal and a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones link in links )
+			{
+				if ( target.Equals(link.Operaciones) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one ClasePrincipalTieneOperaciones link between a given ClasePrincipaland a Operaciones.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones link in links )
+			{
+				if ( target.Equals(link.Operaciones) )
 				{
 					return link;
 				}
