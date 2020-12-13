@@ -117,13 +117,13 @@
             </xsd:complexType>
           </xsd:element>
           <!-- Relationship: ClasePrincipalTieneIdentificador -->
-          <xsd:element name="identificador" minOccurs="0" maxOccurs="1">
+          <xsd:element name="identificador" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>Instances of ClasePrincipalTieneIdentificador</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="clasePrincipalTieneIdentificador" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="clasePrincipalTieneIdentificador" minOccurs="1" maxOccurs="unbounded">
                   <xsd:annotation>
                     <xsd:documentation>[Instance of ClasePrincipalTieneIdentificador needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
@@ -131,31 +131,31 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClasePrincipalTieneAtributos -->
-          <xsd:element name="atributos" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClasePrincipalTieneAtributo -->
+          <xsd:element name="atributo" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClasePrincipalTieneAtributos</xsd:documentation>
+              <xsd:documentation>Instances of ClasePrincipalTieneAtributo</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="clasePrincipalTieneAtributos" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="clasePrincipalTieneAtributo" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClasePrincipalTieneAtributos needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClasePrincipalTieneAtributo needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
-          <!-- Relationship: ClasePrincipalTieneOperaciones -->
-          <xsd:element name="operaciones" minOccurs="0" maxOccurs="1">
+          <!-- Relationship: ClasePrincipalTieneOperacion -->
+          <xsd:element name="operacion" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-              <xsd:documentation>Instances of ClasePrincipalTieneOperaciones</xsd:documentation>
+              <xsd:documentation>Instances of ClasePrincipalTieneOperacion</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element ref="clasePrincipalTieneOperaciones" minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="clasePrincipalTieneOperacion" minOccurs="0" maxOccurs="unbounded">
                   <xsd:annotation>
-                    <xsd:documentation>[Instance of ClasePrincipalTieneOperaciones needs to be serialized in full-form]</xsd:documentation>
+                    <xsd:documentation>[Instance of ClasePrincipalTieneOperacion needs to be serialized in full-form]</xsd:documentation>
                   </xsd:annotation>
                 </xsd:element>
               </xsd:sequence>
@@ -220,9 +220,9 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Atributos -->
-  <xsd:element name="atributos" type="Atributos" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="Atributos">
+  <!-- Atributo -->
+  <xsd:element name="atributo" type="Atributo" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Atributo">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <!-- Id -->
@@ -231,17 +231,19 @@
             <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <!-- Property: atributo -->
-        <xsd:attribute name="atributo" type="xsd:string" />
+        <!-- Property: nombreAtributo -->
+        <xsd:attribute name="nombreAtributo" type="xsd:string" />
+        <!-- Property: atributoTipo -->
+        <xsd:attribute name="atributoTipo" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Atributos Moniker -->
+  <!-- Atributo Moniker -->
   <xsd:element name="monikerAtributos" type="MonikerAtributos" substitutionGroup="core:modelElementMoniker" />
   <xsd:complexType name="MonikerAtributos">
     <xsd:annotation>
-      <xsd:documentation>Moniker for Atributos instance.</xsd:documentation>
+      <xsd:documentation>Moniker for Atributo instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -254,11 +256,28 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Operaciones -->
-  <xsd:element name="operaciones" type="Operaciones" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="Operaciones">
+  <!-- Operacion -->
+  <xsd:element name="operacion" type="Operacion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Operacion">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Relationship: OperacionTieneParametro -->
+          <xsd:element name="parametro" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of OperacionTieneParametro</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="operacionTieneParametro" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of OperacionTieneParametro needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
           <xsd:annotation>
@@ -267,15 +286,53 @@
         </xsd:attribute>
         <!-- Property: operacion -->
         <xsd:attribute name="operacion" type="xsd:string" />
+        <!-- Property: tipoDevuelto -->
+        <xsd:attribute name="tipoDevuelto" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Operaciones Moniker -->
+  <!-- Operacion Moniker -->
   <xsd:element name="monikerOperaciones" type="MonikerOperaciones" substitutionGroup="core:modelElementMoniker" />
   <xsd:complexType name="MonikerOperaciones">
     <xsd:annotation>
-      <xsd:documentation>Moniker for Operaciones instance.</xsd:documentation>
+      <xsd:documentation>Moniker for Operacion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Parametro -->
+  <xsd:element name="parametro" type="Parametro" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="Parametro">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: nombreParametro -->
+        <xsd:attribute name="nombreParametro" type="xsd:string" />
+        <!-- Property: parametroTipo -->
+        <xsd:attribute name="parametroTipo" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- Parametro Moniker -->
+  <xsd:element name="monikerParametro" type="MonikerParametro" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerParametro">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for Parametro instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -412,14 +469,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClasePrincipalTieneAtributos -->
-  <xsd:element name="clasePrincipalTieneAtributos" type="ClasePrincipalTieneAtributos" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClasePrincipalTieneAtributos">
+  <!-- ClasePrincipalTieneAtributo -->
+  <xsd:element name="clasePrincipalTieneAtributo" type="ClasePrincipalTieneAtributo" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClasePrincipalTieneAtributo">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Atributos -->
-          <xsd:element ref="atributos" minOccurs="1" maxOccurs="1">
+          <!-- Target end Atributo -->
+          <xsd:element ref="atributo" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -435,11 +492,11 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClasePrincipalTieneAtributos Moniker -->
+  <!-- ClasePrincipalTieneAtributo Moniker -->
   <xsd:element name="monikerClasePrincipalTieneAtributos" type="MonikerClasePrincipalTieneAtributos" substitutionGroup="core:modelElementMoniker" />
   <xsd:complexType name="MonikerClasePrincipalTieneAtributos">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClasePrincipalTieneAtributos instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClasePrincipalTieneAtributo instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">
@@ -452,14 +509,14 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClasePrincipalTieneOperaciones -->
-  <xsd:element name="clasePrincipalTieneOperaciones" type="ClasePrincipalTieneOperaciones" substitutionGroup="core:modelElement" />
-  <xsd:complexType name="ClasePrincipalTieneOperaciones">
+  <!-- ClasePrincipalTieneOperacion -->
+  <xsd:element name="clasePrincipalTieneOperacion" type="ClasePrincipalTieneOperacion" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="ClasePrincipalTieneOperacion">
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
-          <!-- Target end Operaciones -->
-          <xsd:element ref="operaciones" minOccurs="1" maxOccurs="1">
+          <!-- Target end Operacion -->
+          <xsd:element ref="operacion" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
               <xsd:documentation>[Target role-player]</xsd:documentation>
             </xsd:annotation>
@@ -475,11 +532,51 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- ClasePrincipalTieneOperaciones Moniker -->
+  <!-- ClasePrincipalTieneOperacion Moniker -->
   <xsd:element name="monikerClasePrincipalTieneOperaciones" type="MonikerClasePrincipalTieneOperaciones" substitutionGroup="core:modelElementMoniker" />
   <xsd:complexType name="MonikerClasePrincipalTieneOperaciones">
     <xsd:annotation>
-      <xsd:documentation>Moniker for ClasePrincipalTieneOperaciones instance.</xsd:documentation>
+      <xsd:documentation>Moniker for ClasePrincipalTieneOperacion instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperacionTieneParametro -->
+  <xsd:element name="operacionTieneParametro" type="OperacionTieneParametro" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="OperacionTieneParametro">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end Parametro -->
+          <xsd:element ref="parametro" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- OperacionTieneParametro Moniker -->
+  <xsd:element name="monikerOperacionTieneParametro" type="MonikerOperacionTieneParametro" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerOperacionTieneParametro">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for OperacionTieneParametro instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

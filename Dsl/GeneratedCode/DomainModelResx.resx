@@ -189,37 +189,77 @@
     <value>Identificador</value>
     <comment>DisplayName for DomainProperty &apos;identificador&apos; on DomainClass &apos;Identificador&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos</value>
-    <comment>Description for DomainClass &apos;Atributos&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo</value>
+    <comment>Description for DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.DisplayName" xml:space="preserve">
-    <value>Atributos</value>
-    <comment>DisplayName for DomainClass &apos;Atributos&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos/atributo.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.Atributo</value>
-    <comment>Description for DomainProperty &apos;atributo&apos; on DomainClass &apos;Atributos&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos/atributo.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.DisplayName" xml:space="preserve">
     <value>Atributo</value>
-    <comment>DisplayName for DomainProperty &apos;atributo&apos; on DomainClass &apos;Atributos&apos;</comment>
+    <comment>DisplayName for DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones</value>
-    <comment>Description for DomainClass &apos;Operaciones&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/nombreAtributo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Nombre Atributo</value>
+    <comment>Description for DomainProperty &apos;nombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.DisplayName" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>DisplayName for DomainClass &apos;Operaciones&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/nombreAtributo.DisplayName" xml:space="preserve">
+    <value>Nombre Atributo</value>
+    <comment>DisplayName for DomainProperty &apos;nombreAtributo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones/operacion.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.Operacion</value>
-    <comment>Description for DomainProperty &apos;operacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Atributo Tipo</value>
+    <comment>Description for DomainProperty &apos;atributoTipo&apos; on DomainClass &apos;Atributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones/operacion.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.DisplayName" xml:space="preserve">
+    <value>Atributo Tipo</value>
+    <comment>DisplayName for DomainProperty &apos;atributoTipo&apos; on DomainClass &apos;Atributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion</value>
+    <comment>Description for DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.DisplayName" xml:space="preserve">
     <value>Operacion</value>
-    <comment>DisplayName for DomainProperty &apos;operacion&apos; on DomainClass &apos;Operaciones&apos;</comment>
+    <comment>DisplayName for DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/operacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Operacion</value>
+    <comment>Description for DomainProperty &apos;operacion&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/operacion.DisplayName" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>DisplayName for DomainProperty &apos;operacion&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Tipo Devuelto</value>
+    <comment>Description for DomainProperty &apos;tipoDevuelto&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.DisplayName" xml:space="preserve">
+    <value>Tipo Devuelto</value>
+    <comment>DisplayName for DomainProperty &apos;tipoDevuelto&apos; on DomainClass &apos;Operacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro</value>
+    <comment>Description for DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.DisplayName" xml:space="preserve">
+    <value>Parametro</value>
+    <comment>DisplayName for DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/nombreParametro.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Nombre Parametro</value>
+    <comment>Description for DomainProperty &apos;nombreParametro&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/nombreParametro.DisplayName" xml:space="preserve">
+    <value>Nombre Parametro</value>
+    <comment>DisplayName for DomainProperty &apos;nombreParametro&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Parametro Tipo</value>
+    <comment>Description for DomainProperty &apos;parametroTipo&apos; on DomainClass &apos;Parametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.DisplayName" xml:space="preserve">
+    <value>Parametro Tipo</value>
+    <comment>DisplayName for DomainProperty &apos;parametroTipo&apos; on DomainClass &apos;Parametro&apos;</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectosTieneClase.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectosTieneClase</value>
@@ -333,69 +373,125 @@
     <value>Clase Principal</value>
     <comment>PropertyDisplayName for DomainRole &apos;Identificador&apos; on DomainRelationship &apos;ClasePrincipalTieneIdentificador&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos</value>
-    <comment>Description for DomainClass &apos;ClasePrincipalTieneAtributos&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo</value>
+    <comment>Description for DomainClass &apos;ClasePrincipalTieneAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.DisplayName" xml:space="preserve">
-    <value>Clase Principal Tiene Atributos</value>
-    <comment>DisplayName for DomainClass &apos;ClasePrincipalTieneAtributos&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.DisplayName" xml:space="preserve">
+    <value>Clase Principal Tiene Atributo</value>
+    <comment>DisplayName for DomainClass &apos;ClasePrincipalTieneAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipal</value>
-    <comment>Description for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/ClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.ClasePrincipal</value>
+    <comment>Description for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.DisplayName" xml:space="preserve">
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/ClasePrincipal.DisplayName" xml:space="preserve">
     <value>Clase Principal</value>
-    <comment>DisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
+    <comment>DisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/ClasePrincipal.PropertyDisplayName" xml:space="preserve">
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/ClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/Atributo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.Atributo</value>
+    <comment>Description for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/Atributo.DisplayName" xml:space="preserve">
+    <value>Atributo</value>
+    <comment>DisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo/Atributo.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Principal</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Atributo&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributo&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion</value>
+    <comment>Description for DomainClass &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.DisplayName" xml:space="preserve">
+    <value>Clase Principal Tiene Operacion</value>
+    <comment>DisplayName for DomainClass &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/ClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.ClasePrincipal</value>
+    <comment>Description for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/ClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/ClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/Operacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.Operacion</value>
+    <comment>Description for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/Operacion.DisplayName" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>DisplayName for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion/Operacion.PropertyDisplayName" xml:space="preserve">
+    <value>Clase Principal</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;ClasePrincipalTieneOperacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro</value>
+    <comment>Description for DomainClass &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.DisplayName" xml:space="preserve">
+    <value>Operacion Tiene Parametro</value>
+    <comment>DisplayName for DomainClass &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Operacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.Operacion</value>
+    <comment>Description for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Operacion.DisplayName" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>DisplayName for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Operacion.PropertyDisplayName" xml:space="preserve">
+    <value>Parametro</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Operacion&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Parametro.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.Parametro</value>
+    <comment>Description for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Parametro.DisplayName" xml:space="preserve">
+    <value>Parametro</value>
+    <comment>DisplayName for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro/Parametro.PropertyDisplayName" xml:space="preserve">
+    <value>Operacion</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape</value>
+    <comment>Description for DomainClass &apos;ClasePrincipalShape&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.DisplayName" xml:space="preserve">
+    <value>Clase Principal Shape</value>
+    <comment>DisplayName for DomainClass &apos;ClasePrincipalShape&apos;</comment>
+  </data>
+  <data name="ClasePrincipalShapeidentificadorTitle" xml:space="preserve">
+    <value>Identificador</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ClasePrincipalShapeatributosTitle" xml:space="preserve">
     <value>Atributos</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
+    <comment>Compartment title</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Atributos</value>
-    <comment>Description for DomainRole &apos;Atributos&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.DisplayName" xml:space="preserve">
-    <value>Atributos</value>
-    <comment>DisplayName for DomainRole &apos;Atributos&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos/Atributos.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Principal</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Atributos&apos; on DomainRelationship &apos;ClasePrincipalTieneAtributos&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones</value>
-    <comment>Description for DomainClass &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.DisplayName" xml:space="preserve">
-    <value>Clase Principal Tiene Operaciones</value>
-    <comment>DisplayName for DomainClass &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipal</value>
-    <comment>Description for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.DisplayName" xml:space="preserve">
-    <value>Clase Principal</value>
-    <comment>DisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/ClasePrincipal.PropertyDisplayName" xml:space="preserve">
+  <data name="ClasePrincipalShapeoperacionesTitle" xml:space="preserve">
     <value>Operaciones</value>
-    <comment>PropertyDisplayName for DomainRole &apos;ClasePrincipal&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
+    <comment>Compartment title</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Operaciones</value>
-    <comment>Description for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.DisplayName" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>DisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
-  </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones/Operaciones.PropertyDisplayName" xml:space="preserve">
-    <value>Clase Principal</value>
-    <comment>PropertyDisplayName for DomainRole &apos;Operaciones&apos; on DomainRelationship &apos;ClasePrincipalTieneOperaciones&apos;</comment>
+  <data name="ClasePrincipalShapenombreClaseDefaultText" xml:space="preserve">
+    <value>nombreClase</value>
+    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1</value>
@@ -405,21 +501,9 @@
     <value>Compartment Shape1</value>
     <comment>DisplayName for DomainClass &apos;CompartmentShape1&apos;</comment>
   </data>
-  <data name="CompartmentShape1identificadorTitle" xml:space="preserve">
-    <value>Identificador</value>
+  <data name="CompartmentShape1parametrosTitle" xml:space="preserve">
+    <value></value>
     <comment>Compartment title</comment>
-  </data>
-  <data name="CompartmentShape1atributosTitle" xml:space="preserve">
-    <value>Atributos</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CompartmentShape1operacionesTitle" xml:space="preserve">
-    <value>Operaciones</value>
-    <comment>Compartment title</comment>
-  </data>
-  <data name="CompartmentShape1nombreClaseDefaultText" xml:space="preserve">
-    <value>nombreClase</value>
-    <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1</value>

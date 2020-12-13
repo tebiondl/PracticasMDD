@@ -71,15 +71,18 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				typeof(Clase),
 				typeof(ClasePrincipal),
 				typeof(Identificador),
-				typeof(Atributos),
-				typeof(Operaciones),
+				typeof(Atributo),
+				typeof(Operacion),
+				typeof(Parametro),
 				typeof(TapizProyectosTieneClase),
 				typeof(CPReferenciasCP),
 				typeof(ClasePrincipalTieneIdentificador),
-				typeof(ClasePrincipalTieneAtributos),
-				typeof(ClasePrincipalTieneOperaciones),
+				typeof(ClasePrincipalTieneAtributo),
+				typeof(ClasePrincipalTieneOperacion),
+				typeof(OperacionTieneParametro),
 				typeof(MBRDCMDMIDiagram),
 				typeof(Connector1),
+				typeof(ClasePrincipalShape),
 				typeof(CompartmentShape1),
 				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.FixUpDiagram),
 				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.DecoratorPropertyChanged),
@@ -104,8 +107,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainMemberInfo(typeof(Clase), "nombre", Clase.nombreDomainPropertyId, typeof(Clase.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClasePrincipal), "nombreClase", ClasePrincipal.nombreClaseDomainPropertyId, typeof(ClasePrincipal.nombreClasePropertyHandler)),
 				new DomainMemberInfo(typeof(Identificador), "identificador", Identificador.identificadorDomainPropertyId, typeof(Identificador.identificadorPropertyHandler)),
-				new DomainMemberInfo(typeof(Atributos), "atributo", Atributos.atributoDomainPropertyId, typeof(Atributos.atributoPropertyHandler)),
-				new DomainMemberInfo(typeof(Operaciones), "operacion", Operaciones.operacionDomainPropertyId, typeof(Operaciones.operacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "nombreAtributo", Atributo.nombreAtributoDomainPropertyId, typeof(Atributo.nombreAtributoPropertyHandler)),
+				new DomainMemberInfo(typeof(Atributo), "atributoTipo", Atributo.atributoTipoDomainPropertyId, typeof(Atributo.atributoTipoPropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "operacion", Operacion.operacionDomainPropertyId, typeof(Operacion.operacionPropertyHandler)),
+				new DomainMemberInfo(typeof(Operacion), "tipoDevuelto", Operacion.tipoDevueltoDomainPropertyId, typeof(Operacion.tipoDevueltoPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "nombreParametro", Parametro.nombreParametroDomainPropertyId, typeof(Parametro.nombreParametroPropertyHandler)),
+				new DomainMemberInfo(typeof(Parametro), "parametroTipo", Parametro.parametroTipoDomainPropertyId, typeof(Parametro.parametroTipoPropertyHandler)),
 				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadOrigen", CPReferenciasCP.CardinalidadOrigenDomainPropertyId, typeof(CPReferenciasCP.CardinalidadOrigenPropertyHandler)),
 				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadDestino", CPReferenciasCP.CardinalidadDestinoDomainPropertyId, typeof(CPReferenciasCP.CardinalidadDestinoPropertyHandler)),
 			};
@@ -124,10 +131,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainRolePlayerInfo(typeof(CPReferenciasCP), "DestinoClasePrincipal", CPReferenciasCP.DestinoClasePrincipalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneIdentificador), "ClasePrincipal", ClasePrincipalTieneIdentificador.ClasePrincipalDomainRoleId),
 				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneIdentificador), "Identificador", ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributos), "ClasePrincipal", ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributos), "Atributos", ClasePrincipalTieneAtributos.AtributosDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperaciones), "ClasePrincipal", ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId),
-				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperaciones), "Operaciones", ClasePrincipalTieneOperaciones.OperacionesDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributo), "ClasePrincipal", ClasePrincipalTieneAtributo.ClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneAtributo), "Atributo", ClasePrincipalTieneAtributo.AtributoDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperacion), "ClasePrincipal", ClasePrincipalTieneOperacion.ClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperacion), "Operacion", ClasePrincipalTieneOperacion.OperacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(OperacionTieneParametro), "Operacion", OperacionTieneParametro.OperacionDomainRoleId),
+				new DomainRolePlayerInfo(typeof(OperacionTieneParametro), "Parametro", OperacionTieneParametro.ParametroDomainRoleId),
 			};
 		}
 		#endregion
@@ -149,15 +158,17 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
 				createElementMap.Add(typeof(TapizProyectos), 0);
 				createElementMap.Add(typeof(ClasePrincipal), 1);
 				createElementMap.Add(typeof(Identificador), 2);
-				createElementMap.Add(typeof(Atributos), 3);
-				createElementMap.Add(typeof(Operaciones), 4);
-				createElementMap.Add(typeof(MBRDCMDMIDiagram), 5);
-				createElementMap.Add(typeof(Connector1), 6);
-				createElementMap.Add(typeof(CompartmentShape1), 7);
+				createElementMap.Add(typeof(Atributo), 3);
+				createElementMap.Add(typeof(Operacion), 4);
+				createElementMap.Add(typeof(Parametro), 5);
+				createElementMap.Add(typeof(MBRDCMDMIDiagram), 6);
+				createElementMap.Add(typeof(Connector1), 7);
+				createElementMap.Add(typeof(ClasePrincipalShape), 8);
+				createElementMap.Add(typeof(CompartmentShape1), 9);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -174,11 +185,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				case 0: return new TapizProyectos(partition, propertyAssignments);
 				case 1: return new ClasePrincipal(partition, propertyAssignments);
 				case 2: return new Identificador(partition, propertyAssignments);
-				case 3: return new Atributos(partition, propertyAssignments);
-				case 4: return new Operaciones(partition, propertyAssignments);
-				case 5: return new MBRDCMDMIDiagram(partition, propertyAssignments);
-				case 6: return new Connector1(partition, propertyAssignments);
-				case 7: return new CompartmentShape1(partition, propertyAssignments);
+				case 3: return new Atributo(partition, propertyAssignments);
+				case 4: return new Operacion(partition, propertyAssignments);
+				case 5: return new Parametro(partition, propertyAssignments);
+				case 6: return new MBRDCMDMIDiagram(partition, propertyAssignments);
+				case 7: return new Connector1(partition, propertyAssignments);
+				case 8: return new ClasePrincipalShape(partition, propertyAssignments);
+				case 9: return new CompartmentShape1(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -201,12 +214,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(5);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
 				createElementLinkMap.Add(typeof(TapizProyectosTieneClase), 0);
 				createElementLinkMap.Add(typeof(CPReferenciasCP), 1);
 				createElementLinkMap.Add(typeof(ClasePrincipalTieneIdentificador), 2);
-				createElementLinkMap.Add(typeof(ClasePrincipalTieneAtributos), 3);
-				createElementLinkMap.Add(typeof(ClasePrincipalTieneOperaciones), 4);
+				createElementLinkMap.Add(typeof(ClasePrincipalTieneAtributo), 3);
+				createElementLinkMap.Add(typeof(ClasePrincipalTieneOperacion), 4);
+				createElementLinkMap.Add(typeof(OperacionTieneParametro), 5);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -224,8 +238,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				case 0: return new TapizProyectosTieneClase(partition, roleAssignments, propertyAssignments);
 				case 1: return new CPReferenciasCP(partition, roleAssignments, propertyAssignments);
 				case 2: return new ClasePrincipalTieneIdentificador(partition, roleAssignments, propertyAssignments);
-				case 3: return new ClasePrincipalTieneAtributos(partition, roleAssignments, propertyAssignments);
-				case 4: return new ClasePrincipalTieneOperaciones(partition, roleAssignments, propertyAssignments);
+				case 3: return new ClasePrincipalTieneAtributo(partition, roleAssignments, propertyAssignments);
+				case 4: return new ClasePrincipalTieneOperacion(partition, roleAssignments, propertyAssignments);
+				case 5: return new OperacionTieneParametro(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -408,8 +423,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			#region Initialize DomainData Table
 			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectosTieneClase.ClaseDomainRoleId, true);
 			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador.IdentificadorDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId, true);
-			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.AtributoDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.OperacionDomainRoleId, true);
+			DomainRoles.Add(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.ParametroDomainRoleId, true);
 			#endregion
 		}
 		/// <summary>

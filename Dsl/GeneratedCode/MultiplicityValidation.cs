@@ -10,5 +10,29 @@
 using DslModeling = global::Microsoft.VisualStudio.Modeling;
 using DslDesign = global::Microsoft.VisualStudio.Modeling.Design;
 using DslValidation = global::Microsoft.VisualStudio.Modeling.Validation;
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	[DslValidation::ValidationState(DslValidation::ValidationState.Enabled)]
+	public partial class ClasePrincipal
+	{
+		/// <summary>
+		/// Checks that the relationships that have a multiplicity of One or OneMany do actually have a link.
+		/// </summary>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Justification = "Generated code.")]
+		[DslValidation::ValidationMethod(DslValidation::ValidationCategories.Open | DslValidation::ValidationCategories.Save | DslValidation::ValidationCategories.Menu)]
+		private void ValidateClasePrincipalMultiplicity (DslValidation::ValidationContext context)
+		{
+			if (this.Identificador.Count == 0)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClasePrincipal", "", "Identificador"),
+						"DSL0001", this);
+			}
+		} // ValidateClasePrincipalMultiplicity
+	} // class ClasePrincipal
+} // UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+
 	
  

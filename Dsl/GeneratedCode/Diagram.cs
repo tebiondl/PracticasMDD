@@ -291,6 +291,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		{
 			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)
 			{
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape(this.Partition);
+				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)
+			{
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1 newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1(this.Partition);
 				if(newShape != null) newShape.Size = newShape.DefaultSize; // set default shape size
 				return newShape;
@@ -311,17 +317,17 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		protected override void InitializeShapeFields(global::System.Collections.Generic.IList<DslDiagrams::ShapeField> shapeFields)
 		{
 			base.InitializeShapeFields(shapeFields);
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1.DecoratorsInitialized += CompartmentShape1DecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.DecoratorsInitialized += ClasePrincipalShapeDecoratorMap.OnDecoratorsInitialized;
 			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.DecoratorsInitialized += Connector1DecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for CompartmentShape1.
+		/// Class containing decorator path traversal methods for ClasePrincipalShape.
 		/// </summary>
-		internal static partial class CompartmentShape1DecoratorMap
+		internal static partial class ClasePrincipalShapeDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for CompartmentShape1.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for ClasePrincipalShape.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -507,6 +513,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// Rule that initiates view fixup when an element that has an associated shape is added to the model. 
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
@@ -527,6 +534,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				{
 					parentElement = GetParentForClasePrincipal((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)childElement);
 				} else
+				if(childElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)
+				{
+					parentElement = GetParentForOperacion((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)childElement);
+				} else
 				{
 					parentElement = null;
 				}
@@ -540,6 +551,16 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				// Segments 0 and 1
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectos result = root.TapizProyectos;
+				if ( result == null ) return null;
+				return result;
+			}
+			public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectos GetParentForOperacion( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion root )
+			{
+				// Segments 0 and 1
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Clase root2 = root.ClasePrincipal as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Clase;
+				if ( root2 == null ) return null;
+				// Segments 2 and 3
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.TapizProyectos result = root2.TapizProyectos;
 				if ( result == null ) return null;
 				return result;
 			}
@@ -631,9 +652,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Rule to update compartments when an item is added to the list
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemAddRule : DslModeling::AddRule
 		{
 			/// <summary>
@@ -650,63 +672,82 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				if(e==null) throw new global::System.ArgumentNullException("e");
 				if (e.ModelElement.IsDeleted)
 					return;
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo)
 				{
-					global::System.Collections.IEnumerable elements = GetClasePrincipalForCompartmentShape1atributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetClasePrincipalForClasePrincipalShapeatributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
 				}
 				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)
 				{
-					global::System.Collections.IEnumerable elements = GetClasePrincipalForCompartmentShape1identificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetClasePrincipalForClasePrincipalShapeidentificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion)
 				{
-					global::System.Collections.IEnumerable elements = GetClasePrincipalForCompartmentShape1operacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones)e.ModelElement);
-					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
+					global::System.Collections.IEnumerable elements = GetClasePrincipalForClasePrincipalShapeoperacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro)
+				{
+					global::System.Collections.IEnumerable elements = GetOperacionForCompartmentShape1parametrosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro)e.ModelElement);
+					UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 				}
 			}
 			
 			#region static DomainPath traversal methods to get the list of compartments to update
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1atributosFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeatributosFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo root)
 			{
 				// Segment 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1atributos(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeatributos(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo root)
 			{
 				// Segments 1 and 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1identificadorFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeidentificadorFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador root)
 			{
 				// Segment 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1identificador(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeidentificador(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador root)
 			{
 				// Segments 1 and 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1operacionesFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeoperacionesFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion root)
 			{
 				// Segment 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
-			internal static global::System.Collections.ICollection GetClasePrincipalForCompartmentShape1operaciones(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones root)
+			internal static global::System.Collections.ICollection GetClasePrincipalForClasePrincipalShapeoperaciones(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion root)
 			{
 				// Segments 1 and 0
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal result = root.ClasePrincipal;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetOperacionForCompartmentShape1parametrosFromLastLink(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro root)
+			{
+				// Segment 0
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion result = root.Operacion;
+				if ( result == null ) return new DslModeling::ModelElement[0];
+				return new DslModeling::ModelElement[] {result};
+			}
+			internal static global::System.Collections.ICollection GetOperacionForCompartmentShape1parametros(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro root)
+			{
+				// Segments 1 and 0
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion result = root.Operacion;
 				if ( result == null ) return new DslModeling::ModelElement[0];
 				return new DslModeling::ModelElement[] {result};
 			}
@@ -755,9 +796,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Rule to update compartments when an items is removed from the list
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemDeleteRule : DslModeling::DeleteRule
 		{
 			/// <summary>
@@ -772,20 +814,25 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			internal static void ElementDeleted(DslModeling::ElementDeletedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
 				}
 				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion)
 				{
-					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro)
+				{
+					global::System.Collections.ICollection elements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametrosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 				}
 			}
 		}
@@ -793,9 +840,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Rule to update compartments when the property on an item being displayed changes.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemChangeRule : DslModeling::ChangeRule 
 		{
 			/// <summary>
@@ -810,20 +858,25 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			internal static void ElementPropertyChanged(DslModeling::ElementPropertyChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.atributoDomainPropertyId)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.nombreAtributoDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
 				}
 				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.identificadorDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
 				}
-				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.operacionDomainPropertyId)
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.operacionDomainPropertyId)
 				{
-					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones)e.ModelElement);
-					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+				}
+				if(e.ModelElement is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro && e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.nombreParametroDomainPropertyId)
+				{
+					global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametros((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro)e.ModelElement);
+					CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 				}
 			}
 		}
@@ -831,9 +884,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Rule to update compartments when a roleplayer change happens
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerChangeRule : DslModeling::RolePlayerChangeRule 
 		{
 			/// <summary>
@@ -848,11 +902,92 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			internal static void RolePlayerChanged(DslModeling::RolePlayerChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(e.DomainRole.IsSource)
 					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos)e.OldRolePlayer);
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape compartmentShape = pel as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[0].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape compartmentShape = pel as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)e.OldRolePlayer);
+						//foreach(DslModeling::ModelElement element in oldElements)
+						//{
+						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
+						//	foreach(DslDiagrams::PresentationElement pel in pels)
+						//	{
+						//		global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape compartmentShape = pel as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape;
+						//		if(compartmentShape != null)
+						//		{
+						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
+						//		}
+						//	}
+						//}
+						
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+					}
+					else 
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(e.DomainRole.IsSource)
+					{
+						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametrosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro)e.OldRolePlayer);
 						//foreach(DslModeling::ModelElement element in oldElements)
 						//{
 						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
@@ -866,67 +1001,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 						//	}
 						//}
 						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametrosFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro)e.ElementLink);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 					}
 					else 
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
-					}
-				}
-				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1 compartmentShape = pel as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[1].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificadorFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
-					}
-				}
-				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
-				{
-					if(e.DomainRole.IsSource)
-					{
-						//global::System.Collections.IEnumerable oldElements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones)e.OldRolePlayer);
-						//foreach(DslModeling::ModelElement element in oldElements)
-						//{
-						//	DslModeling::LinkedElementCollection<DslDiagrams::PresentationElement> pels = DslDiagrams::PresentationViewsSubject.GetPresentation(element);
-						//	foreach(DslDiagrams::PresentationElement pel in pels)
-						//	{
-						//		global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1 compartmentShape = pel as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1;
-						//		if(compartmentShape != null)
-						//		{
-						//			compartmentShape.GetCompartmentMappings()[2].InitializeCompartmentShape(compartmentShape);
-						//		}
-						//	}
-						//}
-						
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operacionesFromLastLink((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones)e.ElementLink);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
-					}
-					else 
-					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones)e.NewRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametros((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro)e.NewRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 					}
 				}
 			}
@@ -935,9 +1016,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Rule to update compartments when the order of items in the list changes.
 		/// </summary>
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
-		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro), FireTime=DslModeling::TimeToFire.TopLevelCommit, InitiallyDisabled=true)]
 		internal sealed class CompartmentItemRolePlayerPositionChangeRule : DslModeling::RolePlayerPositionChangeRule 
 		{
 			/// <summary>
@@ -952,28 +1034,36 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			internal static void RolePlayerPositionChanged(DslModeling::RolePlayerOrderChangedEventArgs e, bool repaintOnly)
 			{
 				if(e==null) throw new global::System.ArgumentNullException("e");
-				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1atributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "atributos", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeatributos((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "atributos", repaintOnly);
 					}
 				}
 				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneIdentificador).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1identificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "identificador", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeidentificador((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "identificador", repaintOnly);
 					}
 				}
-				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
 				{
 					if(!e.CounterpartDomainRole.IsSource)
 					{
-						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForCompartmentShape1operaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones)e.CounterpartRolePlayer);
-						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "operaciones", repaintOnly);
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetClasePrincipalForClasePrincipalShapeoperaciones((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape), "operaciones", repaintOnly);
+					}
+				}
+				if(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro).IsAssignableFrom(e.DomainRelationship.ImplementationClass))
+				{
+					if(!e.CounterpartDomainRole.IsSource)
+					{
+						global::System.Collections.IEnumerable elements = CompartmentItemAddRule.GetOperacionForCompartmentShape1parametros((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro)e.CounterpartRolePlayer);
+						CompartmentItemAddRule.UpdateCompartments(elements, typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1), "parametros", repaintOnly);
 					}
 				}
 			}

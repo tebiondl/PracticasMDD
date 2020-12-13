@@ -564,35 +564,35 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 		}
 		#endregion
-		#region Atributos opposite domain role accessor
+		#region Atributo opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Atributos.
+		/// Gets a list of Atributo.
 		/// Descripción de
-		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipal
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.ClasePrincipal
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Atributos> Atributos
+		public virtual DslModeling::LinkedElementCollection<Atributo> Atributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributos>, Atributos>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Atributo>, Atributo>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.ClasePrincipalDomainRoleId);
 			}
 		}
 		#endregion
-		#region Operaciones opposite domain role accessor
+		#region Operacion opposite domain role accessor
 		
 		/// <summary>
-		/// Gets a list of Operaciones.
+		/// Gets a list of Operacion.
 		/// Descripción de
-		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipal
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.ClasePrincipal
 		/// </summary>
-		public virtual DslModeling::LinkedElementCollection<Operaciones> Operaciones
+		public virtual DslModeling::LinkedElementCollection<Operacion> Operacion
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return GetRoleCollection<DslModeling::LinkedElementCollection<Operaciones>, Operaciones>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId);
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Operacion>, Operacion>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.ClasePrincipalDomainRoleId);
 			}
 		}
 		#endregion
@@ -621,12 +621,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.DomainClassId)) 
 				{
 					return true;
 				}
 				
-				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.DomainClassId)) 
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.DomainClassId)) 
 				{
 					return true;
 				}
@@ -664,20 +664,20 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				return;
 			}
 				
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos sourceAtributos2 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos;
-			if (sourceAtributos2 != null)
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo;
+			if (sourceAtributo2 != null)
 			{
-				// Create link for path ClasePrincipalTieneAtributos.Atributos
-				this.Atributos.Add(sourceAtributos2);
+				// Create link for path ClasePrincipalTieneAtributo.Atributo
+				this.Atributo.Add(sourceAtributo2);
 
 				return;
 			}
 				
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones sourceOperaciones3 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones;
-			if (sourceOperaciones3 != null)
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion sourceOperacion3 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion;
+			if (sourceOperacion3 != null)
 			{
-				// Create link for path ClasePrincipalTieneOperaciones.Operaciones
-				this.Operaciones.Add(sourceOperaciones3);
+				// Create link for path ClasePrincipalTieneOperacion.Operacion
+				this.Operacion.Add(sourceOperacion3);
 
 				return;
 			}
@@ -718,29 +718,29 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				return;
 			}
 				
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos sourceAtributos2 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos;
-			if (sourceAtributos2 != null)
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo sourceAtributo2 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo;
+			if (sourceAtributo2 != null)
 			{
-				// Delete link for path ClasePrincipalTieneAtributos.Atributos
+				// Delete link for path ClasePrincipalTieneAtributo.Atributo
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.GetLinks((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)this, sourceAtributos2))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.GetLinks((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)this, sourceAtributo2))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.ClasePrincipalDomainRoleId, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId);
+					link.Delete(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.ClasePrincipalDomainRoleId, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.AtributoDomainRoleId);
 				}
 
 				return;
 			}
 				
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones sourceOperaciones3 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones;
-			if (sourceOperaciones3 != null)
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion sourceOperacion3 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion;
+			if (sourceOperacion3 != null)
 			{
-				// Delete link for path ClasePrincipalTieneOperaciones.Operaciones
+				// Delete link for path ClasePrincipalTieneOperacion.Operacion
 				
-				foreach (DslModeling::ElementLink link in global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.GetLinks((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)this, sourceOperaciones3))
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.GetLinks((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal)this, sourceOperacion3))
 				{
 					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
-					link.Delete(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.ClasePrincipalDomainRoleId, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId);
+					link.Delete(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.ClasePrincipalDomainRoleId, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.OperacionDomainRoleId);
 				}
 
 				return;
@@ -903,20 +903,20 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 {
 	/// <summary>
-	/// DomainClass Atributos
-	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos
+	/// DomainClass Atributo
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("407f5efe-c7da-42fc-b3f9-6060ddc9cf18")]
-	public partial class Atributos : DslModeling::ModelElement
+	public partial class Atributo : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Atributos domain class Id.
+		/// Atributo domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x407f5efe, 0xc7da, 0x42fc, 0xb3, 0xf9, 0x60, 0x60, 0xdd, 0xc9, 0xcf, 0x18);
 		/// <summary>
@@ -924,7 +924,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Atributos(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Atributo(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -934,64 +934,64 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Atributos(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Atributo(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
 		#endregion
-		#region atributo domain property code
+		#region nombreAtributo domain property code
 		
 		/// <summary>
-		/// atributo domain property Id.
+		/// nombreAtributo domain property Id.
 		/// </summary>
-		public static readonly global::System.Guid atributoDomainPropertyId = new global::System.Guid(0xcd339bfb, 0x8df2, 0x4bd1, 0xbd, 0x41, 0x08, 0x9d, 0xb3, 0xd7, 0xe7, 0xbe);
+		public static readonly global::System.Guid nombreAtributoDomainPropertyId = new global::System.Guid(0xcd339bfb, 0x8df2, 0x4bd1, 0xbd, 0x41, 0x08, 0x9d, 0xb3, 0xd7, 0xe7, 0xbe);
 		
 		/// <summary>
-		/// Storage for atributo
+		/// Storage for nombreAtributo
 		/// </summary>
-		private global::System.String atributoPropertyStorage = string.Empty;
+		private global::System.String nombreAtributoPropertyStorage = string.Empty;
 		
 		/// <summary>
-		/// Gets or sets the value of atributo domain property.
-		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos.Atributo
+		/// Gets or sets the value of nombreAtributo domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Nombre Atributo
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos/atributo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributos/atributo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/nombreAtributo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/nombreAtributo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("cd339bfb-8df2-4bd1-bd41-089db3d7e7be")]
-		public global::System.String atributo
+		public global::System.String nombreAtributo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return atributoPropertyStorage;
+				return nombreAtributoPropertyStorage;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				atributoPropertyHandler.Instance.SetValue(this, value);
+				nombreAtributoPropertyHandler.Instance.SetValue(this, value);
 			}
 		}
 		/// <summary>
-		/// Value handler for the Atributos.atributo domain property.
+		/// Value handler for the Atributo.nombreAtributo domain property.
 		/// </summary>
-		internal sealed partial class atributoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributos, global::System.String>
+		internal sealed partial class nombreAtributoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
 		{
-			private atributoPropertyHandler() { }
+			private nombreAtributoPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Atributos.atributo domain property value handler.
+			/// Gets the singleton instance of the Atributo.nombreAtributo domain property value handler.
 			/// </summary>
-			public static readonly atributoPropertyHandler Instance = new atributoPropertyHandler();
+			public static readonly nombreAtributoPropertyHandler Instance = new nombreAtributoPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Atributos.atributo domain property.
+			/// Gets the Id of the Atributo.nombreAtributo domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
 				[global::System.Diagnostics.DebuggerStepThrough]
 				get
 				{
-					return atributoDomainPropertyId;
+					return nombreAtributoDomainPropertyId;
 				}
 			}
 			
@@ -1000,10 +1000,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributos element)
+			public override sealed global::System.String GetValue(Atributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
-				return element.atributoPropertyStorage;
+				return element.nombreAtributoPropertyStorage;
 			}
 		
 			/// <summary>
@@ -1011,7 +1011,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributos element, global::System.String newValue)
+			public override sealed void SetValue(Atributo element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -1019,7 +1019,94 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
-					element.atributoPropertyStorage = newValue;
+					element.nombreAtributoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region atributoTipo domain property code
+		
+		/// <summary>
+		/// atributoTipo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid atributoTipoDomainPropertyId = new global::System.Guid(0x01ce83d8, 0x87be, 0x4eb2, 0x8e, 0xd6, 0xa9, 0xdf, 0xc3, 0x0a, 0x81, 0x21);
+		
+		/// <summary>
+		/// Storage for atributoTipo
+		/// </summary>
+		private global::System.String atributoTipoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of atributoTipo domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Atributo Tipo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("01ce83d8-87be-4eb2-8ed6-a9dfc30a8121")]
+		public global::System.String atributoTipo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return atributoTipoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				atributoTipoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Atributo.atributoTipo domain property.
+		/// </summary>
+		internal sealed partial class atributoTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		{
+			private atributoTipoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Atributo.atributoTipo domain property value handler.
+			/// </summary>
+			public static readonly atributoTipoPropertyHandler Instance = new atributoTipoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Atributo.atributoTipo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return atributoTipoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Atributo element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.atributoTipoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.atributoTipoPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1030,19 +1117,19 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Gets or sets ClasePrincipal.
 		/// Descripción de
-		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.Atributos
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.Atributo
 		/// </summary>
 		public virtual ClasePrincipal ClasePrincipal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId) as ClasePrincipal;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.AtributoDomainRoleId) as ClasePrincipal;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributos.AtributosDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneAtributo.AtributoDomainRoleId, value);
 			}
 		}
 		#endregion
@@ -1051,20 +1138,20 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 {
 	/// <summary>
-	/// DomainClass Operaciones
-	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones
+	/// DomainClass Operacion
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion
 	/// </summary>
-	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
 	[global::System.CLSCompliant(true)]
 	[DslModeling::DomainObjectId("bc739245-00e6-424b-a26d-c51362bc1db2")]
-	public partial class Operaciones : DslModeling::ModelElement
+	public partial class Operacion : DslModeling::ModelElement
 	{
 		#region Constructors, domain class Id
 	
 		/// <summary>
-		/// Operaciones domain class Id.
+		/// Operacion domain class Id.
 		/// </summary>
 		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xbc739245, 0x00e6, 0x424b, 0xa2, 0x6d, 0xc5, 0x13, 0x62, 0xbc, 0x1d, 0xb2);
 		/// <summary>
@@ -1072,7 +1159,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		/// <param name="store">Store where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Operaciones(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Operacion(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
 		{
 		}
@@ -1082,7 +1169,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		/// <param name="partition">Partition where new element is to be created.</param>
 		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
-		public Operaciones(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+		public Operacion(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
 			: base(partition, propertyAssignments)
 		{
 		}
@@ -1101,10 +1188,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		
 		/// <summary>
 		/// Gets or sets the value of operacion domain property.
-		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones.Operacion
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Operacion
 		/// </summary>
-		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones/operacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operaciones/operacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/operacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/operacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("2855af9b-0fb4-4fc4-a129-611d1ac355a8")]
 		public global::System.String operacion
 		{
@@ -1120,19 +1207,19 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 		}
 		/// <summary>
-		/// Value handler for the Operaciones.operacion domain property.
+		/// Value handler for the Operacion.operacion domain property.
 		/// </summary>
-		internal sealed partial class operacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operaciones, global::System.String>
+		internal sealed partial class operacionPropertyHandler : DslModeling::DomainPropertyValueHandler<Operacion, global::System.String>
 		{
 			private operacionPropertyHandler() { }
 		
 			/// <summary>
-			/// Gets the singleton instance of the Operaciones.operacion domain property value handler.
+			/// Gets the singleton instance of the Operacion.operacion domain property value handler.
 			/// </summary>
 			public static readonly operacionPropertyHandler Instance = new operacionPropertyHandler();
 		
 			/// <summary>
-			/// Gets the Id of the Operaciones.operacion domain property.
+			/// Gets the Id of the Operacion.operacion domain property.
 			/// </summary>
 			public sealed override global::System.Guid DomainPropertyId
 			{
@@ -1148,7 +1235,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Operaciones element)
+			public override sealed global::System.String GetValue(Operacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.operacionPropertyStorage;
@@ -1159,7 +1246,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Operaciones element, global::System.String newValue)
+			public override sealed void SetValue(Operacion element, global::System.String newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
@@ -1174,23 +1261,459 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		#endregion
+		#region tipoDevuelto domain property code
+		
+		/// <summary>
+		/// tipoDevuelto domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid tipoDevueltoDomainPropertyId = new global::System.Guid(0x49b922fa, 0x6d31, 0x4835, 0x9b, 0x67, 0x06, 0xc8, 0xd8, 0x87, 0x2f, 0x3c);
+		
+		/// <summary>
+		/// Storage for tipoDevuelto
+		/// </summary>
+		private global::System.String tipoDevueltoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of tipoDevuelto domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Tipo Devuelto
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("49b922fa-6d31-4835-9b67-06c8d8872f3c")]
+		public global::System.String tipoDevuelto
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return tipoDevueltoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				tipoDevueltoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Operacion.tipoDevuelto domain property.
+		/// </summary>
+		internal sealed partial class tipoDevueltoPropertyHandler : DslModeling::DomainPropertyValueHandler<Operacion, global::System.String>
+		{
+			private tipoDevueltoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Operacion.tipoDevuelto domain property value handler.
+			/// </summary>
+			public static readonly tipoDevueltoPropertyHandler Instance = new tipoDevueltoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Operacion.tipoDevuelto domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return tipoDevueltoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Operacion element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.tipoDevueltoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Operacion element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.tipoDevueltoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
 		#region ClasePrincipal opposite domain role accessor
 		/// <summary>
 		/// Gets or sets ClasePrincipal.
 		/// Descripción de
-		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.Operaciones
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.Operacion
 		/// </summary>
 		public virtual ClasePrincipal ClasePrincipal
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
 			{
-				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId) as ClasePrincipal;
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.OperacionDomainRoleId) as ClasePrincipal;
 			}
 			[global::System.Diagnostics.DebuggerStepThrough]
 			set
 			{
-				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperaciones.OperacionesDomainRoleId, value);
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalTieneOperacion.OperacionDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region Parametro opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of Parametro.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.Operacion
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<Parametro> Parametro
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<Parametro>, Parametro>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.OperacionDomainRoleId);
+			}
+		}
+		#endregion
+		#region ElementGroupPrototype Merge methods
+		/// <summary>
+		/// Returns a value indicating whether the source element represented by the
+		/// specified root ProtoElement can be added to this element.
+		/// </summary>
+		/// <param name="rootElement">
+		/// The root ProtoElement representing a source element.  This can be null, 
+		/// in which case the ElementGroupPrototype does not contain an ProtoElements
+		/// and the code should inspect the ElementGroupPrototype context information.
+		/// </param>
+		/// <param name="elementGroupPrototype">The ElementGroupPrototype that contains the root ProtoElement.</param>
+		/// <returns>true if the source element represented by the ProtoElement can be added to this target element.</returns>
+		protected override bool CanMerge(DslModeling::ProtoElementBase rootElement, DslModeling::ElementGroupPrototype elementGroupPrototype)
+		{
+			if ( elementGroupPrototype == null ) throw new global::System.ArgumentNullException("elementGroupPrototype");
+			
+			if (rootElement != null)
+			{
+				DslModeling::DomainClassInfo rootElementDomainInfo = this.Partition.DomainDataDirectory.GetDomainClass(rootElement.DomainClassId);
+				
+				if (rootElementDomainInfo.IsDerivedFrom(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.DomainClassId)) 
+				{
+					return true;
+				}
+			}
+			return base.CanMerge(rootElement, elementGroupPrototype);
+		}
+		
+		/// <summary>
+		/// Called by the Merge process to create a relationship between 
+		/// this target element and the specified source element. 
+		/// Typically, a parent-child relationship is established
+		/// between the target element (the parent) and the source element 
+		/// (the child), but any relationship can be established.
+		/// </summary>
+		/// <param name="sourceElement">The element that is to be related to this model element.</param>
+		/// <param name="elementGroup">The group of source ModelElements that have been rehydrated into the target store.</param>
+		/// <remarks>
+		/// This method is overriden to create the relationship between the target element and the specified source element.
+		/// The base method does nothing.
+		/// </remarks>
+		protected override void MergeRelate(DslModeling::ModelElement sourceElement, DslModeling::ElementGroup elementGroup)
+		{
+			// In general, sourceElement is allowed to be null, meaning that the elementGroup must be parsed for special cases.
+			// However this is not supported in generated code.  Use double-deriving on this class and then override MergeRelate completely if you 
+			// need to support this case.
+			if ( sourceElement == null ) throw new global::System.ArgumentNullException("sourceElement");
+		
+				
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro sourceParametro1 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro;
+			if (sourceParametro1 != null)
+			{
+				// Create link for path OperacionTieneParametro.Parametro
+				this.Parametro.Add(sourceParametro1);
+
+				return;
+			}
+		
+			// Sdk workaround to runtime bug #879350 (DSL: can't copy and paste a MEL that has a MEX). Avoid MergeRelate on ModelElementExtension
+			// during a "Paste".
+			if (sourceElement is DslModeling::ExtensionElement
+				&& sourceElement.Store.TransactionManager.CurrentTransaction.TopLevelTransaction.Context.ContextInfo.ContainsKey("{9DAFD42A-DC0E-4d78-8C3F-8266B2CF8B33}"))
+			{
+				return;
+			}
+		
+			// Fall through to base class if this class hasn't handled the merge.
+			base.MergeRelate(sourceElement, elementGroup);
+		}
+		
+		/// <summary>
+		/// Performs operation opposite to MergeRelate - i.e. disconnects a given
+		/// element from the current one (removes links created by MergeRelate).
+		/// </summary>
+		/// <param name="sourceElement">Element to be unmerged/disconnected.</param>
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
+		protected override void MergeDisconnect(DslModeling::ModelElement sourceElement)
+		{
+			if (sourceElement == null) throw new global::System.ArgumentNullException("sourceElement");
+				
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro sourceParametro1 = sourceElement as global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro;
+			if (sourceParametro1 != null)
+			{
+				// Delete link for path OperacionTieneParametro.Parametro
+				
+				foreach (DslModeling::ElementLink link in global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.GetLinks((global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion)this, sourceParametro1))
+				{
+					// Delete the link, but without possible delete propagation to the element since it's moving to a new location.
+					link.Delete(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.OperacionDomainRoleId, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.ParametroDomainRoleId);
+				}
+
+				return;
+			}
+			// Fall through to base class if this class hasn't handled the unmerge.
+			base.MergeDisconnect(sourceElement);
+		}
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainClass Parametro
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainObjectId("73503c8e-e58a-488d-bc36-2263031df055")]
+	public partial class Parametro : DslModeling::ModelElement
+	{
+		#region Constructors, domain class Id
+	
+		/// <summary>
+		/// Parametro domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x73503c8e, 0xe58a, 0x488d, 0xbc, 0x36, 0x22, 0x63, 0x03, 0x1d, 0xf0, 0x55);
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Parametro(DslModeling::Store store, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: this(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new element is to be created.</param>
+		/// <param name="propertyAssignments">List of domain property id/value pairs to set once the element is created.</param>
+		public Parametro(DslModeling::Partition partition, params DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, propertyAssignments)
+		{
+		}
+		#endregion
+		#region nombreParametro domain property code
+		
+		/// <summary>
+		/// nombreParametro domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreParametroDomainPropertyId = new global::System.Guid(0xc14211e2, 0x9a29, 0x42d0, 0x9f, 0xe6, 0xbb, 0x10, 0x81, 0xfe, 0xf8, 0x61);
+		
+		/// <summary>
+		/// Storage for nombreParametro
+		/// </summary>
+		private global::System.String nombreParametroPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of nombreParametro domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Nombre
+		/// Parametro
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/nombreParametro.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/nombreParametro.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c14211e2-9a29-42d0-9fe6-bb1081fef861")]
+		public global::System.String nombreParametro
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreParametroPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombreParametroPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Parametro.nombreParametro domain property.
+		/// </summary>
+		internal sealed partial class nombreParametroPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametro, global::System.String>
+		{
+			private nombreParametroPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Parametro.nombreParametro domain property value handler.
+			/// </summary>
+			public static readonly nombreParametroPropertyHandler Instance = new nombreParametroPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Parametro.nombreParametro domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreParametroDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Parametro element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreParametroPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Parametro element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreParametroPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region parametroTipo domain property code
+		
+		/// <summary>
+		/// parametroTipo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid parametroTipoDomainPropertyId = new global::System.Guid(0xc0b8f498, 0xbbd6, 0x4784, 0xb4, 0xb7, 0x4b, 0x0f, 0x3a, 0xdb, 0xe1, 0xb7);
+		
+		/// <summary>
+		/// Storage for parametroTipo
+		/// </summary>
+		private global::System.String parametroTipoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of parametroTipo domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Parametro Tipo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("c0b8f498-bbd6-4784-b4b7-4b0f3adbe1b7")]
+		public global::System.String parametroTipo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return parametroTipoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				parametroTipoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Parametro.parametroTipo domain property.
+		/// </summary>
+		internal sealed partial class parametroTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametro, global::System.String>
+		{
+			private parametroTipoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Parametro.parametroTipo domain property value handler.
+			/// </summary>
+			public static readonly parametroTipoPropertyHandler Instance = new parametroTipoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Parametro.parametroTipo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return parametroTipoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Parametro element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.parametroTipoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Parametro element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.parametroTipoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region Operacion opposite domain role accessor
+		/// <summary>
+		/// Gets or sets Operacion.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.Parametro
+		/// </summary>
+		public virtual Operacion Operacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.ParametroDomainRoleId) as Operacion;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro.ParametroDomainRoleId, value);
 			}
 		}
 		#endregion
