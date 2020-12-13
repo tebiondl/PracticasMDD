@@ -318,7 +318,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP)
 			{
-				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1 newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1(this.Partition);
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia(this.Partition);
 				return newShape;
 			}
 			return base.CreateChildShape(element);

@@ -438,7 +438,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for nombreClase
 		/// </summary>
-		private global::System.String nombreClasePropertyStorage = string.Empty;
+		private global::System.String nombreClasePropertyStorage = "Nombre Clase";
 		
 		/// <summary>
 		/// Gets or sets the value of nombreClase domain property.
@@ -447,6 +447,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal/nombreClase.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal/nombreClase.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("Nombre Clase")]
 		[DslModeling::DomainObjectId("2451da2a-e945-4f82-9307-2b18b8f5181d")]
 		public global::System.String nombreClase
 		{
@@ -980,6 +981,94 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.identificadorPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region identificadorTipo domain property code
+		
+		/// <summary>
+		/// identificadorTipo domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid identificadorTipoDomainPropertyId = new global::System.Guid(0xedb1559a, 0xa8a2, 0x42a7, 0xbb, 0x5d, 0x5c, 0xbb, 0xf8, 0x14, 0x1d, 0xa9);
+		
+		/// <summary>
+		/// Storage for identificadorTipo
+		/// </summary>
+		private global::System.String identificadorTipoPropertyStorage = string.Empty;
+		
+		/// <summary>
+		/// Gets or sets the value of identificadorTipo domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.Identificador Tipo
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainObjectId("edb1559a-a8a2-42a7-bb5d-5cbbf8141da9")]
+		public global::System.String identificadorTipo
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return identificadorTipoPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				identificadorTipoPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the Identificador.identificadorTipo domain property.
+		/// </summary>
+		internal sealed partial class identificadorTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Identificador, global::System.String>
+		{
+			private identificadorTipoPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the Identificador.identificadorTipo domain property value handler.
+			/// </summary>
+			public static readonly identificadorTipoPropertyHandler Instance = new identificadorTipoPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the Identificador.identificadorTipo domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return identificadorTipoDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(Identificador element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.identificadorTipoPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(Identificador element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.identificadorTipoPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}

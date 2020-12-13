@@ -74,6 +74,11 @@
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
+        <DomainProperty Id="edb1559a-a8a2-42a7-bb5d-5cbbf8141da9" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.Identificador Tipo" Name="identificadorTipo" DisplayName="Identificador Tipo">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
       </Properties>
     </DomainClass>
     <DomainClass Id="407f5efe-c7da-42fc-b3f9-6060ddc9cf18" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo" Name="Atributo" DisplayName="Atributo" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
@@ -336,7 +341,7 @@
   <Shapes>
     <CompartmentShape Id="19e1bb28-44d7-4044-ac5b-451063a8e63d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape" Name="ClasePrincipalShape" DisplayName="Clase Principal Shape" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Clase Principal Shape" FillColor="Orange" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">
       <ShapeHasDecorators Position="InnerTopCenter" HorizontalOffset="0" VerticalOffset="0">
-        <TextDecorator Name="nombreClase" DisplayName="Nombre Clase" DefaultText="nombreClase" />
+        <TextDecorator Name="nombreClase" DisplayName="Nombre Clase" DefaultText="Nombre Clase" />
       </ShapeHasDecorators>
       <Compartment Name="identificador" Title="Identificador" />
       <Compartment Name="atributos" Title="Atributos" />
@@ -371,7 +376,7 @@
         <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\DepDRomb.bmp" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="71f078a2-e8b6-42f2-a69f-f224f18b84d7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Connector1">
+    <Connector Id="71f078a2-e8b6-42f2-a69f-f224f18b84d7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia" Name="RelacionHerencia" DisplayName="Relacion Herencia" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Herencia">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\HeFlch.bmp" />
       </ConnectorHasDecorators>
@@ -459,6 +464,9 @@
           <XmlPropertyData XmlName="identificador">
             <DomainPropertyMoniker Name="Identificador/identificador" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="identificadorTipo">
+            <DomainPropertyMoniker Name="Identificador/identificadorTipo" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="Atributo" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerAtributos" ElementName="atributo" MonikerTypeName="MonikerAtributos">
@@ -543,8 +551,8 @@
       <XmlClassData TypeName="CPHerenciaCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPHerenciaCP" ElementName="cPHerenciaCP" MonikerTypeName="MonikerCPHerenciaCP">
         <DomainRelationshipMoniker Name="CPHerenciaCP" />
       </XmlClassData>
-      <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="connector1" MonikerTypeName="MonikerConnector1">
-        <ConnectorMoniker Name="Connector1" />
+      <XmlClassData TypeName="RelacionHerencia" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="relacionHerencia" MonikerTypeName="MonikerConnector1">
+        <ConnectorMoniker Name="RelacionHerencia" />
       </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
@@ -745,7 +753,7 @@
         </DecoratorMap>
       </ConnectorMap>
       <ConnectorMap>
-        <ConnectorMoniker Name="Connector1" />
+        <ConnectorMoniker Name="RelacionHerencia" />
         <DomainRelationshipMoniker Name="CPHerenciaCP" />
       </ConnectorMap>
     </ConnectorMaps>

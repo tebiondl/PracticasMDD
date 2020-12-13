@@ -244,6 +244,8 @@
         </xsd:attribute>
         <!-- Property: identificador -->
         <xsd:attribute name="identificador" type="xsd:string" />
+        <!-- Property: identificadorTipo -->
+        <xsd:attribute name="identificadorTipo" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

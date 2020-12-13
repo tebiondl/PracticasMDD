@@ -87,7 +87,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				typeof(RelacionAsociacion),
 				typeof(RelacionAgregacionInclusion),
 				typeof(RelacionAgregacionNoInclusion),
-				typeof(Connector1),
+				typeof(RelacionHerencia),
 				typeof(ClasePrincipalShape),
 				typeof(CompartmentShape1),
 				typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.FixUpDiagram),
@@ -113,6 +113,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainMemberInfo(typeof(Clase), "nombre", Clase.nombreDomainPropertyId, typeof(Clase.nombrePropertyHandler)),
 				new DomainMemberInfo(typeof(ClasePrincipal), "nombreClase", ClasePrincipal.nombreClaseDomainPropertyId, typeof(ClasePrincipal.nombreClasePropertyHandler)),
 				new DomainMemberInfo(typeof(Identificador), "identificador", Identificador.identificadorDomainPropertyId, typeof(Identificador.identificadorPropertyHandler)),
+				new DomainMemberInfo(typeof(Identificador), "identificadorTipo", Identificador.identificadorTipoDomainPropertyId, typeof(Identificador.identificadorTipoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "nombreAtributo", Atributo.nombreAtributoDomainPropertyId, typeof(Atributo.nombreAtributoPropertyHandler)),
 				new DomainMemberInfo(typeof(Atributo), "atributoTipo", Atributo.atributoTipoDomainPropertyId, typeof(Atributo.atributoTipoPropertyHandler)),
 				new DomainMemberInfo(typeof(Operacion), "operacion", Operacion.operacionDomainPropertyId, typeof(Operacion.operacionPropertyHandler)),
@@ -186,7 +187,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				createElementMap.Add(typeof(RelacionAsociacion), 7);
 				createElementMap.Add(typeof(RelacionAgregacionInclusion), 8);
 				createElementMap.Add(typeof(RelacionAgregacionNoInclusion), 9);
-				createElementMap.Add(typeof(Connector1), 10);
+				createElementMap.Add(typeof(RelacionHerencia), 10);
 				createElementMap.Add(typeof(ClasePrincipalShape), 11);
 				createElementMap.Add(typeof(CompartmentShape1), 12);
 			}
@@ -212,7 +213,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				case 7: return new RelacionAsociacion(partition, propertyAssignments);
 				case 8: return new RelacionAgregacionInclusion(partition, propertyAssignments);
 				case 9: return new RelacionAgregacionNoInclusion(partition, propertyAssignments);
-				case 10: return new Connector1(partition, propertyAssignments);
+				case 10: return new RelacionHerencia(partition, propertyAssignments);
 				case 11: return new ClasePrincipalShape(partition, propertyAssignments);
 				case 12: return new CompartmentShape1(partition, propertyAssignments);
 				default: return null;

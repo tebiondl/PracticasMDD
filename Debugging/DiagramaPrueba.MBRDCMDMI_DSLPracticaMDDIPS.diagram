@@ -1,1 +1,66 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<mBRDCMDMIDiagram dslVersion="1.0.0.0" Id="01671e75-8fad-4101-b18a-df0b18644ed5" absoluteBounds="0, 0, 14.625, 8.625" name="DiagramaPrueba">
+  <exampleModelMoniker Id="9d12d0ee-73e5-4d4f-8b36-5b7ce30e040c" />
+  <nestedChildShapes>
+    <clasePrincipalShape Id="3474be94-bf8f-4bfc-ab19-9ca0fddc003c" absoluteBounds="7.625, 1.25, 1.5, 2.2627718098958329">
+      <monikerClasePrincipal Id="040e7e5b-1569-442e-9a8f-954259f6554c" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53ceecd8-1eb4-44fa-b988-5979d0bac0ad" absoluteBounds="7.64, 2.26, 1.4700000000000002, 0.44169108072916663" name="identificador" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="5de2e3f7-ef55-4c52-970d-37e1ab8b7619" absoluteBounds="7.64, 2.7116910807291665, 1.4700000000000002, 0.44169108072916663" name="atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="356f255e-c74c-4bab-988d-a69ba4a2cc47" absoluteBounds="7.64, 3.1633821614583333, 1.4700000000000002, 0.2493896484375" name="operaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </clasePrincipalShape>
+    <clasePrincipalShape Id="5aeb9cca-ccce-46b5-8dbe-65567b3c8bbc" absoluteBounds="2, 1, 1.5, 2.6473746744791664">
+      <monikerClasePrincipal Id="bdd2b362-6830-4923-846b-0c7e30355918" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28db062b-92e2-428f-918b-c79501573ccc" absoluteBounds="2.015, 2.01, 1.4700000000000002, 0.44169108072916674" name="identificador" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="c01f7419-11f6-4079-b3c8-d6e81b098a3e" absoluteBounds="2.015, 2.4616910807291665, 1.4700000000000002, 0.63399251302083326" name="atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="977c0286-ec65-4d2a-a2aa-846d24c41986" absoluteBounds="2.015, 3.10568359375, 1.4700000000000002, 0.44169108072916663" name="operaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </clasePrincipalShape>
+    <clasePrincipalShape Id="6bc6415d-0c3c-4ab7-9996-e3439fd03b2d" absoluteBounds="12.875, 4.625, 1.5, 2.2627718098958329">
+      <monikerClasePrincipal Id="7496c905-1302-4351-9738-b6fcd17f6f34" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2712a86f-64e2-417e-8fb7-67bd32388d0e" absoluteBounds="12.89, 5.635, 1.4700000000000002, 0.2493896484375" name="identificador" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="85bb1a08-59d8-455e-bfc2-f6d7fbf2a573" absoluteBounds="12.89, 5.8943896484375, 1.4700000000000002, 0.44169108072916663" name="atributos" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="411c8b08-fa37-4517-9ee4-911d1ef1aa36" absoluteBounds="12.89, 6.3460807291666663, 1.4700000000000002, 0.44169108072916674" name="operaciones" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </clasePrincipalShape>
+    <relacionAgregacionInclusion Id="acbe3115-16ef-46bd-94bf-c481f971842e" edgePoints="[(2.78125 : 3.64737467447917); (2.78125 : 6.16622113481351); (12.875 : 6.16622113481351)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <monikerCPAgregacionInclusivaCP Id="1abd49ca-8feb-44dd-951c-40a3cf0fee1b" />
+      <relativeChildShapes />
+      <nodes>
+        <monikerCompartmentShape1 Id="5aeb9cca-ccce-46b5-8dbe-65567b3c8bbc" />
+        <monikerCompartmentShape1 Id="6bc6415d-0c3c-4ab7-9996-e3439fd03b2d" />
+      </nodes>
+    </relacionAgregacionInclusion>
+    <compartmentShape1 Id="71785dec-5044-47c6-8357-3a0eac722eb2" absoluteBounds="12.875, 6.875, 1.5, 1.5516910807291655">
+      <monikerOperaciones Id="0655d45e-88a2-4c46-bfde-b4fdd5b20b9e" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13f0f9a9-dc67-4cff-a747-2599c4106d12" absoluteBounds="12.89, 7.885, 1.4700000000000002, 0.44169108072916663" name="parametros" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </compartmentShape1>
+    <relacionAsociacion Id="3c53aee0-46eb-4e56-93fb-7a740fc2b584" edgePoints="[(7.625 : 2.38138590494792); (3.5 : 2.38138590494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <monikerCPReferenciasCP Id="d8078f3b-727b-4ca7-af2d-b96560c307be" />
+      <relativeChildShapes />
+      <nodes>
+        <monikerCompartmentShape1 Id="3474be94-bf8f-4bfc-ab19-9ca0fddc003c" />
+        <monikerCompartmentShape1 Id="5aeb9cca-ccce-46b5-8dbe-65567b3c8bbc" />
+      </nodes>
+    </relacionAsociacion>
+    <compartmentShape1 Id="db6aab74-6471-41c0-99b2-210b3a25db03" absoluteBounds="0.5, 3.125, 1.5, 1.5516910807291664">
+      <monikerOperaciones Id="31bd5a44-9ffd-43ef-97d3-8d84de117a26" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ad2013cd-1ca5-4902-8515-725d018669ca" absoluteBounds="0.515, 4.135, 1.4700000000000002, 0.44169108072916663" name="parametros" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </compartmentShape1>
+    <relacionHerencia Id="03f6f99e-9614-4672-93d8-ae85c83cb3bd" edgePoints="[(8.375 : 3.51277180989583); (8.375 : 5.38216545973119); (12.875 : 5.38216545973119)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <monikerCPHerenciaCP Id="e2b3f115-35e0-4f2b-9f93-3fff53521d72" />
+      <relativeChildShapes />
+      <nodes>
+        <monikerCompartmentShape1 Id="3474be94-bf8f-4bfc-ab19-9ca0fddc003c" />
+        <monikerCompartmentShape1 Id="6bc6415d-0c3c-4ab7-9996-e3439fd03b2d" />
+      </nodes>
+    </relacionHerencia>
+  </nestedChildShapes>
+</mBRDCMDMIDiagram>

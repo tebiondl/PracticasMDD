@@ -189,6 +189,14 @@
     <value>Identificador</value>
     <comment>DisplayName for DomainProperty &apos;identificador&apos; on DomainClass &apos;Identificador&apos;</comment>
   </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.Identificador Tipo</value>
+    <comment>Description for DomainProperty &apos;identificadorTipo&apos; on DomainClass &apos;Identificador&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.DisplayName" xml:space="preserve">
+    <value>Identificador Tipo</value>
+    <comment>DisplayName for DomainProperty &apos;identificadorTipo&apos; on DomainClass &apos;Identificador&apos;</comment>
+  </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo</value>
     <comment>Description for DomainClass &apos;Atributo&apos;</comment>
@@ -626,7 +634,7 @@
     <comment>Compartment title</comment>
   </data>
   <data name="ClasePrincipalShapenombreClaseDefaultText" xml:space="preserve">
-    <value>nombreClase</value>
+    <value>Nombre Clase</value>
     <comment>Text decorator default text</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1.Description" xml:space="preserve">
@@ -677,13 +685,13 @@
     <value>Relacion Agregacion No Inclusion</value>
     <comment>DisplayName for DomainClass &apos;RelacionAgregacionNoInclusion&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1</value>
-    <comment>Description for DomainClass &apos;Connector1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia</value>
+    <comment>Description for DomainClass &apos;RelacionHerencia&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.DisplayName" xml:space="preserve">
-    <value>Connector1</value>
-    <comment>DisplayName for DomainClass &apos;Connector1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia.DisplayName" xml:space="preserve">
+    <value>Relacion Herencia</value>
+    <comment>DisplayName for DomainClass &apos;RelacionHerencia&apos;</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>MBRDCMDMI (*.MBRDCMDMI_DSLPracticaMDDIPS)|*.MBRDCMDMI_DSLPracticaMDDIPS</value>
@@ -882,7 +890,7 @@ A DomainClass can be serialized as a moniker only if
     <value>..\Resources\DepDRomb.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>
-  <data name="Connector1IconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="RelacionHerenciaIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\HeFlch.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Icon decorator default image</comment>
   </data>

@@ -2308,9 +2308,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				global::System.String propValue = instanceOfClasePrincipal.nombreClase;
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
+					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "Nombre Clase") != 0))
+					{	// No need to write the value out if it's the same as default value.
 						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "nombreClase", propValue);
-	
+					}
 				}
 			}
 		}
@@ -2677,6 +2678,23 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 					else
 					{	// Invalid property value, ignored.
 						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "identificador", typeof(global::System.String), attribidentificador);
+					}
+				}
+			}
+			// identificadorTipo
+			if (!serializationContext.Result.Failed)
+			{
+				string attribidentificadorTipo = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "identificadorTipo");
+				if (attribidentificadorTipo != null)
+				{
+					global::System.String valueOfidentificadorTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribidentificadorTipo, out valueOfidentificadorTipo))
+					{
+						instanceOfIdentificador.identificadorTipo = valueOfidentificadorTipo;
+					}
+					else
+					{	// Invalid property value, ignored.
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "identificadorTipo", typeof(global::System.String), attribidentificadorTipo);
 					}
 				}
 			}
@@ -3113,6 +3131,17 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				{
 					if (!string.IsNullOrEmpty(propValue))
 						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "identificador", propValue);
+	
+				}
+			}
+			// identificadorTipo
+			if (!serializationContext.Result.Failed)
+			{
+				global::System.String propValue = instanceOfIdentificador.identificadorTipo;
+				if (!serializationContext.Result.Failed)
+				{
+					if (!string.IsNullOrEmpty(propValue))
+						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "identificadorTipo", propValue);
 	
 				}
 			}
@@ -15843,15 +15872,15 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 {
 	/// <summary>
-	/// Serializer Connector1Serializer for DomainClass Connector1.
+	/// Serializer RelacionHerenciaSerializer for DomainClass RelacionHerencia.
 	/// </summary>
-	public partial class Connector1Serializer : DslDiagrams::BinaryLinkShapeSerializer
+	public partial class RelacionHerenciaSerializer : DslDiagrams::BinaryLinkShapeSerializer
 	{
 		#region Constructor
 		/// <summary>
-		/// Connector1Serializer Constructor
+		/// RelacionHerenciaSerializer Constructor
 		/// </summary>
-		public Connector1Serializer ()
+		public RelacionHerenciaSerializer ()
 			: base ()
 		{
 		}
@@ -15877,16 +15906,16 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region Public Properties
 		/// <summary>
-		/// This is the XML tag name used to serialize an instance of Connector1.
+		/// This is the XML tag name used to serialize an instance of RelacionHerencia.
 		/// </summary>
 		public override string XmlTagName
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
-			get { return @"connector1"; }
+			get { return @"relacionHerencia"; }
 		}
 	
 		/// <summary>
-		/// This is the XML tag name used to serialize a monikerized instance of Connector1.
+		/// This is the XML tag name used to serialize a monikerized instance of RelacionHerencia.
 		/// </summary>
 		public override string MonikerTagName
 		{
@@ -15895,7 +15924,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		/// <summary>
-		/// This is the name of the XML attribute that stores the moniker of Connector1 in a serialized monikerized instance.
+		/// This is the name of the XML attribute that stores the moniker of RelacionHerencia in a serialized monikerized instance.
 		/// </summary>
 		public override string MonikerAttributeName
 		{
@@ -15906,16 +15935,16 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region Read Methods
 		/// <summary>
-		/// Public Read() method that deserializes one Connector1 instance from XML.
+		/// Public Read() method that deserializes one RelacionHerencia instance from XML.
 		/// </summary>
 		/// <remarks>
 		/// When this method is called, caller guarantees that the passed-in XML reader is positioned at the open XML tag
-		/// of the Connector1 element that is about to be deserialized. 
+		/// of the RelacionHerencia element that is about to be deserialized. 
 		/// The method needs to ensure that when it returns, the reader is positioned at the open XML tag of the next sibling element,
 		/// or the close tag of the parent element (or EOF).
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">In-memory Connector1 instance that will get the deserialized data.</param>
+		/// <param name="element">In-memory RelacionHerencia instance that will get the deserialized data.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		public override void Read(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlReader reader)
 		{
@@ -15967,8 +15996,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region TryCreateInstance
 		/// <summary>
-		/// This method creates a correct instance of Connector1 based on the tag currently pointed by the reader. If the reader
-		/// is positioned at a serialized Connector1, a new Connector1 instance will be created in the given partition, otherwise 
+		/// This method creates a correct instance of RelacionHerencia based on the tag currently pointed by the reader. If the reader
+		/// is positioned at a serialized RelacionHerencia, a new RelacionHerencia instance will be created in the given partition, otherwise 
 		/// null is returned.
 		/// </summary>
 		/// <remarks>
@@ -15978,7 +16007,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
 		/// <param name="partition">Partition in which new elements should be created.</param>	
-		/// <returns>Created Connector1 instance, or null if the reader is not pointing to a serialized Connector1 instance.</returns>
+		/// <returns>Created RelacionHerencia instance, or null if the reader is not pointing to a serialized RelacionHerencia instance.</returns>
 		public override DslModeling::ModelElement TryCreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			#region Check Parameters
@@ -15998,18 +16027,18 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.XmlTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "Connector1" instance.
+				{	// New "RelacionHerencia" instance.
 					result = this.CreateInstance(serializationContext, reader, partition);
 				}
 				else
-				{	// Check for derived classes of "Connector1".
+				{	// Check for derived classes of "RelacionHerencia".
 					if (this.derivedClasses == null)
 						this.ConstructDerivedClassesLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert (this.derivedClasses != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClasses.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class instance.
-						Connector1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as Connector1Serializer;
+						RelacionHerenciaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as RelacionHerenciaSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateInstance(serializationContext, reader, partition);
 					}
@@ -16020,8 +16049,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 	
 		/// <summary>
-		/// This method creates an instance of Connector1 based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
-		/// to be pointed at a serialized instance of Connector1.
+		/// This method creates an instance of RelacionHerencia based on the tag currently pointed by the reader. The reader is guaranteed (by the caller)
+		/// to be pointed at a serialized instance of RelacionHerencia.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the ModelRoot instance being read. This method should
@@ -16029,8 +16058,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </remarks>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="reader">XmlReader to read serialized data from.</param>
-		/// <param name="partition">Partition in which new Connector1 instance should be created.</param>	
-		/// <returns>Created Connector1 instance.</returns>
+		/// <param name="partition">Partition in which new RelacionHerencia instance should be created.</param>	
+		/// <returns>Created RelacionHerencia instance.</returns>
 		protected override DslModeling::ModelElement CreateInstance(DslModeling::SerializationContext serializationContext, global::System.Xml.XmlReader reader, DslModeling::Partition partition)
 		{
 			string idStr = reader.GetAttribute ("Id");
@@ -16046,7 +16075,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				{
 					id = new global::System.Guid (idStr);
 				}
-				return new Connector1(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
+				return new RelacionHerencia(partition, new DslModeling::PropertyAssignment(DslModeling::ElementFactory.IdPropertyAssignment, id));
 			}
 			catch (global::System.ArgumentNullException /* anEx */)
 			{	
@@ -16064,12 +16093,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 	
 		/// <summary>
-		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from Connector1, created on demand.
+		/// Stores a mapping from XmlTagName to DomainClassInfo that derives from RelacionHerencia, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClasses;
 	
 		/// <summary>
-		/// Construct the apping from XmlTagName to DomainClassInfo that derives from Connector1.
+		/// Construct the apping from XmlTagName to DomainClassInfo that derives from RelacionHerencia.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -16078,7 +16107,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			global::System.Diagnostics.Debug.Assert(this.derivedClasses == null); // Shouldn't construct the table more than once.
 			this.derivedClasses = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(Connector1.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(RelacionHerencia.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -16110,7 +16139,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region TryCreateMonikerInstance
 		/// <summary>
-		/// This method creates a Moniker of the correct derived (including Connector1 itself) instance of Connector1 based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of the correct derived (including RelacionHerencia itself) instance of RelacionHerencia based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -16144,18 +16173,18 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				string localName = reader.LocalName;
 				if (string.Compare (localName, this.MonikerTagName, global::System.StringComparison.CurrentCulture) == 0)
-				{	// New "Connector1" moniker instance.
+				{	// New "RelacionHerencia" moniker instance.
 					result = this.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 				}
 				else
-				{	// Check for derived classes of "Connector1".
+				{	// Check for derived classes of "RelacionHerencia".
 					if (this.derivedClassMonikers == null)
 						this.ConstructDerivedClassMonikersLookupTable(serializationContext, partition.DomainDataDirectory);
 					global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers != null);
 					DslModeling::DomainClassInfo derivedClass = null;
 					if (this.derivedClassMonikers.TryGetValue (localName, out derivedClass) && derivedClass != null)
 					{	// New derived class moniker instance.
-						Connector1Serializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as Connector1Serializer;
+						RelacionHerenciaSerializer derivedSerializer = serializationContext.Directory.GetSerializer(derivedClass.Id) as RelacionHerenciaSerializer;
 						global::System.Diagnostics.Debug.Assert(derivedSerializer != null, "Cannot find serializer for " + derivedClass.Name + "!");
 						result = derivedSerializer.CreateMonikerInstance(serializationContext, reader, sourceRolePlayer, relDomainClassId, partition);
 					}
@@ -16166,7 +16195,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		/// <summary>
-		/// This method creates a Moniker of Connector1 based on the tag currently pointed by the reader.
+		/// This method creates a Moniker of RelacionHerencia based on the tag currently pointed by the reader.
 		/// </summary>
 		/// <remarks>
 		/// The caller will guarantee that the reader is positioned at open XML tag of the next element being read. This method should
@@ -16191,7 +16220,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{	// Normalize the Id.
 				global::System.Guid id = new global::System.Guid(monikerString);
 				monikerString = id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
-				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, Connector1.DomainClassId, partition.Store), partition.Store);
+				DslModeling::Moniker result = new DslModeling::Moniker(new DslModeling::MonikerKey(monikerString, relDomainClassId, RelacionHerencia.DomainClassId, partition.Store), partition.Store);
 				// Set location info if possible.
 				result.Location = serializationContext.Location;
 				global::System.Xml.IXmlLineInfo xmlLineInfo = reader as global::System.Xml.IXmlLineInfo;
@@ -16215,12 +16244,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 	
 		/// <summary>
-		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from Connector1, created on demand.
+		/// Stores a mapping from Moniker Xml tag name to DomainClassInfo that derives from RelacionHerencia, created on demand.
 		/// </summary>
 		private global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> derivedClassMonikers;
 	
 		/// <summary>
-		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from Connector1.
+		/// Construct the mapping from Moniker Xml tag name to DomainClassInfo that derives from RelacionHerencia.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
 		/// <param name="domainDataDirectory">DomainDataDirectory to be used to discover all derived classes.</param>
@@ -16229,7 +16258,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			global::System.Diagnostics.Debug.Assert(this.derivedClassMonikers == null); // Shouldn't construct the table more than once.
 			this.derivedClassMonikers = new global::System.Collections.Generic.Dictionary<string, DslModeling::DomainClassInfo> (global::System.StringComparer.CurrentCulture);
 	
-			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(Connector1.DomainClassId);
+			DslModeling::DomainClassInfo thisClass = domainDataDirectory.GetDomainClass(RelacionHerencia.DomainClassId);
 			global::System.Diagnostics.Debug.Assert(thisClass != null, "Cannot find DomainClassInfo for ModelRoot!");
 	
 			global::System.Collections.ObjectModel.ReadOnlyCollection<DslModeling::DomainClassInfo> descendents = thisClass.AllDescendants;
@@ -16255,13 +16284,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region Write Methods
 		/// <summary>
-		/// Public WriteMoniker() method that writes a monikerized Connector1 instance into XML.
+		/// Public WriteMoniker() method that writes a monikerized RelacionHerencia instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">Connector1 instance to be monikerized.</param>
+		/// <param name="element">RelacionHerencia instance to be monikerized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
-		/// <param name="sourceRolePlayer">Source element that references the Connector1 instance being monikerized.</param>
-		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the Connector1 instance being monikerized.</param>
+		/// <param name="sourceRolePlayer">Source element that references the RelacionHerencia instance being monikerized.</param>
+		/// <param name="relSerializer">Serializer that handles the relationship connecting the source element to the RelacionHerencia instance being monikerized.</param>
 		public override void WriteMoniker(DslModeling::SerializationContext serializationContext, DslModeling::ModelElement element, global::System.Xml.XmlWriter writer, DslModeling::ModelElement sourceRolePlayer, DslModeling::DomainRelationshipXmlSerializer relSerializer)
 		{
 			#region Check Parameters
@@ -16290,10 +16319,10 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		/// <summary>
-		/// Public Write() method that serializes one Connector1 instance into XML.
+		/// Public Write() method that serializes one RelacionHerencia instance into XML.
 		/// </summary>
 		/// <param name="serializationContext">Serialization context.</param>
-		/// <param name="element">Connector1 instance to be serialized.</param>
+		/// <param name="element">RelacionHerencia instance to be serialized.</param>
 		/// <param name="writer">XmlWriter to write serialized data to.</param>
 		/// <param name="rootElementSettings">
 		/// The root element settings if the passed in element is serialized as a root element in the XML. The root element contains additional
@@ -16353,11 +16382,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 		#region Moniker Support
 		/// <summary>
-		/// This method calculates a moniker to a given Connector1 instance.
+		/// This method calculates a moniker to a given RelacionHerencia instance.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">Connector1 instance to calculate qualified name for.</param>
-		/// <returns>A fully qualified string moniker to the Connector1 instance.</returns>
+		/// <param name="element">RelacionHerencia instance to calculate qualified name for.</param>
+		/// <returns>A fully qualified string moniker to the RelacionHerencia instance.</returns>
 		public override string CalculateQualifiedName(DslModeling::DomainXmlSerializerDirectory directory, DslModeling::ModelElement element)
 		{
 			#region Check Parameters
@@ -16369,8 +16398,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				throw new global::System.ArgumentNullException("element");
 			#endregion	
 			
-			Connector1 instance = element as Connector1;
-			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of Connector1!");
+			RelacionHerencia instance = element as RelacionHerencia;
+			global::System.Diagnostics.Debug.Assert(instance != null, "Expecting an instance of RelacionHerencia!");
 	
 			return instance.Id.ToString("D", global::System.Globalization.CultureInfo.CurrentCulture);
 		}
@@ -16381,7 +16410,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// returns empty string.
 		/// </summary>
 		/// <param name="directory">Directory to look up serializer based on model element type.</param>
-		/// <param name="element">Connector1 instance to get moniker qualifier from.</param>
+		/// <param name="element">RelacionHerencia instance to get moniker qualifier from.</param>
 		/// <returns>
 		/// Value of this element's moniker qualifier property, if it has one, or the value of the container's moniker qualifier property. Or empty string if this
 		/// element is not monikerized using standard /qualifier/key mechanism.
@@ -17052,7 +17081,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionAsociacion.DomainClassId, typeof(RelacionAsociacionSerializer)));
 					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionAgregacionInclusion.DomainClassId, typeof(RelacionAgregacionInclusionSerializer)));
 					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionAgregacionNoInclusion.DomainClassId, typeof(RelacionAgregacionNoInclusionSerializer)));
-					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(Connector1.DomainClassId, typeof(Connector1Serializer)));
+					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(RelacionHerencia.DomainClassId, typeof(RelacionHerenciaSerializer)));
 					MBRDCMDMISerializationBehavior.serializerTypes.Add(new DslModeling::DomainXmlSerializerDirectoryEntry(MBRDCMDMIDiagram.DomainClassId, typeof(MBRDCMDMIDiagramSerializer)));
 					#endregion
 					
