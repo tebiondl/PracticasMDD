@@ -34,7 +34,7 @@
         <DomainClassMoniker Name="Clase" />
       </BaseClass>
       <Properties>
-        <DomainProperty Id="2451da2a-e945-4f82-9307-2b18b8f5181d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal.Nombre Clase" Name="nombreClase" DisplayName="Nombre Clase">
+        <DomainProperty Id="2451da2a-e945-4f82-9307-2b18b8f5181d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal.Nombre Clase" Name="nombreClase" DisplayName="Nombre Clase" DefaultValue="Nombre Clase">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -148,12 +148,17 @@
     </DomainRelationship>
     <DomainRelationship Id="c4464b28-088e-4240-a8b9-fdf26de9a9b7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP" Name="CPReferenciasCP" DisplayName="CPReferencias CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
       <Properties>
-        <DomainProperty Id="1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen" Name="CardinalidadOrigen" DisplayName="Cardinalidad Origen">
+        <DomainProperty Id="1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen" Name="CardinalidadOrigen" DisplayName="Cardinalidad Origen" DefaultValue="1..1">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="e283e3d4-33d6-4215-8e49-d4b54df5f964" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino" Name="CardinalidadDestino" DisplayName="Cardinalidad Destino">
+        <DomainProperty Id="e283e3d4-33d6-4215-8e49-d4b54df5f964" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino" Name="CardinalidadDestino" DisplayName="Cardinalidad Destino" DefaultValue="1..1">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="80ee5d74-e13d-4b61-81ad-aaacadbc3a53" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
           <Type>
             <ExternalTypeMoniker Name="/System/String" />
           </Type>
@@ -238,6 +243,78 @@
         </DomainRole>
       </Target>
     </DomainRelationship>
+    <DomainRelationship Id="a71e4787-773b-4588-924a-2fb92d33661d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP" Name="CPAgregacionInclusivaCP" DisplayName="CPAgregacion Inclusiva CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="d8fe1fea-8250-4c20-8154-9dfcf74740a6" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="1..1">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="99909fab-aa3a-4f72-9d31-ee58d449fe5e" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="6834e904-5069-4acb-8e16-ba715a570055" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipal" Name="OrigenClasePrincipal" DisplayName="Origen Clase Principal" PropertyName="DestinoClasePrincipal1" PropertyDisplayName="Destino Clase Principal1">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="8ca86796-8b5d-4a76-b8be-803a3485d5f7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipal" Name="DestinoClasePrincipal" DisplayName="Destino Clase Principal" PropertyName="OrigenClasePrincipal1" Multiplicity="One" PropertyDisplayName="Origen Clase Principal1">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="28c35ab3-7941-4efd-8807-49b473ef091a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP" Name="CPAgregacionNoInclusivaCP" DisplayName="CPAgregacion No Inclusiva CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Properties>
+        <DomainProperty Id="8ae2aac7-65fa-431d-bcaa-2e00e4066359" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="1..1">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+        <DomainProperty Id="a9d3ab85-6e4a-4c3a-b7f1-30c26f7eede6" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
+          <Type>
+            <ExternalTypeMoniker Name="/System/String" />
+          </Type>
+        </DomainProperty>
+      </Properties>
+      <Source>
+        <DomainRole Id="08e8583a-2480-49f3-ba70-e91acc6ef993" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipal" Name="OrigenClasePrincipal" DisplayName="Origen Clase Principal" PropertyName="DestinoClasePrincipal2" PropertyDisplayName="Destino Clase Principal2">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="3eaab186-1ae2-4e2c-a2c4-cf140b91c29c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipal" Name="DestinoClasePrincipal" DisplayName="Destino Clase Principal" PropertyName="OrigenClasePrincipal2" Multiplicity="ZeroOne" PropertyDisplayName="Origen Clase Principal2">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
+    <DomainRelationship Id="791c396c-b46d-4a39-a953-769e85856602" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP" Name="CPHerenciaCP" DisplayName="CPHerencia CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
+      <Source>
+        <DomainRole Id="f4f2d515-dd22-4329-809b-b4705501afa0" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipal" Name="OrigenClasePrincipal" DisplayName="Origen Clase Principal" PropertyName="DestinoClasePrincipal3" PropertyDisplayName="Destino Clase Principal3">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Source>
+      <Target>
+        <DomainRole Id="71d6c3ca-22fd-46de-bb60-3d2bbba9b221" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipal" Name="DestinoClasePrincipal" DisplayName="Destino Clase Principal" PropertyName="OrigenClasePrincipal3" Multiplicity="One" PropertyDisplayName="Origen Clase Principal3">
+          <RolePlayer>
+            <DomainClassMoniker Name="ClasePrincipal" />
+          </RolePlayer>
+        </DomainRole>
+      </Target>
+    </DomainRelationship>
   </Relationships>
   <Types>
     <ExternalType Name="DateTime" Namespace="System" />
@@ -266,16 +343,37 @@
       <Compartment Name="operaciones" Title="Operaciones" />
     </CompartmentShape>
     <CompartmentShape Id="af5a483a-3e1f-4152-b493-cf92b676625d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CompartmentShape1" Name="CompartmentShape1" DisplayName="Compartment Shape1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Compartment Shape1" InitialHeight="1" Geometry="Rectangle">
-      <Compartment Name="parametros" />
+      <Compartment Name="parametros" Title="Parámetros" />
     </CompartmentShape>
   </Shapes>
   <Connectors>
-    <Connector Id="6bc285a9-9068-4991-9bc7-17bfa621639c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Connector1">
+    <Connector Id="6bc285a9-9068-4991-9bc7-17bfa621639c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion" Name="RelacionAsociacion" DisplayName="Relacion Asociacion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Asociacion">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="1..1" />
       </ConnectorHasDecorators>
       <ConnectorHasDecorators Position="TargetTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="CardD" DisplayName="Card D" DefaultText="1..1" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="0ec163de-3d91-49d8-8506-0d3bd0a6f136" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion" Name="RelacionAgregacionInclusion" DisplayName="Relacion Agregacion Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion Inclusion">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="CardO" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\DepFRomb.bmp" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="a820673e-1c86-4de8-80d3-2ffdb7dd5d1b" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion" Name="RelacionAgregacionNoInclusion" DisplayName="Relacion Agregacion No Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion No Inclusion">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="" />
+      </ConnectorHasDecorators>
+      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
+        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\DepDRomb.bmp" />
+      </ConnectorHasDecorators>
+    </Connector>
+    <Connector Id="71f078a2-e8b6-42f2-a69f-f224f18b84d7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1" Name="Connector1" DisplayName="Connector1" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Connector1">
+      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
+        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\HeFlch.bmp" />
       </ConnectorHasDecorators>
     </Connector>
   </Connectors>
@@ -324,6 +422,15 @@
           <XmlRelationshipData UseFullForm="true" RoleElementName="operacion">
             <DomainRelationshipMoniker Name="ClasePrincipalTieneOperacion" />
           </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="destinoClasePrincipal1">
+            <DomainRelationshipMoniker Name="CPAgregacionInclusivaCP" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="destinoClasePrincipal2">
+            <DomainRelationshipMoniker Name="CPAgregacionNoInclusivaCP" />
+          </XmlRelationshipData>
+          <XmlRelationshipData UseFullForm="true" RoleElementName="destinoClasePrincipal3">
+            <DomainRelationshipMoniker Name="CPHerenciaCP" />
+          </XmlRelationshipData>
         </ElementData>
       </XmlClassData>
       <XmlClassData TypeName="ClasePrincipalShape" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCompartmentShape1" ElementName="clasePrincipalShape" MonikerTypeName="MonikerCompartmentShape1">
@@ -338,10 +445,13 @@
           <XmlPropertyData XmlName="cardinalidadDestino">
             <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadDestino" />
           </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreRelacion">
+            <DomainPropertyMoniker Name="CPReferenciasCP/nombreRelacion" />
+          </XmlPropertyData>
         </ElementData>
       </XmlClassData>
-      <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="connector1" MonikerTypeName="MonikerConnector1">
-        <ConnectorMoniker Name="Connector1" />
+      <XmlClassData TypeName="RelacionAsociacion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="relacionAsociacion" MonikerTypeName="MonikerConnector1">
+        <ConnectorMoniker Name="RelacionAsociacion" />
       </XmlClassData>
       <XmlClassData TypeName="Identificador" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerIdentificador" ElementName="identificador" MonikerTypeName="MonikerIdentificador">
         <DomainClassMoniker Name="Identificador" />
@@ -402,6 +512,40 @@
       <XmlClassData TypeName="CompartmentShape1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCompartmentShape1" ElementName="compartmentShape1" MonikerTypeName="MonikerCompartmentShape1">
         <CompartmentShapeMoniker Name="CompartmentShape1" />
       </XmlClassData>
+      <XmlClassData TypeName="CPAgregacionInclusivaCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPAgregacionInclusivaCP" ElementName="cPAgregacionInclusivaCP" MonikerTypeName="MonikerCPAgregacionInclusivaCP">
+        <DomainRelationshipMoniker Name="CPAgregacionInclusivaCP" />
+        <ElementData>
+          <XmlPropertyData XmlName="cardinalidadO">
+            <DomainPropertyMoniker Name="CPAgregacionInclusivaCP/CardinalidadO" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreRelacion">
+            <DomainPropertyMoniker Name="CPAgregacionInclusivaCP/nombreRelacion" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="CPAgregacionNoInclusivaCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPAgregacionNoInclusivaCP" ElementName="cPAgregacionNoInclusivaCP" MonikerTypeName="MonikerCPAgregacionNoInclusivaCP">
+        <DomainRelationshipMoniker Name="CPAgregacionNoInclusivaCP" />
+        <ElementData>
+          <XmlPropertyData XmlName="cardinalidadO">
+            <DomainPropertyMoniker Name="CPAgregacionNoInclusivaCP/CardinalidadO" />
+          </XmlPropertyData>
+          <XmlPropertyData XmlName="nombreRelacion">
+            <DomainPropertyMoniker Name="CPAgregacionNoInclusivaCP/nombreRelacion" />
+          </XmlPropertyData>
+        </ElementData>
+      </XmlClassData>
+      <XmlClassData TypeName="RelacionAgregacionInclusion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerRelacionAgregacionInclusion" ElementName="relacionAgregacionInclusion" MonikerTypeName="MonikerRelacionAgregacionInclusion">
+        <ConnectorMoniker Name="RelacionAgregacionInclusion" />
+      </XmlClassData>
+      <XmlClassData TypeName="RelacionAgregacionNoInclusion" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerRelacionAgregacionNoInclusion" ElementName="relacionAgregacionNoInclusion" MonikerTypeName="MonikerRelacionAgregacionNoInclusion">
+        <ConnectorMoniker Name="RelacionAgregacionNoInclusion" />
+      </XmlClassData>
+      <XmlClassData TypeName="CPHerenciaCP" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerCPHerenciaCP" ElementName="cPHerenciaCP" MonikerTypeName="MonikerCPHerenciaCP">
+        <DomainRelationshipMoniker Name="CPHerenciaCP" />
+      </XmlClassData>
+      <XmlClassData TypeName="Connector1" MonikerAttributeName="" SerializeId="true" MonikerElementName="monikerConnector1" ElementName="connector1" MonikerTypeName="MonikerConnector1">
+        <ConnectorMoniker Name="Connector1" />
+      </XmlClassData>
     </ClassData>
   </XmlSerializationBehavior>
   <ExplorerBehavior Name="MBRDCMDMIExplorer" />
@@ -409,6 +553,63 @@
     <ConnectionBuilder Name="GeneradorCPReferenciasCP">
       <LinkConnectDirective>
         <DomainRelationshipMoniker Name="CPReferenciasCP" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="GeneradorCPAgregacionInclusivaCP">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CPAgregacionInclusivaCP" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="GeneradorCPAgregacionNoInclusivaCP">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CPAgregacionNoInclusivaCP" />
+        <SourceDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </SourceDirectives>
+        <TargetDirectives>
+          <RolePlayerConnectDirective>
+            <AcceptingClass>
+              <DomainClassMoniker Name="ClasePrincipal" />
+            </AcceptingClass>
+          </RolePlayerConnectDirective>
+        </TargetDirectives>
+      </LinkConnectDirective>
+    </ConnectionBuilder>
+    <ConnectionBuilder Name="GeneradorCPHerenciaCP">
+      <LinkConnectDirective>
+        <DomainRelationshipMoniker Name="CPHerenciaCP" />
         <SourceDirectives>
           <RolePlayerConnectDirective>
             <AcceptingClass>
@@ -500,10 +701,10 @@
     </ShapeMaps>
     <ConnectorMaps>
       <ConnectorMap>
-        <ConnectorMoniker Name="Connector1" />
+        <ConnectorMoniker Name="RelacionAsociacion" />
         <DomainRelationshipMoniker Name="CPReferenciasCP" />
         <DecoratorMap>
-          <TextDecoratorMoniker Name="Connector1/CardD" />
+          <TextDecoratorMoniker Name="RelacionAsociacion/CardD" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadDestino" />
@@ -511,13 +712,41 @@
           </PropertyDisplayed>
         </DecoratorMap>
         <DecoratorMap>
-          <TextDecoratorMoniker Name="Connector1/CardO" />
+          <TextDecoratorMoniker Name="RelacionAsociacion/CardO" />
           <PropertyDisplayed>
             <PropertyPath>
               <DomainPropertyMoniker Name="CPReferenciasCP/CardinalidadOrigen" />
             </PropertyPath>
           </PropertyDisplayed>
         </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="RelacionAgregacionInclusion" />
+        <DomainRelationshipMoniker Name="CPAgregacionInclusivaCP" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="RelacionAgregacionInclusion/CardO" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CPAgregacionInclusivaCP/CardinalidadO" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="RelacionAgregacionNoInclusion" />
+        <DomainRelationshipMoniker Name="CPAgregacionNoInclusivaCP" />
+        <DecoratorMap>
+          <TextDecoratorMoniker Name="RelacionAgregacionNoInclusion/CardO" />
+          <PropertyDisplayed>
+            <PropertyPath>
+              <DomainPropertyMoniker Name="CPAgregacionNoInclusivaCP/CardinalidadO" />
+            </PropertyPath>
+          </PropertyDisplayed>
+        </DecoratorMap>
+      </ConnectorMap>
+      <ConnectorMap>
+        <ConnectorMoniker Name="Connector1" />
+        <DomainRelationshipMoniker Name="CPHerenciaCP" />
       </ConnectorMap>
     </ConnectorMaps>
   </Diagram>
@@ -534,8 +763,17 @@
       </ElementTool>
     </ToolboxTab>
     <ToolboxTab TabText="Relaciones">
-      <ConnectionTool Name="RATool" ToolboxIcon="Resources\RAItem.bmp" Caption="RATool" Tooltip="Crear relación de asociación" HelpKeyword="RATool">
+      <ConnectionTool Name="RelacionAsociacion" ToolboxIcon="Resources\RAItem.bmp" Caption="Relacion Asociacion" Tooltip="Crear relación de asociación" HelpKeyword="RelacionAsociacion">
         <ConnectionBuilderMoniker Name="MBRDCMDMI/GeneradorCPReferenciasCP" />
+      </ConnectionTool>
+      <ConnectionTool Name="RelacionAgregacionInclusiva" ToolboxIcon="Resources\RAgIncItem.bmp" Caption="Relacion Agregacion Inclusiva" Tooltip="Crear Relacion de Agregacion Inclusiva" HelpKeyword="RelacionAgregacionInclusiva">
+        <ConnectionBuilderMoniker Name="MBRDCMDMI/GeneradorCPAgregacionInclusivaCP" />
+      </ConnectionTool>
+      <ConnectionTool Name="RelacionAgregacionRelacional" ToolboxIcon="Resources\RAgReItem.bmp" Caption="Relacion Agregacion Relacional" Tooltip="Crear Relacion de Agregacion Relacional" HelpKeyword="RelacionAgregacionRelacional">
+        <ConnectionBuilderMoniker Name="MBRDCMDMI/GeneradorCPAgregacionNoInclusivaCP" />
+      </ConnectionTool>
+      <ConnectionTool Name="RelacionHerencia" ToolboxIcon="Resources\RHItem.bmp" Caption="Relacion Herencia" Tooltip="Relacion Herencia" HelpKeyword="RelacionHerencia">
+        <ConnectionBuilderMoniker Name="MBRDCMDMI/GeneradorCPHerenciaCP" />
       </ConnectionTool>
     </ToolboxTab>
     <Validation UsesMenu="false" UsesOpen="false" UsesSave="false" UsesLoad="false" />

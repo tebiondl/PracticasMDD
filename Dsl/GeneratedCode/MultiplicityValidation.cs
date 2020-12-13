@@ -30,6 +30,22 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 						"ClasePrincipal", "", "Identificador"),
 						"DSL0001", this);
 			}
+			if (this.OrigenClasePrincipal1 == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClasePrincipal", "", "OrigenClasePrincipal1"),
+						"DSL0001", this);
+			}
+			if (this.OrigenClasePrincipal3 == null)
+			{
+				context.LogViolation(DslValidation::ViolationType.Error,
+					string.Format(global::System.Globalization.CultureInfo.CurrentCulture, 
+						UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel.SingletonResourceManager.GetString("MinimumMultiplicityMissingLink"), 
+						"ClasePrincipal", "", "OrigenClasePrincipal3"),
+						"DSL0001", this);
+			}
 		} // ValidateClasePrincipalMultiplicity
 	} // class ClasePrincipal
 } // UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI

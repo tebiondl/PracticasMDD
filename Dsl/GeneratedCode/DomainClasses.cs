@@ -596,6 +596,114 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 		}
 		#endregion
+		#region DestinoClasePrincipal1 opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal1.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipal
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClasePrincipal> DestinoClasePrincipal1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			}
+		}
+		#endregion
+		#region OrigenClasePrincipal1 opposite domain role accessor
+		/// <summary>
+		/// Gets or sets OrigenClasePrincipal1.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipal
+		/// </summary>
+		public virtual ClasePrincipal OrigenClasePrincipal1
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region DestinoClasePrincipal2 opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal2.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipal
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClasePrincipal> DestinoClasePrincipal2
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			}
+		}
+		#endregion
+		#region OrigenClasePrincipal2 opposite domain role accessor
+		/// <summary>
+		/// Gets or sets OrigenClasePrincipal2.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipal
+		/// </summary>
+		public virtual ClasePrincipal OrigenClasePrincipal2
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+		#endregion
+		#region DestinoClasePrincipal3 opposite domain role accessor
+		
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal3.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipal
+		/// </summary>
+		public virtual DslModeling::LinkedElementCollection<ClasePrincipal> DestinoClasePrincipal3
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipalDomainRoleId);
+			}
+		}
+		#endregion
+		#region OrigenClasePrincipal3 opposite domain role accessor
+		/// <summary>
+		/// Gets or sets OrigenClasePrincipal3.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipal
+		/// </summary>
+		public virtual ClasePrincipal OrigenClasePrincipal3
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return DslModeling::DomainRoleInfo.GetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetLinkedElement(this, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+		#endregion
 		#region ElementGroupPrototype Merge methods
 		/// <summary>
 		/// Returns a value indicating whether the source element represented by the

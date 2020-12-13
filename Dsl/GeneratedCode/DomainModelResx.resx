@@ -317,6 +317,14 @@
     <value>Cardinalidad Destino</value>
     <comment>DisplayName for DomainProperty &apos;CardinalidadDestino&apos; on DomainClass &apos;CPReferenciasCP&apos;</comment>
   </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/nombreRelacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPReferenciasCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/nombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPReferenciasCP&apos;</comment>
+  </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/OrigenClasePrincipal.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.OrigenClasePrincipal</value>
     <comment>Description for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPReferenciasCP&apos;</comment>
@@ -469,6 +477,134 @@
     <value>Operacion</value>
     <comment>PropertyDisplayName for DomainRole &apos;Parametro&apos; on DomainRelationship &apos;OperacionTieneParametro&apos;</comment>
   </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP</value>
+    <comment>Description for DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DisplayName" xml:space="preserve">
+    <value>CPAgregacion Inclusiva CP</value>
+    <comment>DisplayName for DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Cardinalidad O</value>
+    <comment>Description for DomainProperty &apos;CardinalidadO&apos; on DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.DisplayName" xml:space="preserve">
+    <value>Cardinalidad O</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalidadO&apos; on DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/nombreRelacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/nombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipal</value>
+    <comment>Description for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Origen Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Destino Clase Principal1</value>
+    <comment>PropertyDisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipal</value>
+    <comment>Description for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Destino Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Origen Clase Principal1</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP</value>
+    <comment>Description for DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DisplayName" xml:space="preserve">
+    <value>CPAgregacion No Inclusiva CP</value>
+    <comment>DisplayName for DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Cardinalidad O</value>
+    <comment>Description for DomainProperty &apos;CardinalidadO&apos; on DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.DisplayName" xml:space="preserve">
+    <value>Cardinalidad O</value>
+    <comment>DisplayName for DomainProperty &apos;CardinalidadO&apos; on DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/nombreRelacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Nombre Relacion</value>
+    <comment>Description for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/nombreRelacion.DisplayName" xml:space="preserve">
+    <value>Nombre Relacion</value>
+    <comment>DisplayName for DomainProperty &apos;nombreRelacion&apos; on DomainClass &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipal</value>
+    <comment>Description for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Origen Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Destino Clase Principal2</value>
+    <comment>PropertyDisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipal</value>
+    <comment>Description for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Destino Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Origen Clase Principal2</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPAgregacionNoInclusivaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP</value>
+    <comment>Description for DomainClass &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DisplayName" xml:space="preserve">
+    <value>CPHerencia CP</value>
+    <comment>DisplayName for DomainClass &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipal</value>
+    <comment>Description for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Origen Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Destino Clase Principal3</value>
+    <comment>PropertyDisplayName for DomainRole &apos;OrigenClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipal</value>
+    <comment>Description for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.DisplayName" xml:space="preserve">
+    <value>Destino Clase Principal</value>
+    <comment>DisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.PropertyDisplayName" xml:space="preserve">
+    <value>Origen Clase Principal3</value>
+    <comment>PropertyDisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
+  </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape</value>
     <comment>Description for DomainClass &apos;ClasePrincipalShape&apos;</comment>
@@ -502,8 +638,44 @@
     <comment>DisplayName for DomainClass &apos;CompartmentShape1&apos;</comment>
   </data>
   <data name="CompartmentShape1parametrosTitle" xml:space="preserve">
-    <value></value>
+    <value>Parámetros</value>
     <comment>Compartment title</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion</value>
+    <comment>Description for DomainClass &apos;RelacionAsociacion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion.DisplayName" xml:space="preserve">
+    <value>Relacion Asociacion</value>
+    <comment>DisplayName for DomainClass &apos;RelacionAsociacion&apos;</comment>
+  </data>
+  <data name="RelacionAsociacionCardODefaultText" xml:space="preserve">
+    <value>1..1</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="RelacionAsociacionCardDDefaultText" xml:space="preserve">
+    <value>1..1</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion</value>
+    <comment>Description for DomainClass &apos;RelacionAgregacionInclusion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion.DisplayName" xml:space="preserve">
+    <value>Relacion Agregacion Inclusion</value>
+    <comment>DisplayName for DomainClass &apos;RelacionAgregacionInclusion&apos;</comment>
+  </data>
+  <data name="RelacionAgregacionInclusionCardODefaultText" xml:space="preserve">
+    <value>CardO</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion</value>
+    <comment>Description for DomainClass &apos;RelacionAgregacionNoInclusion&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion.DisplayName" xml:space="preserve">
+    <value>Relacion Agregacion No Inclusion</value>
+    <comment>DisplayName for DomainClass &apos;RelacionAgregacionNoInclusion&apos;</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1</value>
@@ -512,14 +684,6 @@
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.DisplayName" xml:space="preserve">
     <value>Connector1</value>
     <comment>DisplayName for DomainClass &apos;Connector1&apos;</comment>
-  </data>
-  <data name="Connector1CardODefaultText" xml:space="preserve">
-    <value>1..1</value>
-    <comment>Text decorator default text</comment>
-  </data>
-  <data name="Connector1CardDDefaultText" xml:space="preserve">
-    <value>1..1</value>
-    <comment>Text decorator default text</comment>
   </data>
   <data name="FormatList" xml:space="preserve">
     <value>MBRDCMDMI (*.MBRDCMDMI_DSLPracticaMDDIPS)|*.MBRDCMDMI_DSLPracticaMDDIPS</value>
@@ -553,12 +717,36 @@
     <value>Relaciones</value>
     <comment>Toolbox item tab name</comment>
   </data>
-  <data name="RAToolToolboxItem" xml:space="preserve">
-    <value>RATool</value>
+  <data name="RelacionAsociacionToolboxItem" xml:space="preserve">
+    <value>Relacion Asociacion</value>
     <comment>Toolbox item name</comment>
   </data>
-  <data name="RAToolToolboxTooltip" xml:space="preserve">
+  <data name="RelacionAsociacionToolboxTooltip" xml:space="preserve">
     <value>Crear relación de asociación</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionAgregacionInclusivaToolboxItem" xml:space="preserve">
+    <value>Relacion Agregacion Inclusiva</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionAgregacionInclusivaToolboxTooltip" xml:space="preserve">
+    <value>Crear Relacion de Agregacion Inclusiva</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionAgregacionRelacionalToolboxItem" xml:space="preserve">
+    <value>Relacion Agregacion Relacional</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionAgregacionRelacionalToolboxTooltip" xml:space="preserve">
+    <value>Crear Relacion de Agregacion Relacional</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="RelacionHerenciaToolboxItem" xml:space="preserve">
+    <value>Relacion Herencia</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="RelacionHerenciaToolboxTooltip" xml:space="preserve">
+    <value>Relacion Herencia</value>
     <comment>Toolbox tooltip text</comment>
   </data>
   <data name="UnresolvedToolboxItem" xml:space="preserve">
@@ -686,12 +874,36 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="RelacionAgregacionInclusionIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\DepFRomb.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="RelacionAgregacionNoInclusionIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\DepDRomb.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="Connector1IconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\HeFlch.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
   <data name="ClaseToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClassItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
-  <data name="RAToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+  <data name="RelacionAsociacionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\RAItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionAgregacionInclusivaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\RAgIncItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionAgregacionRelacionalToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\RAgReItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="RelacionHerenciaToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\RHItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>
   </data>
 </root>

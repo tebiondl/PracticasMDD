@@ -303,6 +303,21 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP)
 			{
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP)
+			{
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP)
+			{
+				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion(this.Partition);
+				return newShape;
+			}
+			if(element is global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP)
+			{
 				global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1 newShape = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1(this.Partition);
 				return newShape;
 			}
@@ -318,7 +333,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		{
 			base.InitializeShapeFields(shapeFields);
 			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.DecoratorsInitialized += ClasePrincipalShapeDecoratorMap.OnDecoratorsInitialized;
-			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.DecoratorsInitialized += Connector1DecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion.DecoratorsInitialized += RelacionAsociacionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion.DecoratorsInitialized += RelacionAgregacionInclusionDecoratorMap.OnDecoratorsInitialized;
+			global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion.DecoratorsInitialized += RelacionAgregacionNoInclusionDecoratorMap.OnDecoratorsInitialized;
 		}
 		
 		/// <summary>
@@ -340,12 +357,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		}
 		
 		/// <summary>
-		/// Class containing decorator path traversal methods for Connector1.
+		/// Class containing decorator path traversal methods for RelacionAsociacion.
 		/// </summary>
-		internal static partial class Connector1DecoratorMap
+		internal static partial class RelacionAsociacionDecoratorMap
 		{
 			/// <summary>
-			/// Event handler called when decorator initialization is complete for Connector1.  Adds decorator mappings for this shape or connector.
+			/// Event handler called when decorator initialization is complete for RelacionAsociacion.  Adds decorator mappings for this shape or connector.
 			/// </summary>
 			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
 			{
@@ -360,11 +377,50 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			}
 		}
 		
+		/// <summary>
+		/// Class containing decorator path traversal methods for RelacionAgregacionInclusion.
+		/// </summary>
+		internal static partial class RelacionAgregacionInclusionDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for RelacionAgregacionInclusion.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.CardinalidadODomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardO").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
+		/// <summary>
+		/// Class containing decorator path traversal methods for RelacionAgregacionNoInclusion.
+		/// </summary>
+		internal static partial class RelacionAgregacionNoInclusionDecoratorMap
+		{
+			/// <summary>
+			/// Event handler called when decorator initialization is complete for RelacionAgregacionNoInclusion.  Adds decorator mappings for this shape or connector.
+			/// </summary>
+			public static void OnDecoratorsInitialized(object sender, global::System.EventArgs e)
+			{
+				DslDiagrams::ShapeElement shape = (DslDiagrams::ShapeElement)sender;
+				DslDiagrams::AssociatedPropertyInfo propertyInfo;
+				
+				propertyInfo = new DslDiagrams::AssociatedPropertyInfo(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.CardinalidadODomainPropertyId);
+				DslDiagrams::ShapeElement.FindDecorator(shape.Decorators, "CardO").AssociateValueWith(shape.Store, propertyInfo);
+			}
+		}
+		
 		#endregion
 		
 		#region Connect actions
 		private bool changingMouseAction;
-		private global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RAToolConnectAction rAToolConnectAction;
+		private global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacionConnectAction relacionAsociacionConnectAction;
+		private global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusivaConnectAction relacionAgregacionInclusivaConnectAction;
+		private global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionRelacionalConnectAction relacionAgregacionRelacionalConnectAction;
+		private global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerenciaConnectAction relacionHerenciaConnectAction;
 		/// <summary>
 		/// Virtual method to provide a filter when to select the mouse action
 		/// </summary>
@@ -387,14 +443,41 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			if(activeView != null)
 			{
 				DslDiagrams::MouseAction action = null;
-				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIToolboxHelper.RAToolFilterString))
+				if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIToolboxHelper.RelacionAsociacionFilterString))
 				{
-					if (this.rAToolConnectAction == null)
+					if (this.relacionAsociacionConnectAction == null)
 					{
-						this.rAToolConnectAction = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RAToolConnectAction(this);
-						this.rAToolConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+						this.relacionAsociacionConnectAction = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacionConnectAction(this);
+						this.relacionAsociacionConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
 					}
-					action = this.rAToolConnectAction;
+					action = this.relacionAsociacionConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIToolboxHelper.RelacionAgregacionInclusivaFilterString))
+				{
+					if (this.relacionAgregacionInclusivaConnectAction == null)
+					{
+						this.relacionAgregacionInclusivaConnectAction = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusivaConnectAction(this);
+						this.relacionAgregacionInclusivaConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.relacionAgregacionInclusivaConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIToolboxHelper.RelacionAgregacionRelacionalFilterString))
+				{
+					if (this.relacionAgregacionRelacionalConnectAction == null)
+					{
+						this.relacionAgregacionRelacionalConnectAction = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionRelacionalConnectAction(this);
+						this.relacionAgregacionRelacionalConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.relacionAgregacionRelacionalConnectAction;
+				} 
+				else if (SelectedToolboxItemSupportsFilterString(activeView, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIToolboxHelper.RelacionHerenciaFilterString))
+				{
+					if (this.relacionHerenciaConnectAction == null)
+					{
+						this.relacionHerenciaConnectAction = new global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerenciaConnectAction(this);
+						this.relacionHerenciaConnectAction.MouseActionDeactivated += new DslDiagrams::MouseAction.MouseActionDeactivatedEventHandler(OnConnectActionDeactivated);
+					}
+					action = this.relacionHerenciaConnectAction;
 				} 
 				else
 				{
@@ -453,10 +536,25 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			{
 				if(disposing)
 				{
-					if(this.rAToolConnectAction != null)
+					if(this.relacionAsociacionConnectAction != null)
 					{
-						this.rAToolConnectAction.Dispose();
-						this.rAToolConnectAction = null;
+						this.relacionAsociacionConnectAction.Dispose();
+						this.relacionAsociacionConnectAction = null;
+					}
+					if(this.relacionAgregacionInclusivaConnectAction != null)
+					{
+						this.relacionAgregacionInclusivaConnectAction.Dispose();
+						this.relacionAgregacionInclusivaConnectAction = null;
+					}
+					if(this.relacionAgregacionRelacionalConnectAction != null)
+					{
+						this.relacionAgregacionRelacionalConnectAction.Dispose();
+						this.relacionAgregacionRelacionalConnectAction = null;
+					}
+					if(this.relacionHerenciaConnectAction != null)
+					{
+						this.relacionHerenciaConnectAction.Dispose();
+						this.relacionHerenciaConnectAction = null;
 					}
 					this.UnsubscribeCompartmentItemsEvents();
 				}
@@ -515,6 +613,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddShapeParentExistRulePriority, InitiallyDisabled=true)]
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed partial class FixUpDiagram : FixUpDiagramBase
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
@@ -1074,6 +1175,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// so we can update the decorator host's bounds.
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP), InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP), InitiallyDisabled=true)]
 		internal sealed class DecoratorPropertyChanged : DslModeling::ChangeRule
 		{
 			[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity", Justification = "Generated code.")]
@@ -1083,7 +1186,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				
 				if (e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.CardinalidadDestinoDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.FindConnector1Decorator("CardD");
+					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion.FindRelacionAsociacionDecorator("CardD");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DomainClassId);
@@ -1091,10 +1194,26 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				}
 				else if (e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.CardinalidadOrigenDomainPropertyId)
 				{
-					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Connector1.FindConnector1Decorator("CardO");
+					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacion.FindRelacionAsociacionDecorator("CardO");
 					if(decorator != null)
 					{
 						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.CardinalidadODomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion.FindRelacionAgregacionInclusionDecorator("CardO");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DomainClassId);
+					}
+				}
+				else if (e.DomainProperty.Id == global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.CardinalidadODomainPropertyId)
+				{
+					DslDiagrams::Decorator decorator = global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion.FindRelacionAgregacionNoInclusionDecorator("CardO");
+					if(decorator != null)
+					{
+						decorator.UpdateDecoratorHostShapes(e.ModelElement, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DomainClassId);
 					}
 				}
 			}
@@ -1104,6 +1223,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// Reroute a connector when the role players of its underlying relationship change
 		/// </summary>
 		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
+		[DslModeling::RuleOn(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP), FireTime = DslModeling::TimeToFire.TopLevelCommit, Priority = DslDiagrams::DiagramFixupConstants.AddConnectionRulePriority, InitiallyDisabled=true)]
 		internal sealed class ConnectorRolePlayerChanged : DslModeling::RolePlayerChangeRule
 		{
 			/// <summary>

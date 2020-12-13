@@ -161,6 +161,51 @@
               </xsd:sequence>
             </xsd:complexType>
           </xsd:element>
+          <!-- Relationship: CPAgregacionInclusivaCP -->
+          <xsd:element name="destinoClasePrincipal1" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CPAgregacionInclusivaCP</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="cPAgregacionInclusivaCP" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CPAgregacionInclusivaCP needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: CPAgregacionNoInclusivaCP -->
+          <xsd:element name="destinoClasePrincipal2" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CPAgregacionNoInclusivaCP</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="cPAgregacionNoInclusivaCP" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CPAgregacionNoInclusivaCP needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <!-- Relationship: CPHerenciaCP -->
+          <xsd:element name="destinoClasePrincipal3" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>Instances of CPHerenciaCP</xsd:documentation>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element ref="cPHerenciaCP" minOccurs="0" maxOccurs="unbounded">
+                  <xsd:annotation>
+                    <xsd:documentation>[Instance of CPHerenciaCP needs to be serialized in full-form]</xsd:documentation>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
         </xsd:sequence>
         <!-- Id -->
         <xsd:attribute name="Id" type="xsd:string">
@@ -408,6 +453,8 @@
         <xsd:attribute name="cardinalidadOrigen" type="xsd:string" />
         <!-- Property: CardinalidadDestino -->
         <xsd:attribute name="cardinalidadDestino" type="xsd:string" />
+        <!-- Property: nombreRelacion -->
+        <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -577,6 +624,134 @@
   <xsd:complexType name="MonikerOperacionTieneParametro">
     <xsd:annotation>
       <xsd:documentation>Moniker for OperacionTieneParametro instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPAgregacionInclusivaCP -->
+  <xsd:element name="cPAgregacionInclusivaCP" type="CPAgregacionInclusivaCP" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CPAgregacionInclusivaCP">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClasePrincipal -->
+          <xsd:element ref="monikerClasePrincipal" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalidadO -->
+        <xsd:attribute name="cardinalidadO" type="xsd:string" />
+        <!-- Property: nombreRelacion -->
+        <xsd:attribute name="nombreRelacion" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPAgregacionInclusivaCP Moniker -->
+  <xsd:element name="monikerCPAgregacionInclusivaCP" type="MonikerCPAgregacionInclusivaCP" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerCPAgregacionInclusivaCP">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CPAgregacionInclusivaCP instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPAgregacionNoInclusivaCP -->
+  <xsd:element name="cPAgregacionNoInclusivaCP" type="CPAgregacionNoInclusivaCP" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CPAgregacionNoInclusivaCP">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClasePrincipal -->
+          <xsd:element ref="monikerClasePrincipal" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <!-- Property: CardinalidadO -->
+        <xsd:attribute name="cardinalidadO" type="xsd:string" />
+        <!-- Property: nombreRelacion -->
+        <xsd:attribute name="nombreRelacion" type="xsd:string" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPAgregacionNoInclusivaCP Moniker -->
+  <xsd:element name="monikerCPAgregacionNoInclusivaCP" type="MonikerCPAgregacionNoInclusivaCP" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerCPAgregacionNoInclusivaCP">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CPAgregacionNoInclusivaCP instance.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElementMoniker">
+        <xsd:attribute name="Id" type="xsd:string" >
+          <xsd:annotation>
+            <xsd:documentation>Attribute to store the moniker string.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPHerenciaCP -->
+  <xsd:element name="cPHerenciaCP" type="CPHerenciaCP" substitutionGroup="core:modelElement" />
+  <xsd:complexType name="CPHerenciaCP">
+    <xsd:complexContent>
+      <xsd:extension base="core:ModelElement">
+        <xsd:sequence minOccurs="0" maxOccurs="1">
+          <!-- Target end ClasePrincipal -->
+          <xsd:element ref="monikerClasePrincipal" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+              <xsd:documentation>[Target role-player]</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <!-- Id -->
+        <xsd:attribute name="Id" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>Instance Guid of this element, needed because SerializeId is set to true.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  
+  <!-- CPHerenciaCP Moniker -->
+  <xsd:element name="monikerCPHerenciaCP" type="MonikerCPHerenciaCP" substitutionGroup="core:modelElementMoniker" />
+  <xsd:complexType name="MonikerCPHerenciaCP">
+    <xsd:annotation>
+      <xsd:documentation>Moniker for CPHerenciaCP instance.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElementMoniker">

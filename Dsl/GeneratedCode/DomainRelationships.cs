@@ -419,7 +419,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadOrigen
 		/// </summary>
-		private global::System.String cardinalidadOrigenPropertyStorage = string.Empty;
+		private global::System.String cardinalidadOrigenPropertyStorage = "1..1";
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadOrigen domain property.
@@ -428,6 +428,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("1..1")]
 		[DslModeling::DomainObjectId("1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a")]
 		public global::System.String CardinalidadOrigen
 		{
@@ -507,7 +508,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadDestino
 		/// </summary>
-		private global::System.String cardinalidadDestinoPropertyStorage = string.Empty;
+		private global::System.String cardinalidadDestinoPropertyStorage = "1..1";
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadDestino domain property.
@@ -516,6 +517,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("1..1")]
 		[DslModeling::DomainObjectId("e283e3d4-33d6-4215-8e49-d4b54df5f964")]
 		public global::System.String CardinalidadDestino
 		{
@@ -579,6 +581,95 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				{
 					ValueChanging(element, oldValue, newValue);
 					element.cardinalidadDestinoPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region nombreRelacion domain property code
+		
+		/// <summary>
+		/// nombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreRelacionDomainPropertyId = new global::System.Guid(0x80ee5d74, 0xe13d, 0x4b61, 0x81, 0xad, 0xaa, 0xac, 0xad, 0xbc, 0x3a, 0x53);
+		
+		/// <summary>
+		/// Storage for nombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = "Nombre";
+		
+		/// <summary>
+		/// Gets or sets the value of nombreRelacion domain property.
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Nombre
+		/// Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/nombreRelacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/nombreRelacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("Nombre")]
+		[DslModeling::DomainObjectId("80ee5d74-e13d-4b61-81ad-aaacadbc3a53")]
+		public global::System.String nombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPReferenciasCP.nombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class nombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, global::System.String>
+		{
+			private nombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPReferenciasCP.nombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly nombreRelacionPropertyHandler Instance = new nombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPReferenciasCP.nombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPReferenciasCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPReferenciasCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
 					ValueChanged(element, oldValue, newValue);
 				}
 			}
@@ -1605,6 +1696,1086 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.OperacionTieneParametro link in links )
 			{
 				if ( target.Equals(link.Parametro) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship CPAgregacionInclusivaCP
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("a71e4787-773b-4588-924a-2fb92d33661d")]
+	public partial class CPAgregacionInclusivaCP : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CPAgregacionInclusivaCP domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0xa71e4787, 0x773b, 0x4588, 0x92, 0x4a, 0x2f, 0xb9, 0x2d, 0x33, 0x66, 0x1d);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CPAgregacionInclusivaCP link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">ClasePrincipal to use as the target of the relationship.</param>
+		public CPAgregacionInclusivaCP(ClasePrincipal source, ClasePrincipal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(CPAgregacionInclusivaCP.DestinoClasePrincipalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPAgregacionInclusivaCP(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPAgregacionInclusivaCP(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPAgregacionInclusivaCP(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPAgregacionInclusivaCP(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region OrigenClasePrincipal domain role code
+		
+		/// <summary>
+		/// OrigenClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OrigenClasePrincipalDomainRoleId = new global::System.Guid(0x6834e904, 0x5069, 0x4acb, 0x8e, 0x16, 0xba, 0x71, 0x5a, 0x57, 0x00, 0x55);
+		
+		/// <summary>
+		/// DomainRole OrigenClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "DestinoClasePrincipal1", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/OrigenClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("6834e904-5069-4acb-8e16-ba715a570055")]
+		public virtual ClasePrincipal OrigenClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, OrigenClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OrigenClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access OrigenClasePrincipal1 of a ClasePrincipal
+		/// <summary>
+		/// Gets OrigenClasePrincipal1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetOrigenClasePrincipal1(ClasePrincipal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets OrigenClasePrincipal1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetOrigenClasePrincipal1(ClasePrincipal element, ClasePrincipal newOrigenClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, DestinoClasePrincipalDomainRoleId, newOrigenClasePrincipal);
+		}
+		#endregion
+		#region DestinoClasePrincipal domain role code
+		
+		/// <summary>
+		/// DestinoClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DestinoClasePrincipalDomainRoleId = new global::System.Guid(0x8ca86796, 0x8b5d, 0x4a76, 0xb8, 0xbe, 0x80, 0x3a, 0x34, 0x85, 0xd5, 0xf7);
+		
+		/// <summary>
+		/// DomainRole DestinoClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "OrigenClasePrincipal1", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/DestinoClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("8ca86796-8b5d-4a76-b8be-803a3485d5f7")]
+		public virtual ClasePrincipal DestinoClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, DestinoClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DestinoClasePrincipal1 of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal1.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ClasePrincipal> GetDestinoClasePrincipal1(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(element, OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region CardinalidadO domain property code
+		
+		/// <summary>
+		/// CardinalidadO domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalidadODomainPropertyId = new global::System.Guid(0xd8fe1fea, 0x8250, 0x4c20, 0x81, 0x54, 0x9d, 0xfc, 0xf7, 0x47, 0x40, 0xa6);
+		
+		/// <summary>
+		/// Storage for CardinalidadO
+		/// </summary>
+		private global::System.String cardinalidadOPropertyStorage = "1..1";
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalidadO domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Cardinalidad O
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("1..1")]
+		[DslModeling::DomainObjectId("d8fe1fea-8250-4c20-8154-9dfcf74740a6")]
+		public global::System.String CardinalidadO
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidadOPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalidadOPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPAgregacionInclusivaCP.CardinalidadO domain property.
+		/// </summary>
+		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionInclusivaCP, global::System.String>
+		{
+			private CardinalidadOPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPAgregacionInclusivaCP.CardinalidadO domain property value handler.
+			/// </summary>
+			public static readonly CardinalidadOPropertyHandler Instance = new CardinalidadOPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPAgregacionInclusivaCP.CardinalidadO domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalidadODomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPAgregacionInclusivaCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalidadOPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPAgregacionInclusivaCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalidadOPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region nombreRelacion domain property code
+		
+		/// <summary>
+		/// nombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreRelacionDomainPropertyId = new global::System.Guid(0x99909fab, 0xaa3a, 0x4f72, 0x9d, 0x31, 0xee, 0x58, 0xd4, 0x49, 0xfe, 0x5e);
+		
+		/// <summary>
+		/// Storage for nombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = "Nombre";
+		
+		/// <summary>
+		/// Gets or sets the value of nombreRelacion domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Nombre Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/nombreRelacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/nombreRelacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("Nombre")]
+		[DslModeling::DomainObjectId("99909fab-aa3a-4f72-9d31-ee58d449fe5e")]
+		public global::System.String nombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPAgregacionInclusivaCP.nombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class nombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionInclusivaCP, global::System.String>
+		{
+			private nombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPAgregacionInclusivaCP.nombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly nombreRelacionPropertyHandler Instance = new nombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPAgregacionInclusivaCP.nombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPAgregacionInclusivaCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPAgregacionInclusivaCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region OrigenClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of CPAgregacionInclusivaCP links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> GetLinksToDestinoClasePrincipal1 ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal origenClasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP>(origenClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region DestinoClasePrincipal link accessor
+		/// <summary>
+		/// Get the CPAgregacionInclusivaCP link to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP GetLinkToOrigenClasePrincipal1 (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal destinoClasePrincipalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP>(destinoClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.DestinoClasePrincipalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of DestinoClasePrincipal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CPAgregacionInclusivaCP instance accessors
+		
+		/// <summary>
+		/// Get any CPAgregacionInclusivaCP links between a given ClasePrincipal and a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CPAgregacionInclusivaCP link between a given ClasePrincipaland a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship CPAgregacionNoInclusivaCP
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("28c35ab3-7941-4efd-8807-49b473ef091a")]
+	public partial class CPAgregacionNoInclusivaCP : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CPAgregacionNoInclusivaCP domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x28c35ab3, 0x7941, 0x4efd, 0x88, 0x07, 0x49, 0xb4, 0x73, 0xef, 0x09, 0x1a);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CPAgregacionNoInclusivaCP link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">ClasePrincipal to use as the target of the relationship.</param>
+		public CPAgregacionNoInclusivaCP(ClasePrincipal source, ClasePrincipal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(CPAgregacionNoInclusivaCP.DestinoClasePrincipalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPAgregacionNoInclusivaCP(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPAgregacionNoInclusivaCP(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPAgregacionNoInclusivaCP(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPAgregacionNoInclusivaCP(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region OrigenClasePrincipal domain role code
+		
+		/// <summary>
+		/// OrigenClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OrigenClasePrincipalDomainRoleId = new global::System.Guid(0x08e8583a, 0x2480, 0x49f3, 0xba, 0x70, 0xe9, 0x1a, 0xcc, 0x6e, 0xf9, 0x93);
+		
+		/// <summary>
+		/// DomainRole OrigenClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "DestinoClasePrincipal2", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/OrigenClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("08e8583a-2480-49f3-ba70-e91acc6ef993")]
+		public virtual ClasePrincipal OrigenClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, OrigenClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OrigenClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access OrigenClasePrincipal2 of a ClasePrincipal
+		/// <summary>
+		/// Gets OrigenClasePrincipal2.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetOrigenClasePrincipal2(ClasePrincipal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets OrigenClasePrincipal2.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetOrigenClasePrincipal2(ClasePrincipal element, ClasePrincipal newOrigenClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, DestinoClasePrincipalDomainRoleId, newOrigenClasePrincipal);
+		}
+		#endregion
+		#region DestinoClasePrincipal domain role code
+		
+		/// <summary>
+		/// DestinoClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DestinoClasePrincipalDomainRoleId = new global::System.Guid(0x3eaab186, 0x1ae2, 0x4e2c, 0xa2, 0xc4, 0xcf, 0x14, 0x0b, 0x91, 0xc2, 0x9c);
+		
+		/// <summary>
+		/// DomainRole DestinoClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "OrigenClasePrincipal2", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/DestinoClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroOne)]
+		[DslModeling::DomainObjectId("3eaab186-1ae2-4e2c-a2c4-cf140b91c29c")]
+		public virtual ClasePrincipal DestinoClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, DestinoClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DestinoClasePrincipal2 of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal2.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ClasePrincipal> GetDestinoClasePrincipal2(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(element, OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region CardinalidadO domain property code
+		
+		/// <summary>
+		/// CardinalidadO domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid CardinalidadODomainPropertyId = new global::System.Guid(0x8ae2aac7, 0x65fa, 0x431d, 0xbc, 0xaa, 0x2e, 0x00, 0xe4, 0x06, 0x63, 0x59);
+		
+		/// <summary>
+		/// Storage for CardinalidadO
+		/// </summary>
+		private global::System.String cardinalidadOPropertyStorage = "1..1";
+		
+		/// <summary>
+		/// Gets or sets the value of CardinalidadO domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Cardinalidad O
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("1..1")]
+		[DslModeling::DomainObjectId("8ae2aac7-65fa-431d-bcaa-2e00e4066359")]
+		public global::System.String CardinalidadO
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return cardinalidadOPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				CardinalidadOPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPAgregacionNoInclusivaCP.CardinalidadO domain property.
+		/// </summary>
+		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionNoInclusivaCP, global::System.String>
+		{
+			private CardinalidadOPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPAgregacionNoInclusivaCP.CardinalidadO domain property value handler.
+			/// </summary>
+			public static readonly CardinalidadOPropertyHandler Instance = new CardinalidadOPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPAgregacionNoInclusivaCP.CardinalidadO domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return CardinalidadODomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPAgregacionNoInclusivaCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.cardinalidadOPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPAgregacionNoInclusivaCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.cardinalidadOPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region nombreRelacion domain property code
+		
+		/// <summary>
+		/// nombreRelacion domain property Id.
+		/// </summary>
+		public static readonly global::System.Guid nombreRelacionDomainPropertyId = new global::System.Guid(0xa9d3ab85, 0x6e4a, 0x4c3a, 0xb7, 0xf1, 0x30, 0xc2, 0x6f, 0x7e, 0xed, 0xe6);
+		
+		/// <summary>
+		/// Storage for nombreRelacion
+		/// </summary>
+		private global::System.String nombreRelacionPropertyStorage = "Nombre";
+		
+		/// <summary>
+		/// Gets or sets the value of nombreRelacion domain property.
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Nombre
+		/// Relacion
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/nombreRelacion.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/nombreRelacion.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[global::System.ComponentModel.DefaultValue("Nombre")]
+		[DslModeling::DomainObjectId("a9d3ab85-6e4a-4c3a-b7f1-30c26f7eede6")]
+		public global::System.String nombreRelacion
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return nombreRelacionPropertyStorage;
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				nombreRelacionPropertyHandler.Instance.SetValue(this, value);
+			}
+		}
+		/// <summary>
+		/// Value handler for the CPAgregacionNoInclusivaCP.nombreRelacion domain property.
+		/// </summary>
+		internal sealed partial class nombreRelacionPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionNoInclusivaCP, global::System.String>
+		{
+			private nombreRelacionPropertyHandler() { }
+		
+			/// <summary>
+			/// Gets the singleton instance of the CPAgregacionNoInclusivaCP.nombreRelacion domain property value handler.
+			/// </summary>
+			public static readonly nombreRelacionPropertyHandler Instance = new nombreRelacionPropertyHandler();
+		
+			/// <summary>
+			/// Gets the Id of the CPAgregacionNoInclusivaCP.nombreRelacion domain property.
+			/// </summary>
+			public sealed override global::System.Guid DomainPropertyId
+			{
+				[global::System.Diagnostics.DebuggerStepThrough]
+				get
+				{
+					return nombreRelacionDomainPropertyId;
+				}
+			}
+			
+			/// <summary>
+			/// Gets a strongly-typed value of the property on specified element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <returns>Property value.</returns>
+			public override sealed global::System.String GetValue(CPAgregacionNoInclusivaCP element)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+				return element.nombreRelacionPropertyStorage;
+			}
+		
+			/// <summary>
+			/// Sets property value on an element.
+			/// </summary>
+			/// <param name="element">Element which owns the property.</param>
+			/// <param name="newValue">New property value.</param>
+			public override sealed void SetValue(CPAgregacionNoInclusivaCP element, global::System.String newValue)
+			{
+				if (element == null) throw new global::System.ArgumentNullException("element");
+		
+				global::System.String oldValue = GetValue(element);
+				if (newValue != oldValue)
+				{
+					ValueChanging(element, oldValue, newValue);
+					element.nombreRelacionPropertyStorage = newValue;
+					ValueChanged(element, oldValue, newValue);
+				}
+			}
+		}
+		
+		#endregion
+		#region OrigenClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of CPAgregacionNoInclusivaCP links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> GetLinksToDestinoClasePrincipal2 ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal origenClasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP>(origenClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region DestinoClasePrincipal link accessor
+		/// <summary>
+		/// Get the CPAgregacionNoInclusivaCP link to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP GetLinkToOrigenClasePrincipal2 (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal destinoClasePrincipalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP>(destinoClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.DestinoClasePrincipalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of DestinoClasePrincipal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CPAgregacionNoInclusivaCP instance accessors
+		
+		/// <summary>
+		/// Get any CPAgregacionNoInclusivaCP links between a given ClasePrincipal and a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CPAgregacionNoInclusivaCP link between a given ClasePrincipaland a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					return link;
+				}
+			}
+			return null;
+		}
+		
+		#endregion
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainRelationship CPHerenciaCP
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP
+	/// </summary>
+	[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+	[DslModeling::DomainModelOwner(typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel))]
+	[global::System.CLSCompliant(true)]
+	[DslModeling::DomainRelationship()]
+	[DslModeling::DomainObjectId("791c396c-b46d-4a39-a953-769e85856602")]
+	public partial class CPHerenciaCP : DslModeling::ElementLink
+	{
+		#region Constructors, domain class Id
+		
+		/// <summary>
+		/// CPHerenciaCP domain class Id.
+		/// </summary>
+		public static readonly new global::System.Guid DomainClassId = new global::System.Guid(0x791c396c, 0xb46d, 0x4a39, 0xa9, 0x53, 0x76, 0x9e, 0x85, 0x85, 0x66, 0x02);
+	
+				
+		/// <summary>
+		/// Constructor
+		/// Creates a CPHerenciaCP link in the same Partition as the given ClasePrincipal
+		/// </summary>
+		/// <param name="source">ClasePrincipal to use as the source of the relationship.</param>
+		/// <param name="target">ClasePrincipal to use as the target of the relationship.</param>
+		public CPHerenciaCP(ClasePrincipal source, ClasePrincipal target)
+			: base((source != null ? source.Partition : null), new DslModeling::RoleAssignment[]{new DslModeling::RoleAssignment(CPHerenciaCP.OrigenClasePrincipalDomainRoleId, source), new DslModeling::RoleAssignment(CPHerenciaCP.DestinoClasePrincipalDomainRoleId, target)}, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPHerenciaCP(DslModeling::Store store, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="store">Store where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPHerenciaCP(DslModeling::Store store, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(store != null ? store.DefaultPartitionForClass(DomainClassId) : null, roleAssignments, propertyAssignments)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		public CPHerenciaCP(DslModeling::Partition partition, params DslModeling::RoleAssignment[] roleAssignments)
+			: base(partition, roleAssignments, null)
+		{
+		}
+		
+		/// <summary>
+		/// Constructor
+		/// </summary>
+		/// <param name="partition">Partition where new link is to be created.</param>
+		/// <param name="roleAssignments">List of relationship role assignments.</param>
+		/// <param name="propertyAssignments">List of properties assignments to set on the new link.</param>
+		public CPHerenciaCP(DslModeling::Partition partition, DslModeling::RoleAssignment[] roleAssignments, DslModeling::PropertyAssignment[] propertyAssignments)
+			: base(partition, roleAssignments, propertyAssignments)
+		{
+		}
+		#endregion
+		#region OrigenClasePrincipal domain role code
+		
+		/// <summary>
+		/// OrigenClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid OrigenClasePrincipalDomainRoleId = new global::System.Guid(0xf4f2d515, 0xdd22, 0x4329, 0x80, 0x9b, 0xb4, 0x70, 0x55, 0x01, 0xaf, 0xa0);
+		
+		/// <summary>
+		/// DomainRole OrigenClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Source, PropertyName = "DestinoClasePrincipal3", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/OrigenClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.ZeroMany)]
+		[DslModeling::DomainObjectId("f4f2d515-dd22-4329-809b-b4705501afa0")]
+		public virtual ClasePrincipal OrigenClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, OrigenClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, OrigenClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access OrigenClasePrincipal3 of a ClasePrincipal
+		/// <summary>
+		/// Gets OrigenClasePrincipal3.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static ClasePrincipal GetOrigenClasePrincipal3(ClasePrincipal element)
+		{
+			return DslModeling::DomainRoleInfo.GetLinkedElement(element, DestinoClasePrincipalDomainRoleId) as ClasePrincipal;
+		}
+		
+		/// <summary>
+		/// Sets OrigenClasePrincipal3.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static void SetOrigenClasePrincipal3(ClasePrincipal element, ClasePrincipal newOrigenClasePrincipal)
+		{
+			DslModeling::DomainRoleInfo.SetLinkedElement(element, DestinoClasePrincipalDomainRoleId, newOrigenClasePrincipal);
+		}
+		#endregion
+		#region DestinoClasePrincipal domain role code
+		
+		/// <summary>
+		/// DestinoClasePrincipal domain role Id.
+		/// </summary>
+		public static readonly global::System.Guid DestinoClasePrincipalDomainRoleId = new global::System.Guid(0x71d6c3ca, 0x22fd, 0x46de, 0xbb, 0x60, 0x3d, 0x2b, 0xbb, 0xa9, 0xb2, 0x21);
+		
+		/// <summary>
+		/// DomainRole DestinoClasePrincipal
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipal
+		/// </summary>
+		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		[DslModeling::DomainRole(DslModeling::DomainRoleOrder.Target, PropertyName = "OrigenClasePrincipal3", PropertyDisplayNameKey="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP/DestinoClasePrincipal.PropertyDisplayName",  PropagatesCopy = DslModeling::PropagatesCopyOption.DoNotPropagateCopy, Multiplicity = DslModeling::Multiplicity.One)]
+		[DslModeling::DomainObjectId("71d6c3ca-22fd-46de-bb60-3d2bbba9b221")]
+		public virtual ClasePrincipal DestinoClasePrincipal
+		{
+			[global::System.Diagnostics.DebuggerStepThrough]
+			get
+			{
+				return (ClasePrincipal)DslModeling::DomainRoleInfo.GetRolePlayer(this, DestinoClasePrincipalDomainRoleId);
+			}
+			[global::System.Diagnostics.DebuggerStepThrough]
+			set
+			{
+				DslModeling::DomainRoleInfo.SetRolePlayer(this, DestinoClasePrincipalDomainRoleId, value);
+			}
+		}
+				
+		#endregion
+		#region Static methods to access DestinoClasePrincipal3 of a ClasePrincipal
+		/// <summary>
+		/// Gets a list of DestinoClasePrincipal3.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static DslModeling::LinkedElementCollection<ClasePrincipal> GetDestinoClasePrincipal3(ClasePrincipal element)
+		{
+			return GetRoleCollection<DslModeling::LinkedElementCollection<ClasePrincipal>, ClasePrincipal>(element, OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region OrigenClasePrincipal link accessor
+		/// <summary>
+		/// Get the list of CPHerenciaCP links to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> GetLinksToDestinoClasePrincipal3 ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal origenClasePrincipalInstance )
+		{
+			return DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP>(origenClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipalDomainRoleId);
+		}
+		#endregion
+		#region DestinoClasePrincipal link accessor
+		/// <summary>
+		/// Get the CPHerenciaCP link to a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP GetLinkToOrigenClasePrincipal3 (global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal destinoClasePrincipalInstance)
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP>(destinoClasePrincipalInstance, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.DestinoClasePrincipalDomainRoleId);
+			global::System.Diagnostics.Debug.Assert(links.Count <= 1, "Multiplicity of DestinoClasePrincipal not obeyed.");
+			if ( links.Count == 0 )
+			{
+				return null;
+			}
+			else
+			{
+				return links[0];
+			}
+		}
+		#endregion
+		#region CPHerenciaCP instance accessors
+		
+		/// <summary>
+		/// Get any CPHerenciaCP links between a given ClasePrincipal and a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::System.Collections.ObjectModel.ReadOnlyCollection<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> GetLinks( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> outLinks = new global::System.Collections.Generic.List<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP>();
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
+				{
+					outLinks.Add(link);
+				}
+			}
+			return outLinks.AsReadOnly();
+		}
+		/// <summary>
+		/// Get the one CPHerenciaCP link between a given ClasePrincipaland a ClasePrincipal.
+		/// </summary>
+		[global::System.Diagnostics.DebuggerStepThrough]
+		[global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011")]
+		public static global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP GetLink( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipal target )
+		{
+			global::System.Collections.Generic.IList<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP> links = DslModeling::DomainRoleInfo.GetElementLinks<global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP>(source, global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP.OrigenClasePrincipalDomainRoleId);
+			foreach ( global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPHerenciaCP link in links )
+			{
+				if ( target.Equals(link.DestinoClasePrincipal) )
 				{
 					return link;
 				}

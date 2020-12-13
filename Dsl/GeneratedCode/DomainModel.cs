@@ -80,7 +80,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				typeof(ClasePrincipalTieneAtributo),
 				typeof(ClasePrincipalTieneOperacion),
 				typeof(OperacionTieneParametro),
+				typeof(CPAgregacionInclusivaCP),
+				typeof(CPAgregacionNoInclusivaCP),
+				typeof(CPHerenciaCP),
 				typeof(MBRDCMDMIDiagram),
+				typeof(RelacionAsociacion),
+				typeof(RelacionAgregacionInclusion),
+				typeof(RelacionAgregacionNoInclusion),
 				typeof(Connector1),
 				typeof(ClasePrincipalShape),
 				typeof(CompartmentShape1),
@@ -115,6 +121,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainMemberInfo(typeof(Parametro), "parametroTipo", Parametro.parametroTipoDomainPropertyId, typeof(Parametro.parametroTipoPropertyHandler)),
 				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadOrigen", CPReferenciasCP.CardinalidadOrigenDomainPropertyId, typeof(CPReferenciasCP.CardinalidadOrigenPropertyHandler)),
 				new DomainMemberInfo(typeof(CPReferenciasCP), "CardinalidadDestino", CPReferenciasCP.CardinalidadDestinoDomainPropertyId, typeof(CPReferenciasCP.CardinalidadDestinoPropertyHandler)),
+				new DomainMemberInfo(typeof(CPReferenciasCP), "nombreRelacion", CPReferenciasCP.nombreRelacionDomainPropertyId, typeof(CPReferenciasCP.nombreRelacionPropertyHandler)),
+				new DomainMemberInfo(typeof(CPAgregacionInclusivaCP), "CardinalidadO", CPAgregacionInclusivaCP.CardinalidadODomainPropertyId, typeof(CPAgregacionInclusivaCP.CardinalidadOPropertyHandler)),
+				new DomainMemberInfo(typeof(CPAgregacionInclusivaCP), "nombreRelacion", CPAgregacionInclusivaCP.nombreRelacionDomainPropertyId, typeof(CPAgregacionInclusivaCP.nombreRelacionPropertyHandler)),
+				new DomainMemberInfo(typeof(CPAgregacionNoInclusivaCP), "CardinalidadO", CPAgregacionNoInclusivaCP.CardinalidadODomainPropertyId, typeof(CPAgregacionNoInclusivaCP.CardinalidadOPropertyHandler)),
+				new DomainMemberInfo(typeof(CPAgregacionNoInclusivaCP), "nombreRelacion", CPAgregacionNoInclusivaCP.nombreRelacionDomainPropertyId, typeof(CPAgregacionNoInclusivaCP.nombreRelacionPropertyHandler)),
 			};
 		}
 		/// <summary>
@@ -137,6 +148,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				new DomainRolePlayerInfo(typeof(ClasePrincipalTieneOperacion), "Operacion", ClasePrincipalTieneOperacion.OperacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionTieneParametro), "Operacion", OperacionTieneParametro.OperacionDomainRoleId),
 				new DomainRolePlayerInfo(typeof(OperacionTieneParametro), "Parametro", OperacionTieneParametro.ParametroDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPAgregacionInclusivaCP), "OrigenClasePrincipal", CPAgregacionInclusivaCP.OrigenClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPAgregacionInclusivaCP), "DestinoClasePrincipal", CPAgregacionInclusivaCP.DestinoClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPAgregacionNoInclusivaCP), "OrigenClasePrincipal", CPAgregacionNoInclusivaCP.OrigenClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPAgregacionNoInclusivaCP), "DestinoClasePrincipal", CPAgregacionNoInclusivaCP.DestinoClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPHerenciaCP), "OrigenClasePrincipal", CPHerenciaCP.OrigenClasePrincipalDomainRoleId),
+				new DomainRolePlayerInfo(typeof(CPHerenciaCP), "DestinoClasePrincipal", CPHerenciaCP.DestinoClasePrincipalDomainRoleId),
 			};
 		}
 		#endregion
@@ -158,7 +175,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementMap == null)
 			{
-				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(11);
+				createElementMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(14);
 				createElementMap.Add(typeof(TapizProyectos), 0);
 				createElementMap.Add(typeof(ClasePrincipal), 1);
 				createElementMap.Add(typeof(Identificador), 2);
@@ -166,9 +183,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				createElementMap.Add(typeof(Operacion), 4);
 				createElementMap.Add(typeof(Parametro), 5);
 				createElementMap.Add(typeof(MBRDCMDMIDiagram), 6);
-				createElementMap.Add(typeof(Connector1), 7);
-				createElementMap.Add(typeof(ClasePrincipalShape), 8);
-				createElementMap.Add(typeof(CompartmentShape1), 9);
+				createElementMap.Add(typeof(RelacionAsociacion), 7);
+				createElementMap.Add(typeof(RelacionAgregacionInclusion), 8);
+				createElementMap.Add(typeof(RelacionAgregacionNoInclusion), 9);
+				createElementMap.Add(typeof(Connector1), 10);
+				createElementMap.Add(typeof(ClasePrincipalShape), 11);
+				createElementMap.Add(typeof(CompartmentShape1), 12);
 			}
 			int index;
 			if (!createElementMap.TryGetValue(elementType, out index))
@@ -189,9 +209,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				case 4: return new Operacion(partition, propertyAssignments);
 				case 5: return new Parametro(partition, propertyAssignments);
 				case 6: return new MBRDCMDMIDiagram(partition, propertyAssignments);
-				case 7: return new Connector1(partition, propertyAssignments);
-				case 8: return new ClasePrincipalShape(partition, propertyAssignments);
-				case 9: return new CompartmentShape1(partition, propertyAssignments);
+				case 7: return new RelacionAsociacion(partition, propertyAssignments);
+				case 8: return new RelacionAgregacionInclusion(partition, propertyAssignments);
+				case 9: return new RelacionAgregacionNoInclusion(partition, propertyAssignments);
+				case 10: return new Connector1(partition, propertyAssignments);
+				case 11: return new ClasePrincipalShape(partition, propertyAssignments);
+				case 12: return new CompartmentShape1(partition, propertyAssignments);
 				default: return null;
 			}
 		}
@@ -214,13 +237,16 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 	
 			if (createElementLinkMap == null)
 			{
-				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(6);
+				createElementLinkMap = new global::System.Collections.Generic.Dictionary<global::System.Type, int>(9);
 				createElementLinkMap.Add(typeof(TapizProyectosTieneClase), 0);
 				createElementLinkMap.Add(typeof(CPReferenciasCP), 1);
 				createElementLinkMap.Add(typeof(ClasePrincipalTieneIdentificador), 2);
 				createElementLinkMap.Add(typeof(ClasePrincipalTieneAtributo), 3);
 				createElementLinkMap.Add(typeof(ClasePrincipalTieneOperacion), 4);
 				createElementLinkMap.Add(typeof(OperacionTieneParametro), 5);
+				createElementLinkMap.Add(typeof(CPAgregacionInclusivaCP), 6);
+				createElementLinkMap.Add(typeof(CPAgregacionNoInclusivaCP), 7);
+				createElementLinkMap.Add(typeof(CPHerenciaCP), 8);
 			}
 			int index;
 			if (!createElementLinkMap.TryGetValue(elementLinkType, out index))
@@ -241,6 +267,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				case 3: return new ClasePrincipalTieneAtributo(partition, roleAssignments, propertyAssignments);
 				case 4: return new ClasePrincipalTieneOperacion(partition, roleAssignments, propertyAssignments);
 				case 5: return new OperacionTieneParametro(partition, roleAssignments, propertyAssignments);
+				case 6: return new CPAgregacionInclusivaCP(partition, roleAssignments, propertyAssignments);
+				case 7: return new CPAgregacionNoInclusivaCP(partition, roleAssignments, propertyAssignments);
+				case 8: return new CPHerenciaCP(partition, roleAssignments, propertyAssignments);
 				default: return null;
 			}
 		}

@@ -38,13 +38,37 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 					Index = 0)]
 	[VSShell::ProvideStaticToolboxGroup("@RelacionesToolboxTab;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab")]
 	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab",
-					"@RAToolToolboxItem;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
-					"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RAToolToolboxItem", 
+					"@RelacionAsociacionToolboxItem;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAsociacionToolboxItem", 
 					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
-					"RATool", 
-					"@RAToolToolboxBitmap;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					"RelacionAsociacion", 
+					"@RelacionAsociacionToolboxBitmap;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
 					0xff00ff,
 					Index = 1)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab",
+					"@RelacionAgregacionInclusivaToolboxItem;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusivaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionAgregacionInclusiva", 
+					"@RelacionAgregacionInclusivaToolboxBitmap;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					0xff00ff,
+					Index = 2)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab",
+					"@RelacionAgregacionRelacionalToolboxItem;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionRelacionalToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionAgregacionRelacional", 
+					"@RelacionAgregacionRelacionalToolboxBitmap;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					0xff00ff,
+					Index = 3)]
+	[VSShell::ProvideStaticToolboxItem("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionesToolboxTab",
+					"@RelacionHerenciaToolboxItem;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					"UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerenciaToolboxItem", 
+					"CF_TOOLBOXITEMCONTAINER,CF_TOOLBOXITEMCONTAINER_HASH,CF_TOOLBOXITEMCONTAINER_CONTENTS", 
+					"RelacionHerencia", 
+					"@RelacionHerenciaToolboxBitmap;UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Dsl.dll", 
+					0xff00ff,
+					Index = 4)]
 	[VSShell::ProvideEditorFactory(typeof(MBRDCMDMIEditorFactory), 103, TrustLevel = VSShellInterop::__VSEDITORTRUSTLEVEL.ETL_AlwaysTrusted)]
 	[VSShell::ProvideEditorExtension(typeof(MBRDCMDMIEditorFactory), "." + Constants.DesignerFileExtension, 50)]
 	[VSShell::ProvideEditorLogicalView(typeof(MBRDCMDMIEditorFactory), "{7651A702-06E5-11D1-8EBD-00A0C90F26EA}")] // Designer logical view GUID i.e. VSConstants.LOGVIEWID_Designer
