@@ -1233,7 +1233,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for atributoTipo
 		/// </summary>
-		private global::System.String atributoTipoPropertyStorage = string.Empty;
+		private VariablesEnum1 atributoTipoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of atributoTipo domain property.
@@ -1242,7 +1242,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("01ce83d8-87be-4eb2-8ed6-a9dfc30a8121")]
-		public global::System.String atributoTipo
+		public VariablesEnum1 atributoTipo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1258,7 +1258,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the Atributo.atributoTipo domain property.
 		/// </summary>
-		internal sealed partial class atributoTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, global::System.String>
+		internal sealed partial class atributoTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, VariablesEnum1>
 		{
 			private atributoTipoPropertyHandler() { }
 		
@@ -1284,7 +1284,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Atributo element)
+			public override sealed VariablesEnum1 GetValue(Atributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.atributoTipoPropertyStorage;
@@ -1295,11 +1295,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, global::System.String newValue)
+			public override sealed void SetValue(Atributo element, VariablesEnum1 newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				VariablesEnum1 oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

@@ -337,6 +337,22 @@
     <ExternalType Name="Guid" Namespace="System" />
     <ExternalType Name="Boolean" Namespace="System" />
     <ExternalType Name="Char" Namespace="System" />
+    <DomainEnumeration Name="CardinalidadesEnum" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum">
+      <Literals>
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1a1" Name="De1a1" Value="0" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0a1" Name="De0a1" Value="1" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0aN" Name="De0aN" Value="2" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1aN" Name="De1aN" Value="3" />
+      </Literals>
+    </DomainEnumeration>
+    <DomainEnumeration Name="EnumeradorDeTipos" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos">
+      <Literals>
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Enteros" Name="Enteros" Value="0" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Caracteres" Name="Caracteres" Value="1" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Booleanos" Name="Booleanos" Value="2" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.CadenaCaracteres" Name="CadenaCaracteres" Value="3" />
+      </Literals>
+    </DomainEnumeration>
   </Types>
   <Shapes>
     <CompartmentShape Id="19e1bb28-44d7-4044-ac5b-451063a8e63d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape" Name="ClasePrincipalShape" DisplayName="Clase Principal Shape" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Clase Principal Shape" FillColor="Orange" InitialHeight="1" FillGradientMode="None" Geometry="Rectangle">

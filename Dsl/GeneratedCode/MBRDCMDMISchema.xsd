@@ -281,7 +281,7 @@
         <!-- Property: nombreAtributo -->
         <xsd:attribute name="nombreAtributo" type="xsd:string" />
         <!-- Property: atributoTipo -->
-        <xsd:attribute name="atributoTipo" type="xsd:string" />
+        <xsd:attribute name="atributoTipo" type="VariablesEnum1" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -765,6 +765,14 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  
+  <!-- Enum VariablesEnum1 -->
+  <xsd:simpleType name="VariablesEnum1">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Entero1"/>
+      <xsd:enumeration value="String1"/>
+    </xsd:restriction>
+  </xsd:simpleType>
   
 </xsd:schema>
 

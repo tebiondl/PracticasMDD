@@ -3381,14 +3381,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribatributoTipo = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "atributoTipo");
 				if (attribatributoTipo != null)
 				{
-					global::System.String valueOfatributoTipo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribatributoTipo, out valueOfatributoTipo))
+					VariablesEnum1 valueOfatributoTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<VariablesEnum1>(serializationContext, attribatributoTipo, out valueOfatributoTipo))
 					{
 						instanceOfAtributo.atributoTipo = valueOfatributoTipo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "atributoTipo", typeof(global::System.String), attribatributoTipo);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "atributoTipo", typeof(VariablesEnum1), attribatributoTipo);
 					}
 				}
 			}
@@ -3831,12 +3831,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// atributoTipo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfAtributo.atributoTipo;
+				VariablesEnum1 propValue = instanceOfAtributo.atributoTipo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<VariablesEnum1>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "atributoTipo", propValue);
-	
+					MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "atributoTipo", serializedPropValue);
 				}
 			}
 		}

@@ -613,6 +613,22 @@
     <value>Origen Clase Principal3</value>
     <comment>PropertyDisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
   </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/Entero1.DisplayName" xml:space="preserve">
+    <value>Entero1</value>
+    <comment>Display name for EnumerationLiteral &apos;Entero1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/Entero1.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.Entero1</value>
+    <comment>Description for EnumerationLiteral &apos;Entero1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/String1.DisplayName" xml:space="preserve">
+    <value>String1</value>
+    <comment>Display name for EnumerationLiteral &apos;String1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/String1.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.String1</value>
+    <comment>Description for EnumerationLiteral &apos;String1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape</value>
     <comment>Description for DomainClass &apos;ClasePrincipalShape&apos;</comment>
