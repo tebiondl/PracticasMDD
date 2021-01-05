@@ -2687,14 +2687,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribidentificadorTipo = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "identificadorTipo");
 				if (attribidentificadorTipo != null)
 				{
-					global::System.String valueOfidentificadorTipo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribidentificadorTipo, out valueOfidentificadorTipo))
+					EnumeradorDeTipos valueOfidentificadorTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<EnumeradorDeTipos>(serializationContext, attribidentificadorTipo, out valueOfidentificadorTipo))
 					{
 						instanceOfIdentificador.identificadorTipo = valueOfidentificadorTipo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "identificadorTipo", typeof(global::System.String), attribidentificadorTipo);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "identificadorTipo", typeof(EnumeradorDeTipos), attribidentificadorTipo);
 					}
 				}
 			}
@@ -3137,12 +3137,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// identificadorTipo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfIdentificador.identificadorTipo;
+				EnumeradorDeTipos propValue = instanceOfIdentificador.identificadorTipo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<EnumeradorDeTipos>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "identificadorTipo", propValue);
-	
+					MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "identificadorTipo", serializedPropValue);
 				}
 			}
 		}
@@ -3381,14 +3380,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribatributoTipo = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "atributoTipo");
 				if (attribatributoTipo != null)
 				{
-					VariablesEnum1 valueOfatributoTipo;
-					if (DslModeling::SerializationUtilities.TryGetValue<VariablesEnum1>(serializationContext, attribatributoTipo, out valueOfatributoTipo))
+					EnumeradorDeTipos valueOfatributoTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<EnumeradorDeTipos>(serializationContext, attribatributoTipo, out valueOfatributoTipo))
 					{
 						instanceOfAtributo.atributoTipo = valueOfatributoTipo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "atributoTipo", typeof(VariablesEnum1), attribatributoTipo);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "atributoTipo", typeof(EnumeradorDeTipos), attribatributoTipo);
 					}
 				}
 			}
@@ -3831,8 +3830,8 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// atributoTipo
 			if (!serializationContext.Result.Failed)
 			{
-				VariablesEnum1 propValue = instanceOfAtributo.atributoTipo;
-				string serializedPropValue = DslModeling::SerializationUtilities.GetString<VariablesEnum1>(serializationContext, propValue);
+				EnumeradorDeTipos propValue = instanceOfAtributo.atributoTipo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<EnumeradorDeTipos>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
 					MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "atributoTipo", serializedPropValue);
@@ -4890,14 +4889,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribparametroTipo = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "parametroTipo");
 				if (attribparametroTipo != null)
 				{
-					global::System.String valueOfparametroTipo;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribparametroTipo, out valueOfparametroTipo))
+					EnumeradorDeTipos valueOfparametroTipo;
+					if (DslModeling::SerializationUtilities.TryGetValue<EnumeradorDeTipos>(serializationContext, attribparametroTipo, out valueOfparametroTipo))
 					{
 						instanceOfParametro.parametroTipo = valueOfparametroTipo;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "parametroTipo", typeof(global::System.String), attribparametroTipo);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "parametroTipo", typeof(EnumeradorDeTipos), attribparametroTipo);
 					}
 				}
 			}
@@ -5340,12 +5339,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// parametroTipo
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfParametro.parametroTipo;
+				EnumeradorDeTipos propValue = instanceOfParametro.parametroTipo;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<EnumeradorDeTipos>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "parametroTipo", propValue);
-	
+					MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "parametroTipo", serializedPropValue);
 				}
 			}
 		}
@@ -6416,14 +6414,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribCardinalidadOrigen = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadOrigen");
 				if (attribCardinalidadOrigen != null)
 				{
-					global::System.String valueOfCardinalidadOrigen;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadOrigen, out valueOfCardinalidadOrigen))
+					CardinalidadesEnum valueOfCardinalidadOrigen;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadOrigen, out valueOfCardinalidadOrigen))
 					{
 						instanceOfCPReferenciasCP.CardinalidadOrigen = valueOfCardinalidadOrigen;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadOrigen", typeof(global::System.String), attribCardinalidadOrigen);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadOrigen", typeof(CardinalidadesEnum), attribCardinalidadOrigen);
 					}
 				}
 			}
@@ -6433,14 +6431,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribCardinalidadDestino = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadDestino");
 				if (attribCardinalidadDestino != null)
 				{
-					global::System.String valueOfCardinalidadDestino;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadDestino, out valueOfCardinalidadDestino))
+					CardinalidadesEnum valueOfCardinalidadDestino;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadDestino, out valueOfCardinalidadDestino))
 					{
 						instanceOfCPReferenciasCP.CardinalidadDestino = valueOfCardinalidadDestino;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadDestino", typeof(global::System.String), attribCardinalidadDestino);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadDestino", typeof(CardinalidadesEnum), attribCardinalidadDestino);
 					}
 				}
 			}
@@ -6950,24 +6948,26 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// CardinalidadOrigen
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfCPReferenciasCP.CardinalidadOrigen;
+				CardinalidadesEnum propValue = instanceOfCPReferenciasCP.CardinalidadOrigen;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "1..1") != 0))
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "De1a1") != 0)
 					{	// No need to write the value out if it's the same as default value.
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadOrigen", propValue);
+						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadOrigen", serializedPropValue);
 					}
 				}
 			}
 			// CardinalidadDestino
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfCPReferenciasCP.CardinalidadDestino;
+				CardinalidadesEnum propValue = instanceOfCPReferenciasCP.CardinalidadDestino;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "1..1") != 0))
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "De1a1") != 0)
 					{	// No need to write the value out if it's the same as default value.
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadDestino", propValue);
+						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadDestino", serializedPropValue);
 					}
 				}
 			}
@@ -10521,14 +10521,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribCardinalidadO = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadO");
 				if (attribCardinalidadO != null)
 				{
-					global::System.String valueOfCardinalidadO;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadO, out valueOfCardinalidadO))
+					CardinalidadesEnum valueOfCardinalidadO;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadO, out valueOfCardinalidadO))
 					{
 						instanceOfCPAgregacionInclusivaCP.CardinalidadO = valueOfCardinalidadO;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadO", typeof(global::System.String), attribCardinalidadO);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadO", typeof(CardinalidadesEnum), attribCardinalidadO);
 					}
 				}
 			}
@@ -11038,12 +11038,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// CardinalidadO
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfCPAgregacionInclusivaCP.CardinalidadO;
+				CardinalidadesEnum propValue = instanceOfCPAgregacionInclusivaCP.CardinalidadO;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "1..1") != 0))
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "De1a1") != 0)
 					{	// No need to write the value out if it's the same as default value.
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadO", propValue);
+						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadO", serializedPropValue);
 					}
 				}
 			}
@@ -11457,14 +11458,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribCardinalidadO = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "cardinalidadO");
 				if (attribCardinalidadO != null)
 				{
-					global::System.String valueOfCardinalidadO;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribCardinalidadO, out valueOfCardinalidadO))
+					CardinalidadesEnum valueOfCardinalidadO;
+					if (DslModeling::SerializationUtilities.TryGetValue<CardinalidadesEnum>(serializationContext, attribCardinalidadO, out valueOfCardinalidadO))
 					{
 						instanceOfCPAgregacionNoInclusivaCP.CardinalidadO = valueOfCardinalidadO;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadO", typeof(global::System.String), attribCardinalidadO);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "cardinalidadO", typeof(CardinalidadesEnum), attribCardinalidadO);
 					}
 				}
 			}
@@ -11974,12 +11975,13 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// CardinalidadO
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfCPAgregacionNoInclusivaCP.CardinalidadO;
+				CardinalidadesEnum propValue = instanceOfCPAgregacionNoInclusivaCP.CardinalidadO;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<CardinalidadesEnum>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (propValue != null && (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(propValue, "1..1") != 0))
+					if (serializationContext.WriteOptionalPropertiesWithDefaultValue || string.CompareOrdinal(serializedPropValue, "De1a1") != 0)
 					{	// No need to write the value out if it's the same as default value.
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadO", propValue);
+						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "cardinalidadO", serializedPropValue);
 					}
 				}
 			}

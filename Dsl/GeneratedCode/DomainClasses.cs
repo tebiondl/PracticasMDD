@@ -997,7 +997,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for identificadorTipo
 		/// </summary>
-		private global::System.String identificadorTipoPropertyStorage = string.Empty;
+		private EnumeradorDeTipos identificadorTipoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of identificadorTipo domain property.
@@ -1007,7 +1007,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador/identificadorTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("edb1559a-a8a2-42a7-bb5d-5cbbf8141da9")]
-		public global::System.String identificadorTipo
+		public EnumeradorDeTipos identificadorTipo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1023,7 +1023,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the Identificador.identificadorTipo domain property.
 		/// </summary>
-		internal sealed partial class identificadorTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Identificador, global::System.String>
+		internal sealed partial class identificadorTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Identificador, EnumeradorDeTipos>
 		{
 			private identificadorTipoPropertyHandler() { }
 		
@@ -1049,7 +1049,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Identificador element)
+			public override sealed EnumeradorDeTipos GetValue(Identificador element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.identificadorTipoPropertyStorage;
@@ -1060,11 +1060,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Identificador element, global::System.String newValue)
+			public override sealed void SetValue(Identificador element, EnumeradorDeTipos newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				EnumeradorDeTipos oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1233,7 +1233,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for atributoTipo
 		/// </summary>
-		private VariablesEnum1 atributoTipoPropertyStorage;
+		private EnumeradorDeTipos atributoTipoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of atributoTipo domain property.
@@ -1242,7 +1242,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo/atributoTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("01ce83d8-87be-4eb2-8ed6-a9dfc30a8121")]
-		public VariablesEnum1 atributoTipo
+		public EnumeradorDeTipos atributoTipo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1258,7 +1258,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the Atributo.atributoTipo domain property.
 		/// </summary>
-		internal sealed partial class atributoTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, VariablesEnum1>
+		internal sealed partial class atributoTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Atributo, EnumeradorDeTipos>
 		{
 			private atributoTipoPropertyHandler() { }
 		
@@ -1284,7 +1284,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed VariablesEnum1 GetValue(Atributo element)
+			public override sealed EnumeradorDeTipos GetValue(Atributo element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.atributoTipoPropertyStorage;
@@ -1295,11 +1295,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Atributo element, VariablesEnum1 newValue)
+			public override sealed void SetValue(Atributo element, EnumeradorDeTipos newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				VariablesEnum1 oldValue = GetValue(element);
+				EnumeradorDeTipos oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1817,7 +1817,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for parametroTipo
 		/// </summary>
-		private global::System.String parametroTipoPropertyStorage = string.Empty;
+		private EnumeradorDeTipos parametroTipoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of parametroTipo domain property.
@@ -1826,7 +1826,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro/parametroTipo.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("c0b8f498-bbd6-4784-b4b7-4b0f3adbe1b7")]
-		public global::System.String parametroTipo
+		public EnumeradorDeTipos parametroTipo
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1842,7 +1842,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the Parametro.parametroTipo domain property.
 		/// </summary>
-		internal sealed partial class parametroTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametro, global::System.String>
+		internal sealed partial class parametroTipoPropertyHandler : DslModeling::DomainPropertyValueHandler<Parametro, EnumeradorDeTipos>
 		{
 			private parametroTipoPropertyHandler() { }
 		
@@ -1868,7 +1868,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Parametro element)
+			public override sealed EnumeradorDeTipos GetValue(Parametro element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.parametroTipoPropertyStorage;
@@ -1879,11 +1879,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Parametro element, global::System.String newValue)
+			public override sealed void SetValue(Parametro element, EnumeradorDeTipos newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				EnumeradorDeTipos oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

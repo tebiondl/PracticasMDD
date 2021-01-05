@@ -44,10 +44,6 @@
       <SubType>
       </SubType>
     </None>
-    <None Include="DiagramaPrueba.MBRDCMDMI_DSLPracticaMDDIPS" />
-    <None Include="DiagramaPrueba.MBRDCMDMI_DSLPracticaMDDIPS.diagram">
-      <DependentUpon>DiagramaPrueba.MBRDCMDMI_DSLPracticaMDDIPS</DependentUpon>
-    </None>
     <None Include="MBRDCMDMIReport.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MBRDCMDMIReport.txt</LastGenOutput>
@@ -56,13 +52,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MBRDCMDMIReportVB.txt</LastGenOutput>
     </None>
-    <None Include="Sample.MBRDCMDMI_DSLPracticaMDDIPS" />
-    <None Include="Sample.MBRDCMDMI_DSLPracticaMDDIPS.diagram">
-      <DependentUpon>Sample.MBRDCMDMI_DSLPracticaMDDIPS</DependentUpon>
-    </None>
-    <None Include="Test.MBRDCMDMI_DSLPracticaMDDIPS" />
-    <None Include="Test.MBRDCMDMI_DSLPracticaMDDIPS.diagram">
-      <DependentUpon>Test.MBRDCMDMI_DSLPracticaMDDIPS</DependentUpon>
+    <None Include="pr.MBRDCMDMI_DSLPracticaMDDIPS" />
+    <None Include="pr.MBRDCMDMI_DSLPracticaMDDIPS.diagram">
+      <DependentUpon>pr.MBRDCMDMI_DSLPracticaMDDIPS</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +70,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MBRDCMDMIReportVB.tt</DependentUpon>
+    </Content>
+    <Content Include="Plantilla1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Plantilla1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Plantilla1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plantilla1.tt</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

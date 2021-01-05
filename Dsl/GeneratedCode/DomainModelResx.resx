@@ -613,21 +613,69 @@
     <value>Origen Clase Principal3</value>
     <comment>PropertyDisplayName for DomainRole &apos;DestinoClasePrincipal&apos; on DomainRelationship &apos;CPHerenciaCP&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/Entero1.DisplayName" xml:space="preserve">
-    <value>Entero1</value>
-    <comment>Display name for EnumerationLiteral &apos;Entero1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1a1.DisplayName" xml:space="preserve">
+    <value>De1a1</value>
+    <comment>Display name for EnumerationLiteral &apos;De1a1&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/Entero1.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.Entero1</value>
-    <comment>Description for EnumerationLiteral &apos;Entero1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1a1.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1a1</value>
+    <comment>Description for EnumerationLiteral &apos;De1a1&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/String1.DisplayName" xml:space="preserve">
-    <value>String1</value>
-    <comment>Display name for EnumerationLiteral &apos;String1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0a1.DisplayName" xml:space="preserve">
+    <value>De0a1</value>
+    <comment>Display name for EnumerationLiteral &apos;De0a1&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
   </data>
-  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/String1.Description" xml:space="preserve">
-    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.String1</value>
-    <comment>Description for EnumerationLiteral &apos;String1&apos; on DomainEnumeration &apos;VariablesEnum1&apos;</comment>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0a1.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0a1</value>
+    <comment>Description for EnumerationLiteral &apos;De0a1&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0aN.DisplayName" xml:space="preserve">
+    <value>De0aN</value>
+    <comment>Display name for EnumerationLiteral &apos;De0aN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0aN.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0aN</value>
+    <comment>Description for EnumerationLiteral &apos;De0aN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1aN.DisplayName" xml:space="preserve">
+    <value>De1aN</value>
+    <comment>Display name for EnumerationLiteral &apos;De1aN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1aN.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1aN</value>
+    <comment>Description for EnumerationLiteral &apos;De1aN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Enteros.DisplayName" xml:space="preserve">
+    <value>Enteros</value>
+    <comment>Display name for EnumerationLiteral &apos;Enteros&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Enteros.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Enteros</value>
+    <comment>Description for EnumerationLiteral &apos;Enteros&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Caracteres.DisplayName" xml:space="preserve">
+    <value>Caracteres</value>
+    <comment>Display name for EnumerationLiteral &apos;Caracteres&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Caracteres.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Caracteres</value>
+    <comment>Description for EnumerationLiteral &apos;Caracteres&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Booleanos.DisplayName" xml:space="preserve">
+    <value>Booleanos</value>
+    <comment>Display name for EnumerationLiteral &apos;Booleanos&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Booleanos.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Booleanos</value>
+    <comment>Description for EnumerationLiteral &apos;Booleanos&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/CadenaCaracteres.DisplayName" xml:space="preserve">
+    <value>CadenaCaracteres</value>
+    <comment>Display name for EnumerationLiteral &apos;CadenaCaracteres&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/CadenaCaracteres.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.CadenaCaracteres</value>
+    <comment>Description for EnumerationLiteral &apos;CadenaCaracteres&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
   </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape.Description" xml:space="preserve">
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.ClasePrincipalShape</value>
@@ -898,18 +946,6 @@ A DomainClass can be serialized as a moniker only if
     <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="RelacionAgregacionInclusionIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\DepFRomb.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
-  <data name="RelacionAgregacionNoInclusionIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\DepDRomb.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
-  <data name="RelacionHerenciaIconoDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
-    <value>..\Resources\HeFlch.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-    <comment>Icon decorator default image</comment>
-  </data>
   <data name="ClaseToolToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
     <value>..\Resources\ClassItem.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>Toolbox item image</comment>

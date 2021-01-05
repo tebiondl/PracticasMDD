@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="d295b44f-29cb-48e2-a1a6-983866dea126" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
+  <clase>
+    <tapizProyectosTieneClase Id="64ef0805-4d3c-45cf-9b8d-faa2c0c95767">
+      <clasePrincipal Id="5cb4a409-2eca-497a-9b10-46c2cdf82655" nombreClase="Hola1">
+        <destinoClasePrincipal>
+          <cPReferenciasCP Id="5ab8eabe-e301-46ed-80e1-0767ab58f756" cardinalidadDestino="De0a1">
+            <monikerClasePrincipal Id="1cd27700-4a96-4f8c-862e-8db3ae49e7db" />
+          </cPReferenciasCP>
+        </destinoClasePrincipal>
+        <identificador>
+          <clasePrincipalTieneIdentificador Id="a2d28f63-4152-45d4-b02a-27eb7cf33ff6">
+            <identificador Id="2e883b80-e8e0-4b3e-8bae-a018675fd21b" identificador="Id1" identificadorTipo="Enteros" />
+          </clasePrincipalTieneIdentificador>
+        </identificador>
+      </clasePrincipal>
+    </tapizProyectosTieneClase>
+    <tapizProyectosTieneClase Id="9f6190f3-e0b8-4ee2-81c9-96a34bcdb7a0">
+      <clasePrincipal Id="1cd27700-4a96-4f8c-862e-8db3ae49e7db" nombreClase="Hola2">
+        <identificador>
+          <clasePrincipalTieneIdentificador Id="7623ba0d-527a-4695-ad62-0735e2c99fd5">
+            <identificador Id="16708f91-5f8a-4bf0-bfec-08b85503133a" identificador="Id2" identificadorTipo="Enteros" />
+          </clasePrincipalTieneIdentificador>
+        </identificador>
+      </clasePrincipal>
+    </tapizProyectosTieneClase>
+  </clase>
+</tapizProyectos>

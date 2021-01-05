@@ -533,24 +533,74 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 {
 	/// <summary>
-	/// DomainEnumeration: VariablesEnum1
-	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1
+	/// DomainEnumeration: CardinalidadesEnum
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum
 	/// </summary>
 	[global::System.CLSCompliant(true)]
-	public enum VariablesEnum1
+	public enum CardinalidadesEnum
 	{
 		/// <summary>
-		/// Entero1
-		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.Entero1
+		/// De1a1
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1a1
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/Entero1.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		Entero1 = 0,
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1a1.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		De1a1 = 0,
 		/// <summary>
-		/// String1
-		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1.String1
+		/// De0a1
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0a1
 		/// </summary>
-		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.VariablesEnum1/String1.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		String1 = 1,
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0a1.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		De0a1 = 1,
+		/// <summary>
+		/// De0aN
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0aN
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De0aN.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		De0aN = 2,
+		/// <summary>
+		/// De1aN
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1aN
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1aN.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		De1aN = 3,
+	}
+}
+namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
+{
+	/// <summary>
+	/// DomainEnumeration: EnumeradorDeTipos
+	/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos
+	/// </summary>
+	[global::System.CLSCompliant(true)]
+	public enum EnumeradorDeTipos
+	{
+		/// <summary>
+		/// Enteros
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Enteros
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Enteros.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		Enteros = 0,
+		/// <summary>
+		/// Caracteres
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Caracteres
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Caracteres.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		Caracteres = 1,
+		/// <summary>
+		/// Booleanos
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.Booleanos
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Booleanos.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		Booleanos = 2,
+		/// <summary>
+		/// CadenaCaracteres
+		/// Descripción de
+		/// UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos.CadenaCaracteres
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/CadenaCaracteres.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		CadenaCaracteres = 3,
 	}
 }
 

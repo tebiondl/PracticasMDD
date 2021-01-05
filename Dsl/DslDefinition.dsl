@@ -76,7 +76,7 @@
         </DomainProperty>
         <DomainProperty Id="edb1559a-a8a2-42a7-bb5d-5cbbf8141da9" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Identificador.Identificador Tipo" Name="identificadorTipo" DisplayName="Identificador Tipo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="EnumeradorDeTipos" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -90,7 +90,7 @@
         </DomainProperty>
         <DomainProperty Id="01ce83d8-87be-4eb2-8ed6-a9dfc30a8121" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Atributo.Atributo Tipo" Name="atributoTipo" DisplayName="Atributo Tipo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="EnumeradorDeTipos" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -128,7 +128,7 @@
         </DomainProperty>
         <DomainProperty Id="c0b8f498-bbd6-4784-b4b7-4b0f3adbe1b7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Parametro.Parametro Tipo" Name="parametroTipo" DisplayName="Parametro Tipo">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="EnumeradorDeTipos" />
           </Type>
         </DomainProperty>
       </Properties>
@@ -153,14 +153,14 @@
     </DomainRelationship>
     <DomainRelationship Id="c4464b28-088e-4240-a8b9-fdf26de9a9b7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP" Name="CPReferenciasCP" DisplayName="CPReferencias CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
       <Properties>
-        <DomainProperty Id="1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen" Name="CardinalidadOrigen" DisplayName="Cardinalidad Origen" DefaultValue="1..1">
+        <DomainProperty Id="1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Origen" Name="CardinalidadOrigen" DisplayName="Cardinalidad Origen" DefaultValue="De1a1">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
-        <DomainProperty Id="e283e3d4-33d6-4215-8e49-d4b54df5f964" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino" Name="CardinalidadDestino" DisplayName="Cardinalidad Destino" DefaultValue="1..1">
+        <DomainProperty Id="e283e3d4-33d6-4215-8e49-d4b54df5f964" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Cardinalidad Destino" Name="CardinalidadDestino" DisplayName="Cardinalidad Destino" DefaultValue="De1a1">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="80ee5d74-e13d-4b61-81ad-aaacadbc3a53" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
@@ -250,9 +250,9 @@
     </DomainRelationship>
     <DomainRelationship Id="a71e4787-773b-4588-924a-2fb92d33661d" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP" Name="CPAgregacionInclusivaCP" DisplayName="CPAgregacion Inclusiva CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
       <Properties>
-        <DomainProperty Id="d8fe1fea-8250-4c20-8154-9dfcf74740a6" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="1..1">
+        <DomainProperty Id="d8fe1fea-8250-4c20-8154-9dfcf74740a6" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="De1a1">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="99909fab-aa3a-4f72-9d31-ee58d449fe5e" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
@@ -278,9 +278,9 @@
     </DomainRelationship>
     <DomainRelationship Id="28c35ab3-7941-4efd-8807-49b473ef091a" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP" Name="CPAgregacionNoInclusivaCP" DisplayName="CPAgregacion No Inclusiva CP" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
       <Properties>
-        <DomainProperty Id="8ae2aac7-65fa-431d-bcaa-2e00e4066359" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="1..1">
+        <DomainProperty Id="8ae2aac7-65fa-431d-bcaa-2e00e4066359" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Cardinalidad O" Name="CardinalidadO" DisplayName="Cardinalidad O" DefaultValue="De1a1">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="CardinalidadesEnum" />
           </Type>
         </DomainProperty>
         <DomainProperty Id="a9d3ab85-6e4a-4c3a-b7f1-30c26f7eede6" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP.Nombre Relacion" Name="nombreRelacion" DisplayName="Nombre Relacion" DefaultValue="Nombre">
@@ -343,6 +343,7 @@
         <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0a1" Name="De0a1" Value="1" />
         <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De0aN" Name="De0aN" Value="2" />
         <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1aN" Name="De1aN" Value="3" />
+        <EnumerationLiteral Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.DeNaN" Name="DeNaN" Value="4" />
       </Literals>
     </DomainEnumeration>
     <DomainEnumeration Name="EnumeradorDeTipos" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos">
@@ -376,27 +377,17 @@
         <TextDecorator Name="CardD" DisplayName="Card D" DefaultText="1..1" />
       </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="0ec163de-3d91-49d8-8506-0d3bd0a6f136" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion" Name="RelacionAgregacionInclusion" DisplayName="Relacion Agregacion Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion Inclusion">
+    <Connector Id="0ec163de-3d91-49d8-8506-0d3bd0a6f136" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionInclusion" Name="RelacionAgregacionInclusion" DisplayName="Relacion Agregacion Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion Inclusion" TargetEndStyle="EmptyDiamond">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="CardO" />
       </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\DepFRomb.bmp" />
-      </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="a820673e-1c86-4de8-80d3-2ffdb7dd5d1b" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion" Name="RelacionAgregacionNoInclusion" DisplayName="Relacion Agregacion No Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion No Inclusion">
+    <Connector Id="a820673e-1c86-4de8-80d3-2ffdb7dd5d1b" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionAgregacionNoInclusion" Name="RelacionAgregacionNoInclusion" DisplayName="Relacion Agregacion No Inclusion" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Agregacion No Inclusion" TargetEndStyle="EmptyDiamond">
       <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
         <TextDecorator Name="CardO" DisplayName="Card O" DefaultText="" />
       </ConnectorHasDecorators>
-      <ConnectorHasDecorators Position="TargetBottom" OffsetFromShape="0" OffsetFromLine="0">
-        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\DepDRomb.bmp" />
-      </ConnectorHasDecorators>
     </Connector>
-    <Connector Id="71f078a2-e8b6-42f2-a69f-f224f18b84d7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia" Name="RelacionHerencia" DisplayName="Relacion Herencia" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Herencia">
-      <ConnectorHasDecorators Position="SourceTop" OffsetFromShape="0" OffsetFromLine="0">
-        <IconDecorator Name="Icono" DisplayName="Icono" DefaultIcon="Resources\HeFlch.bmp" />
-      </ConnectorHasDecorators>
-    </Connector>
+    <Connector Id="71f078a2-e8b6-42f2-a69f-f224f18b84d7" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.RelacionHerencia" Name="RelacionHerencia" DisplayName="Relacion Herencia" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI" FixedTooltipText="Relacion Herencia" SourceEndStyle="FilledArrow" />
   </Connectors>
   <XmlSerializationBehavior Name="MBRDCMDMISerializationBehavior" Namespace="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI">
     <ClassData>

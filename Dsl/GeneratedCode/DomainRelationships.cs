@@ -419,7 +419,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadOrigen
 		/// </summary>
-		private global::System.String cardinalidadOrigenPropertyStorage = "1..1";
+		private CardinalidadesEnum cardinalidadOrigenPropertyStorage = CardinalidadesEnum.De1a1;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadOrigen domain property.
@@ -428,9 +428,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadOrigen.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("1..1")]
+		[global::System.ComponentModel.DefaultValue(CardinalidadesEnum.De1a1)]
 		[DslModeling::DomainObjectId("1c5bf7d7-7f72-4ae5-b7d0-2ede8671b54a")]
-		public global::System.String CardinalidadOrigen
+		public CardinalidadesEnum CardinalidadOrigen
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -446,7 +446,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the CPReferenciasCP.CardinalidadOrigen domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, global::System.String>
+		internal sealed partial class CardinalidadOrigenPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, CardinalidadesEnum>
 		{
 			private CardinalidadOrigenPropertyHandler() { }
 		
@@ -472,7 +472,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(CPReferenciasCP element)
+			public override sealed CardinalidadesEnum GetValue(CPReferenciasCP element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadOrigenPropertyStorage;
@@ -483,11 +483,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(CPReferenciasCP element, global::System.String newValue)
+			public override sealed void SetValue(CPReferenciasCP element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -508,7 +508,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadDestino
 		/// </summary>
-		private global::System.String cardinalidadDestinoPropertyStorage = "1..1";
+		private CardinalidadesEnum cardinalidadDestinoPropertyStorage = CardinalidadesEnum.De1a1;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadDestino domain property.
@@ -517,9 +517,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPReferenciasCP/CardinalidadDestino.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("1..1")]
+		[global::System.ComponentModel.DefaultValue(CardinalidadesEnum.De1a1)]
 		[DslModeling::DomainObjectId("e283e3d4-33d6-4215-8e49-d4b54df5f964")]
-		public global::System.String CardinalidadDestino
+		public CardinalidadesEnum CardinalidadDestino
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -535,7 +535,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the CPReferenciasCP.CardinalidadDestino domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadDestinoPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, global::System.String>
+		internal sealed partial class CardinalidadDestinoPropertyHandler : DslModeling::DomainPropertyValueHandler<CPReferenciasCP, CardinalidadesEnum>
 		{
 			private CardinalidadDestinoPropertyHandler() { }
 		
@@ -561,7 +561,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(CPReferenciasCP element)
+			public override sealed CardinalidadesEnum GetValue(CPReferenciasCP element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadDestinoPropertyStorage;
@@ -572,11 +572,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(CPReferenciasCP element, global::System.String newValue)
+			public override sealed void SetValue(CPReferenciasCP element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -1885,7 +1885,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadO
 		/// </summary>
-		private global::System.String cardinalidadOPropertyStorage = "1..1";
+		private CardinalidadesEnum cardinalidadOPropertyStorage = CardinalidadesEnum.De1a1;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadO domain property.
@@ -1894,9 +1894,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionInclusivaCP/CardinalidadO.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("1..1")]
+		[global::System.ComponentModel.DefaultValue(CardinalidadesEnum.De1a1)]
 		[DslModeling::DomainObjectId("d8fe1fea-8250-4c20-8154-9dfcf74740a6")]
-		public global::System.String CardinalidadO
+		public CardinalidadesEnum CardinalidadO
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1912,7 +1912,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the CPAgregacionInclusivaCP.CardinalidadO domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionInclusivaCP, global::System.String>
+		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionInclusivaCP, CardinalidadesEnum>
 		{
 			private CardinalidadOPropertyHandler() { }
 		
@@ -1938,7 +1938,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(CPAgregacionInclusivaCP element)
+			public override sealed CardinalidadesEnum GetValue(CPAgregacionInclusivaCP element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadOPropertyStorage;
@@ -1949,11 +1949,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(CPAgregacionInclusivaCP element, global::System.String newValue)
+			public override sealed void SetValue(CPAgregacionInclusivaCP element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);
@@ -2304,7 +2304,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for CardinalidadO
 		/// </summary>
-		private global::System.String cardinalidadOPropertyStorage = "1..1";
+		private CardinalidadesEnum cardinalidadOPropertyStorage = CardinalidadesEnum.De1a1;
 		
 		/// <summary>
 		/// Gets or sets the value of CardinalidadO domain property.
@@ -2313,9 +2313,9 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CPAgregacionNoInclusivaCP/CardinalidadO.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
-		[global::System.ComponentModel.DefaultValue("1..1")]
+		[global::System.ComponentModel.DefaultValue(CardinalidadesEnum.De1a1)]
 		[DslModeling::DomainObjectId("8ae2aac7-65fa-431d-bcaa-2e00e4066359")]
-		public global::System.String CardinalidadO
+		public CardinalidadesEnum CardinalidadO
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -2331,7 +2331,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the CPAgregacionNoInclusivaCP.CardinalidadO domain property.
 		/// </summary>
-		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionNoInclusivaCP, global::System.String>
+		internal sealed partial class CardinalidadOPropertyHandler : DslModeling::DomainPropertyValueHandler<CPAgregacionNoInclusivaCP, CardinalidadesEnum>
 		{
 			private CardinalidadOPropertyHandler() { }
 		
@@ -2357,7 +2357,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(CPAgregacionNoInclusivaCP element)
+			public override sealed CardinalidadesEnum GetValue(CPAgregacionNoInclusivaCP element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.cardinalidadOPropertyStorage;
@@ -2368,11 +2368,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(CPAgregacionNoInclusivaCP element, global::System.String newValue)
+			public override sealed void SetValue(CPAgregacionNoInclusivaCP element, CardinalidadesEnum newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				CardinalidadesEnum oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

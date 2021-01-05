@@ -245,7 +245,7 @@
         <!-- Property: identificador -->
         <xsd:attribute name="identificador" type="xsd:string" />
         <!-- Property: identificadorTipo -->
-        <xsd:attribute name="identificadorTipo" type="xsd:string" />
+        <xsd:attribute name="identificadorTipo" type="EnumeradorDeTipos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -281,7 +281,7 @@
         <!-- Property: nombreAtributo -->
         <xsd:attribute name="nombreAtributo" type="xsd:string" />
         <!-- Property: atributoTipo -->
-        <xsd:attribute name="atributoTipo" type="VariablesEnum1" />
+        <xsd:attribute name="atributoTipo" type="EnumeradorDeTipos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -370,7 +370,7 @@
         <!-- Property: nombreParametro -->
         <xsd:attribute name="nombreParametro" type="xsd:string" />
         <!-- Property: parametroTipo -->
-        <xsd:attribute name="parametroTipo" type="xsd:string" />
+        <xsd:attribute name="parametroTipo" type="EnumeradorDeTipos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
@@ -452,9 +452,9 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: CardinalidadOrigen -->
-        <xsd:attribute name="cardinalidadOrigen" type="xsd:string" />
+        <xsd:attribute name="cardinalidadOrigen" type="CardinalidadesEnum" />
         <!-- Property: CardinalidadDestino -->
-        <xsd:attribute name="cardinalidadDestino" type="xsd:string" />
+        <xsd:attribute name="cardinalidadDestino" type="CardinalidadesEnum" />
         <!-- Property: nombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -658,7 +658,7 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: CardinalidadO -->
-        <xsd:attribute name="cardinalidadO" type="xsd:string" />
+        <xsd:attribute name="cardinalidadO" type="CardinalidadesEnum" />
         <!-- Property: nombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -702,7 +702,7 @@
           </xsd:annotation>
         </xsd:attribute>
         <!-- Property: CardinalidadO -->
-        <xsd:attribute name="cardinalidadO" type="xsd:string" />
+        <xsd:attribute name="cardinalidadO" type="CardinalidadesEnum" />
         <!-- Property: nombreRelacion -->
         <xsd:attribute name="nombreRelacion" type="xsd:string" />
       </xsd:extension>
@@ -766,11 +766,23 @@
     </xsd:complexContent>
   </xsd:complexType>
   
-  <!-- Enum VariablesEnum1 -->
-  <xsd:simpleType name="VariablesEnum1">
+  <!-- Enum CardinalidadesEnum -->
+  <xsd:simpleType name="CardinalidadesEnum">
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Entero1"/>
-      <xsd:enumeration value="String1"/>
+      <xsd:enumeration value="De1a1"/>
+      <xsd:enumeration value="De0a1"/>
+      <xsd:enumeration value="De0aN"/>
+      <xsd:enumeration value="De1aN"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <!-- Enum EnumeradorDeTipos -->
+  <xsd:simpleType name="EnumeradorDeTipos">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Enteros"/>
+      <xsd:enumeration value="Caracteres"/>
+      <xsd:enumeration value="Booleanos"/>
+      <xsd:enumeration value="CadenaCaracteres"/>
     </xsd:restriction>
   </xsd:simpleType>
   
