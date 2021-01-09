@@ -2,10 +2,13 @@
 <tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7cfefa91-df00-4e03-8935-70240c7bf0a5" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
   <clase>
     <tapizProyectosTieneClase Id="58e0cb0b-fef4-49bd-b8ea-2ab1a71a4668">
-      <clasePrincipal Id="2848d1be-c280-47a5-a5bc-9a6e4ab6de6c" nombreClase="C1">
+      <clasePrincipal Id="2848d1be-c280-47a5-a5bc-9a6e4ab6de6c" nombreClase="Edificio">
         <destinoClasePrincipal>
           <cPReferenciasCP Id="0764823f-d366-420d-9ace-c3236facc771">
             <monikerClasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" />
+          </cPReferenciasCP>
+          <cPReferenciasCP Id="12119f49-3fbe-4ba8-8bac-dc6020fdec57">
+            <monikerClasePrincipal Id="c5a658f6-bc60-4865-ac24-62449bcc16da" />
           </cPReferenciasCP>
         </destinoClasePrincipal>
         <identificador>
@@ -38,7 +41,7 @@
       </clasePrincipal>
     </tapizProyectosTieneClase>
     <tapizProyectosTieneClase Id="6777dae7-ece3-468e-bd65-c02ea4687930">
-      <clasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" nombreClase="C2">
+      <clasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" nombreClase="Persona">
         <identificador>
           <clasePrincipalTieneIdentificador Id="f19aa648-fd32-4b7e-ae21-7d095c06276e">
             <identificador Id="7934c3fe-e979-4755-8e62-de9d1740b94b" identificador="Id2" identificadorTipo="Enteros" />
@@ -52,6 +55,20 @@
             <atributo Id="f920f1e4-fb58-4a9b-bb94-7f24a9d258bf" nombreAtributo="b2" atributoTipo="Booleanos" />
           </clasePrincipalTieneAtributo>
         </atributo>
+      </clasePrincipal>
+    </tapizProyectosTieneClase>
+    <tapizProyectosTieneClase Id="0d26f97b-c7bf-4f24-9901-8236752c9a2e">
+      <clasePrincipal Id="c5a658f6-bc60-4865-ac24-62449bcc16da" nombreClase="Mesa">
+        <identificador>
+          <clasePrincipalTieneIdentificador Id="6e7fc6ef-a0ce-4688-ba08-98f11fc7bade">
+            <identificador Id="cc9aec4d-cdc1-487a-8028-bb2bc865d783" identificador="id3" identificadorTipo="Enteros" />
+          </clasePrincipalTieneIdentificador>
+        </identificador>
+        <destinoClasePrincipal1>
+          <cPAgregacionInclusivaCP Id="06439189-1291-4ad1-af0e-cf9ba61461d3">
+            <monikerClasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" />
+          </cPAgregacionInclusivaCP>
+        </destinoClasePrincipal1>
       </clasePrincipal>
     </tapizProyectosTieneClase>
   </clase>

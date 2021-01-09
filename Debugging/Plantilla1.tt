@@ -12,6 +12,7 @@
 		//Definir clase
 			WriteLine("public class " + clase.nombreClase + " {");
 			WriteLine("");
+
 			//Escribir identificador
 			foreach(Identificador id in clase.Identificador){
 				WriteLine("    private " + id.identificadorTipo + " " + id.identificador + ";");
@@ -20,12 +21,29 @@
 			foreach(Atributo a in clase.Atributo){
 				WriteLine("    private " + a.atributoTipo + " " + a.nombreAtributo + ";");
 			}
-			WriteLine("");
 
 			//Relacion asociacion
-			foreach(ClasePrincipal clase2 in clase.ClasePrincipal){
-				WriteLine("    public " + clase2.nombreClase + " " + clase2.nombreClase + "1" + ";");
+			int j = 1;
+			foreach(ClasePrincipal c in clase.DestinoClasePrincipal){
+				WriteLine("    public " + c.nombreClase + " " + c.nombreClase + j + ";");
+				j++;
 			}
+			foreach(ClasePrincipal c in clase.OrigenClasePrincipal){
+				WriteLine("    public " + c.nombreClase + " " + c.nombreClase + j + ";");
+				j++;
+			}
+
+			//Relacion agregacion inclusiva
+			if(clase.DestinoClasePrincipal1.Count > 0){
+				WriteLine("    public List<" + clase.DestinoClasePrincipal1[0].nombreClase + "> " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";");
+				j++;
+			}
+			if(clase.OrigenClasePrincipal1 != null){
+				WriteLine("    public " + clase.OrigenClasePrincipal1.nombreClase + " " + clase.OrigenClasePrincipal1.nombreClase + j + ";");
+				j++;
+			}
+
+			WriteLine("");
 			//Escribir operaciones
 			foreach(Operacion o in clase.Operacion){
 				String s = "";

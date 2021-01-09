@@ -1,1 +1,34 @@
-﻿ErrorGeneratingOutput
+﻿
+public class Edificio {
+
+    private Enteros Id1;
+    private Enteros h1;
+    private Enteros h2;
+    public Persona Persona1;
+    public Mesa Mesa2;
+
+    public Caracteres Correr(Enteros p1, CadenaCaracteres p2) {
+
+    }
+
+}
+
+public class Persona {
+
+    private Enteros Id2;
+    private CadenaCaracteres b1;
+    private Booleanos b2;
+    public Edificio Edificio1;
+    public Mesa Mesa2;
+
+}
+
+public class Mesa {
+
+    private Enteros id3;
+    public Edificio Edificio1;
+    public List<Persona> Persona2;
+
+}
+
+
