@@ -1,0 +1,3 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
+<#@ output extension=".txt" #>
+<#@ MBRDCMDMI processor="MBRDCMDMIDirectiveProcessor" requires="fileName='pr.MBRDCMDMI_DSLPracticaMDDIPS'" #>

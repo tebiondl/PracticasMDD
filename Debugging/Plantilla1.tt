@@ -1,3 +1,24 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
 <#@ output extension=".txt" #>
 <#@ MBRDCMDMI processor="MBRDCMDMIDirectiveProcessor" requires="fileName='pr.MBRDCMDMI_DSLPracticaMDDIPS'" #>
+
+<#
+	createClass();
+#>
+
+<#+
+	private void createClass(){
+		foreach(ClasePrincipal clase in this.TapizProyectos.Clase){
+			WriteLine("public class " + clase.nombreClase + " {");
+			WriteLine("");
+			foreach(Identificador id in clase.Identificador){
+				WriteLine("    private " + id.identificadorTipo + " " + id.identificador + ";");
+			}
+			foreach(Atributo a in clase.Atributo){
+				WriteLine("    private " + a.atributoTipo + " " + a.nombreAtributo + ";");
+			}
+			WriteLine("}");
+			WriteLine("");
+		}
+	}
+#>

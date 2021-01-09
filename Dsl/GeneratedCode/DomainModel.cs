@@ -563,6 +563,12 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// </summary>
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/De1aN.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		De1aN = 3,
+		/// <summary>
+		/// DeNaN
+		/// Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.DeNaN
+		/// </summary>
+		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/DeNaN.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
+		DeNaN = 4,
 	}
 }
 namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI

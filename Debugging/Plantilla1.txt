@@ -1,1 +1,14 @@
 ﻿
+public class C1 {
+
+    private Enteros id1;
+    private Enteros a;
+}
+
+public class C2 {
+
+    private Enteros id2;
+    private Enteros b ;
+}
+
+

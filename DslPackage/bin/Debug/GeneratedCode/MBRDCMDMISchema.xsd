@@ -773,6 +773,7 @@
       <xsd:enumeration value="De0a1"/>
       <xsd:enumeration value="De0aN"/>
       <xsd:enumeration value="De1aN"/>
+      <xsd:enumeration value="DeNaN"/>
     </xsd:restriction>
   </xsd:simpleType>
   

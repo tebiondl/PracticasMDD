@@ -645,6 +645,14 @@
     <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.De1aN</value>
     <comment>Description for EnumerationLiteral &apos;De1aN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
   </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/DeNaN.DisplayName" xml:space="preserve">
+    <value>DeNaN</value>
+    <comment>Display name for EnumerationLiteral &apos;DeNaN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
+  <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum/DeNaN.Description" xml:space="preserve">
+    <value>Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.CardinalidadesEnum.DeNaN</value>
+    <comment>Description for EnumerationLiteral &apos;DeNaN&apos; on DomainEnumeration &apos;CardinalidadesEnum&apos;</comment>
+  </data>
   <data name="UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.EnumeradorDeTipos/Enteros.DisplayName" xml:space="preserve">
     <value>Enteros</value>
     <comment>Display name for EnumerationLiteral &apos;Enteros&apos; on DomainEnumeration &apos;EnumeradorDeTipos&apos;</comment>
