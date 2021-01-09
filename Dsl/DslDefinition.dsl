@@ -104,7 +104,7 @@
         </DomainProperty>
         <DomainProperty Id="49b922fa-6d31-4835-9b67-06c8d8872f3c" Description="Descripción de UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion.Tipo Devuelto" Name="tipoDevuelto" DisplayName="Tipo Devuelto">
           <Type>
-            <ExternalTypeMoniker Name="/System/String" />
+            <DomainEnumerationMoniker Name="EnumeradorDeTipos" />
           </Type>
         </DomainProperty>
       </Properties>

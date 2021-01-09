@@ -334,7 +334,7 @@
         <!-- Property: operacion -->
         <xsd:attribute name="operacion" type="xsd:string" />
         <!-- Property: tipoDevuelto -->
-        <xsd:attribute name="tipoDevuelto" type="xsd:string" />
+        <xsd:attribute name="tipoDevuelto" type="EnumeradorDeTipos" />
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>

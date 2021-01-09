@@ -1,49 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="b65aea5e-d570-4c5b-8aa8-39b5390f8e39" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
+<tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7cfefa91-df00-4e03-8935-70240c7bf0a5" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
   <clase>
-    <tapizProyectosTieneClase Id="ed5dd128-026d-4961-96ea-60d06818a1f4">
-      <clasePrincipal Id="8bedb40e-f510-4b62-b12d-b3bd473a819d" nombre="aaaaa" nombreClase="C1">
+    <tapizProyectosTieneClase Id="58e0cb0b-fef4-49bd-b8ea-2ab1a71a4668">
+      <clasePrincipal Id="2848d1be-c280-47a5-a5bc-9a6e4ab6de6c" nombreClase="C1">
+        <destinoClasePrincipal>
+          <cPReferenciasCP Id="0764823f-d366-420d-9ace-c3236facc771">
+            <monikerClasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" />
+          </cPReferenciasCP>
+        </destinoClasePrincipal>
         <identificador>
-          <clasePrincipalTieneIdentificador Id="14bcab5f-40d6-4784-b1c9-dbb732e00a01">
-            <identificador Id="541c333e-0015-48ba-b528-1640e837e96a" identificador="id1" identificadorTipo="Enteros" />
+          <clasePrincipalTieneIdentificador Id="3e16c2c0-5142-4128-97ed-50d5a7d853aa">
+            <identificador Id="f77d3d6f-99a7-4e41-82ed-8d461d0f35e4" identificador="Id1" identificadorTipo="Enteros" />
           </clasePrincipalTieneIdentificador>
         </identificador>
         <atributo>
-          <clasePrincipalTieneAtributo Id="a903836a-327d-456f-be92-fe2fd8850f0b">
-            <atributo Id="9f7b03fc-55ea-4e04-bc15-52b361778e79" nombreAtributo="a" atributoTipo="Enteros" />
+          <clasePrincipalTieneAtributo Id="9d53eb23-c992-48db-a04d-480ec4abeca8">
+            <atributo Id="e0074e1e-b10f-4ab0-9226-cb74d732217e" nombreAtributo="h1" atributoTipo="Enteros" />
+          </clasePrincipalTieneAtributo>
+          <clasePrincipalTieneAtributo Id="2216a7b7-63c5-4929-894d-c07ca76f9fb3">
+            <atributo Id="0ee6ac17-42b5-4e1d-a2ed-8ebb927ea792" nombreAtributo="h2" atributoTipo="Enteros" />
           </clasePrincipalTieneAtributo>
         </atributo>
         <operacion>
-          <clasePrincipalTieneOperacion Id="eb6439af-048a-4b6a-b60b-19910d7efcab">
-            <operacion Id="a69438ed-8664-4a06-93d7-d7983ff4924c" operacion="Correr" tipoDevuelto="Int">
+          <clasePrincipalTieneOperacion Id="7a3e46dd-f7fb-4f08-af69-e991298ac015">
+            <operacion Id="3e2d8135-164f-461c-9d81-ca0ad3db2905" operacion="Correr" tipoDevuelto="Caracteres">
               <parametro>
-                <operacionTieneParametro Id="e08df76c-992c-45eb-b0d4-de9552ff8d6b">
-                  <parametro Id="4cd64caf-348f-49df-a3d0-87ab99b75ede" nombreParametro="hola" parametroTipo="Enteros" />
+                <operacionTieneParametro Id="dd3a87ec-5fe5-4d99-99b2-5fa2d8769865">
+                  <parametro Id="5747bcc4-d68d-4feb-97c9-87aff5936ff7" nombreParametro="p1" parametroTipo="Enteros" />
                 </operacionTieneParametro>
-                <operacionTieneParametro Id="ac67e9f4-8714-4d40-baed-b027bd5e2b01">
-                  <parametro Id="ade1bbe6-43bd-4056-bcb3-8ed86e61ed7d" nombreParametro="talue" parametroTipo="Enteros" />
+                <operacionTieneParametro Id="e65e2b6d-5810-44fd-8f91-b2c9368280ee">
+                  <parametro Id="4d042a18-7541-4267-baf8-be9c94ab09d1" nombreParametro="p2" parametroTipo="CadenaCaracteres" />
                 </operacionTieneParametro>
               </parametro>
             </operacion>
           </clasePrincipalTieneOperacion>
         </operacion>
-        <destinoClasePrincipal1>
-          <cPAgregacionInclusivaCP Id="83cff409-76f4-48ff-a15a-93e7147bc75a">
-            <monikerClasePrincipal Id="09d7ed9b-4cfb-4e84-af41-c3752bf97712" />
-          </cPAgregacionInclusivaCP>
-        </destinoClasePrincipal1>
       </clasePrincipal>
     </tapizProyectosTieneClase>
-    <tapizProyectosTieneClase Id="6fafebb5-1b49-4133-bf15-2b877445c60f">
-      <clasePrincipal Id="09d7ed9b-4cfb-4e84-af41-c3752bf97712" nombre="bbb" nombreClase="C2">
+    <tapizProyectosTieneClase Id="6777dae7-ece3-468e-bd65-c02ea4687930">
+      <clasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" nombreClase="C2">
         <identificador>
-          <clasePrincipalTieneIdentificador Id="641f3895-4e7c-4c7e-b847-134412500813">
-            <identificador Id="6eff13f0-bc20-4d38-acb5-7777bbe1619e" identificador="id2" identificadorTipo="Enteros" />
+          <clasePrincipalTieneIdentificador Id="f19aa648-fd32-4b7e-ae21-7d095c06276e">
+            <identificador Id="7934c3fe-e979-4755-8e62-de9d1740b94b" identificador="Id2" identificadorTipo="Enteros" />
           </clasePrincipalTieneIdentificador>
         </identificador>
         <atributo>
-          <clasePrincipalTieneAtributo Id="c51bc8f7-0672-4486-9a49-302ca8509b9e">
-            <atributo Id="18e5ef16-be03-4ff8-98fa-7fd558b44425" nombreAtributo="b " atributoTipo="Enteros" />
+          <clasePrincipalTieneAtributo Id="7a2906b6-6510-40e1-b287-ca8ee6c84c46">
+            <atributo Id="925d034d-0c9c-4a76-b128-ec3ee3fa183e" nombreAtributo="b1" atributoTipo="CadenaCaracteres" />
+          </clasePrincipalTieneAtributo>
+          <clasePrincipalTieneAtributo Id="e8475357-de23-4c0d-9c8c-6225f489d714">
+            <atributo Id="f920f1e4-fb58-4a9b-bb94-7f24a9d258bf" nombreAtributo="b2" atributoTipo="Booleanos" />
           </clasePrincipalTieneAtributo>
         </atributo>
       </clasePrincipal>

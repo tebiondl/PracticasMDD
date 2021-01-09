@@ -1468,7 +1468,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Storage for tipoDevuelto
 		/// </summary>
-		private global::System.String tipoDevueltoPropertyStorage = string.Empty;
+		private EnumeradorDeTipos tipoDevueltoPropertyStorage;
 		
 		/// <summary>
 		/// Gets or sets the value of tipoDevuelto domain property.
@@ -1477,7 +1477,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		[DslDesign::DisplayNameResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.DisplayName", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslDesign::DescriptionResource("UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.Operacion/tipoDevuelto.Description", typeof(global::UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.MBRDCMDMIDomainModel), "UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI.GeneratedCode.DomainModelResx")]
 		[DslModeling::DomainObjectId("49b922fa-6d31-4835-9b67-06c8d8872f3c")]
-		public global::System.String tipoDevuelto
+		public EnumeradorDeTipos tipoDevuelto
 		{
 			[global::System.Diagnostics.DebuggerStepThrough]
 			get
@@ -1493,7 +1493,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 		/// <summary>
 		/// Value handler for the Operacion.tipoDevuelto domain property.
 		/// </summary>
-		internal sealed partial class tipoDevueltoPropertyHandler : DslModeling::DomainPropertyValueHandler<Operacion, global::System.String>
+		internal sealed partial class tipoDevueltoPropertyHandler : DslModeling::DomainPropertyValueHandler<Operacion, EnumeradorDeTipos>
 		{
 			private tipoDevueltoPropertyHandler() { }
 		
@@ -1519,7 +1519,7 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <returns>Property value.</returns>
-			public override sealed global::System.String GetValue(Operacion element)
+			public override sealed EnumeradorDeTipos GetValue(Operacion element)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 				return element.tipoDevueltoPropertyStorage;
@@ -1530,11 +1530,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			/// </summary>
 			/// <param name="element">Element which owns the property.</param>
 			/// <param name="newValue">New property value.</param>
-			public override sealed void SetValue(Operacion element, global::System.String newValue)
+			public override sealed void SetValue(Operacion element, EnumeradorDeTipos newValue)
 			{
 				if (element == null) throw new global::System.ArgumentNullException("element");
 		
-				global::System.String oldValue = GetValue(element);
+				EnumeradorDeTipos oldValue = GetValue(element);
 				if (newValue != oldValue)
 				{
 					ValueChanging(element, oldValue, newValue);

@@ -80,6 +80,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Plantilla1.tt</DependentUpon>
     </Content>
+    <Content Include="Plantilla2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Plantilla2.txt</LastGenOutput>
+    </Content>
+    <Content Include="Plantilla2.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Plantilla2.tt</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

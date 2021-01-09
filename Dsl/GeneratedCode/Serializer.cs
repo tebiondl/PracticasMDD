@@ -4073,14 +4073,14 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 				string attribtipoDevuelto = MBRDCMDMISerializationHelper.Instance.ReadAttribute(serializationContext, element, reader, "tipoDevuelto");
 				if (attribtipoDevuelto != null)
 				{
-					global::System.String valueOftipoDevuelto;
-					if (DslModeling::SerializationUtilities.TryGetValue<global::System.String>(serializationContext, attribtipoDevuelto, out valueOftipoDevuelto))
+					EnumeradorDeTipos valueOftipoDevuelto;
+					if (DslModeling::SerializationUtilities.TryGetValue<EnumeradorDeTipos>(serializationContext, attribtipoDevuelto, out valueOftipoDevuelto))
 					{
 						instanceOfOperacion.tipoDevuelto = valueOftipoDevuelto;
 					}
 					else
 					{	// Invalid property value, ignored.
-						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoDevuelto", typeof(global::System.String), attribtipoDevuelto);
+						MBRDCMDMISerializationBehaviorSerializationMessages.IgnoredPropertyValue(serializationContext, reader, "tipoDevuelto", typeof(EnumeradorDeTipos), attribtipoDevuelto);
 					}
 				}
 			}
@@ -4610,12 +4610,11 @@ namespace UPM_IPS.MBRDCMDMI_ProyectoIPS.MBRDCMDMI
 			// tipoDevuelto
 			if (!serializationContext.Result.Failed)
 			{
-				global::System.String propValue = instanceOfOperacion.tipoDevuelto;
+				EnumeradorDeTipos propValue = instanceOfOperacion.tipoDevuelto;
+				string serializedPropValue = DslModeling::SerializationUtilities.GetString<EnumeradorDeTipos>(serializationContext, propValue);
 				if (!serializationContext.Result.Failed)
 				{
-					if (!string.IsNullOrEmpty(propValue))
-						MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoDevuelto", propValue);
-	
+					MBRDCMDMISerializationHelper.Instance.WriteAttributeString(serializationContext, element, writer, "tipoDevuelto", serializedPropValue);
 				}
 			}
 		}

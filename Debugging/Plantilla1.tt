@@ -9,15 +9,24 @@
 <#+
 	private void createClass(){
 		foreach(ClasePrincipal clase in this.TapizProyectos.Clase){
+		//Definir clase
 			WriteLine("public class " + clase.nombreClase + " {");
 			WriteLine("");
+			//Escribir identificador
 			foreach(Identificador id in clase.Identificador){
 				WriteLine("    private " + id.identificadorTipo + " " + id.identificador + ";");
 			}
+			//Escribir atributos
 			foreach(Atributo a in clase.Atributo){
 				WriteLine("    private " + a.atributoTipo + " " + a.nombreAtributo + ";");
 			}
 			WriteLine("");
+
+			//Relacion asociacion
+			foreach(ClasePrincipal clase2 in clase.ClasePrincipal){
+				WriteLine("    public " + clase2.nombreClase + " " + clase2.nombreClase + "1" + ";");
+			}
+			//Escribir operaciones
 			foreach(Operacion o in clase.Operacion){
 				String s = "";
 				int i = 0;
