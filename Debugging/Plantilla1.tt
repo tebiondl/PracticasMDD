@@ -17,6 +17,24 @@
 			foreach(Atributo a in clase.Atributo){
 				WriteLine("    private " + a.atributoTipo + " " + a.nombreAtributo + ";");
 			}
+			WriteLine("");
+			foreach(Operacion o in clase.Operacion){
+				String s = "";
+				int i = 0;
+				foreach(Parametro p in o.Parametro){
+					if(i>0){
+						s += ", " + p.parametroTipo + " " + p.nombreParametro;
+					}else{
+						s += p.parametroTipo + " " + p.nombreParametro;
+					}				
+					i++;
+				}
+				s+= ")";
+				WriteLine("    public " + o.tipoDevuelto + " " + o.operacion + "(" + s + " {");
+				WriteLine("");
+				WriteLine("    }");
+				WriteLine("");
+			}
 			WriteLine("}");
 			WriteLine("");
 		}

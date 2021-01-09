@@ -13,6 +13,20 @@
             <atributo Id="9f7b03fc-55ea-4e04-bc15-52b361778e79" nombreAtributo="a" atributoTipo="Enteros" />
           </clasePrincipalTieneAtributo>
         </atributo>
+        <operacion>
+          <clasePrincipalTieneOperacion Id="eb6439af-048a-4b6a-b60b-19910d7efcab">
+            <operacion Id="a69438ed-8664-4a06-93d7-d7983ff4924c" operacion="Correr" tipoDevuelto="Int">
+              <parametro>
+                <operacionTieneParametro Id="e08df76c-992c-45eb-b0d4-de9552ff8d6b">
+                  <parametro Id="4cd64caf-348f-49df-a3d0-87ab99b75ede" nombreParametro="hola" parametroTipo="Enteros" />
+                </operacionTieneParametro>
+                <operacionTieneParametro Id="ac67e9f4-8714-4d40-baed-b027bd5e2b01">
+                  <parametro Id="ade1bbe6-43bd-4056-bcb3-8ed86e61ed7d" nombreParametro="talue" parametroTipo="Enteros" />
+                </operacionTieneParametro>
+              </parametro>
+            </operacion>
+          </clasePrincipalTieneOperacion>
+        </operacion>
         <destinoClasePrincipal1>
           <cPAgregacionInclusivaCP Id="83cff409-76f4-48ff-a15a-93e7147bc75a">
             <monikerClasePrincipal Id="09d7ed9b-4cfb-4e84-af41-c3752bf97712" />
