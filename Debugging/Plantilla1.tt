@@ -9,40 +9,90 @@
 <#+
 	private void createClass(){
 		foreach(ClasePrincipal clase in this.TapizProyectos.Clase){
-		//Definir clase
-			WriteLine("public class " + clase.nombreClase + " {");
+		//Definir clase (Viendo si es hijo o no)
+			if(clase.OrigenClasePrincipal3 != null){
+				WriteLine("public class " + clase.nombreClase + " extends " + clase.OrigenClasePrincipal3.nombreClase + " {");
+			}else{
+				WriteLine("public class " + clase.nombreClase + " {");
+			}
+			
 			WriteLine("");
+			String st = "";
+			String sp = "";
+			String sg = "";
 
 			//Escribir identificador
 			foreach(Identificador id in clase.Identificador){
 				WriteLine("    private " + id.identificadorTipo + " " + id.identificador + ";");
+				st+= id.identificadorTipo + " " + id.identificador;
+				sp+= "this." + id.identificador + " = " + id.identificador + ";";
+				sg+= "    public " + id.identificadorTipo + " get" + id.identificador + "() {\n        return " + id.identificador + ";\n    }\n\n    public void set" + id.identificador + "(" + id.identificadorTipo + " " + id.identificador + ") {\n        this." + id.identificador + " = " + id.identificador + ";" + "\n    }";
 			}
 			//Escribir atributos
 			foreach(Atributo a in clase.Atributo){
 				WriteLine("    private " + a.atributoTipo + " " + a.nombreAtributo + ";");
+				st+= ", " + a.atributoTipo + " " + a.nombreAtributo;
+				sp+= "\n\t\tthis." + a.nombreAtributo + " = " + a.nombreAtributo + ";";
+				sg+= "\n\n    public " + a.atributoTipo + " get" + a.nombreAtributo + "() {\n        return " + a.nombreAtributo + ";\n    }\n\n    public void set" + a.nombreAtributo + "(" + a.atributoTipo + " " + a.nombreAtributo + ") {\n        this." + a.nombreAtributo + " = " + a.nombreAtributo + ";" + "\n    }";
 			}
 
 			//Relacion asociacion
 			int j = 1;
 			foreach(ClasePrincipal c in clase.DestinoClasePrincipal){
-				WriteLine("    public " + c.nombreClase + " " + c.nombreClase + j + ";");
+				WriteLine("    public " + c.nombreClase + " " + c.nombreClase + j + ";");			
+				st+= ", " + c.nombreClase + " " + c.nombreClase + j;
+				sp+= "\n\t\tthis." + c.nombreClase + j + " = " + c.nombreClase + j + ";";
+				sg+= "\n\n    public " + c.nombreClase + " get" + c.nombreClase + j + "() {\n        return " + c.nombreClase + j + ";\n    }\n\n    public void set" + c.nombreClase + j + "(" + c.nombreClase + " " + c.nombreClase + j + ") {\n        this." + c.nombreClase + j + " = " + c.nombreClase + j + ";" + "\n    }";
 				j++;
 			}
 			foreach(ClasePrincipal c in clase.OrigenClasePrincipal){
 				WriteLine("    public " + c.nombreClase + " " + c.nombreClase + j + ";");
+				st+= ", " + c.nombreClase + " " + c.nombreClase + j;
+				sp+= "\n\t\tthis." + c.nombreClase + j + " = " + c.nombreClase + j + ";";
+				sg+= "\n\n    public " + c.nombreClase + " get" + c.nombreClase + j + "() {\n        return " + c.nombreClase + j + ";\n    }\n\n    public void set" + c.nombreClase + j + "(" + c.nombreClase + " " + c.nombreClase + j + ") {\n        this." + c.nombreClase + j + " = " + c.nombreClase + j + ";" + "\n    }";
 				j++;
 			}
 
 			//Relacion agregacion inclusiva
 			if(clase.DestinoClasePrincipal1.Count > 0){
-				WriteLine("    public List<" + clase.DestinoClasePrincipal1[0].nombreClase + "> " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";");
+				WriteLine("    public " + clase.DestinoClasePrincipal1[0].nombreClase + "[] " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";");
+				st+= ", " + clase.DestinoClasePrincipal1[0].nombreClase + "[] " + clase.DestinoClasePrincipal1[0].nombreClase + j;
+				sp+= "\n\t\tthis." + clase.DestinoClasePrincipal1[0].nombreClase + j + " = " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";";
+				sg+= "\n\n    public " + clase.DestinoClasePrincipal1[0].nombreClase + " get" + clase.DestinoClasePrincipal1[0].nombreClase + j + "() {\n        return " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";\n    }\n\n    public void set" + clase.DestinoClasePrincipal1[0].nombreClase + j + "(" + clase.DestinoClasePrincipal1[0].nombreClase + " " + clase.DestinoClasePrincipal1[0].nombreClase + j + ") {\n        this." + clase.DestinoClasePrincipal1[0].nombreClase + j + " = " + clase.DestinoClasePrincipal1[0].nombreClase + j + ";" + "\n    }";
 				j++;
 			}
 			if(clase.OrigenClasePrincipal1 != null){
 				WriteLine("    public " + clase.OrigenClasePrincipal1.nombreClase + " " + clase.OrigenClasePrincipal1.nombreClase + j + ";");
+				st+= ", " + clase.OrigenClasePrincipal1.nombreClase + " " + clase.OrigenClasePrincipal1.nombreClase + j;
+				sp+= "\n\t\tthis." + clase.OrigenClasePrincipal1.nombreClase + j + " = " + clase.OrigenClasePrincipal1.nombreClase + j + ";";
+				sg+= "\n\n    public " + clase.OrigenClasePrincipal1.nombreClase + " get" + clase.OrigenClasePrincipal1.nombreClase + j + "() {\n        return " + clase.OrigenClasePrincipal1.nombreClase + j + ";\n    }\n\n    public void set" + clase.OrigenClasePrincipal1.nombreClase + j + "(" + clase.OrigenClasePrincipal1.nombreClase + " " + clase.OrigenClasePrincipal1.nombreClase + j + ") {\n        this." + clase.OrigenClasePrincipal1.nombreClase + j + " = " + clase.OrigenClasePrincipal1.nombreClase + j + ";" + "\n    }";
 				j++;
 			}
 
+			//Relacion agregacion relacional
+			if(clase.DestinoClasePrincipal2.Count > 0){
+				WriteLine("    public " + clase.DestinoClasePrincipal2[0].nombreClase + "[] " + clase.DestinoClasePrincipal2[0].nombreClase + j + ";");
+				st+= ", " + clase.DestinoClasePrincipal2[0].nombreClase + "[] " + clase.DestinoClasePrincipal2[0].nombreClase + j;
+				sp+= "\n\t\tthis." + clase.DestinoClasePrincipal2[0].nombreClase + j + " = " + clase.DestinoClasePrincipal2[0].nombreClase + j + ";";
+				sg+= "\n\n    public " + clase.DestinoClasePrincipal2[0].nombreClase + " get" + clase.DestinoClasePrincipal2[0].nombreClase + j + "() {\n        return " + clase.DestinoClasePrincipal2[0].nombreClase + j + ";\n    }\n\n    public void set" + clase.DestinoClasePrincipal2[0].nombreClase + j + "(" + clase.DestinoClasePrincipal2[0].nombreClase + " " + clase.DestinoClasePrincipal2[0].nombreClase + j + ") {\n        this." + clase.DestinoClasePrincipal2[0].nombreClase + j + " = " + clase.DestinoClasePrincipal2[0].nombreClase + j + ";" + "\n    }";
+				j++;
+			}
+			if(clase.OrigenClasePrincipal2 != null){
+				WriteLine("    public " + clase.OrigenClasePrincipal2.nombreClase + " " + clase.OrigenClasePrincipal2.nombreClase + j + ";");
+				st+= ", " + clase.OrigenClasePrincipal2.nombreClase + " " + clase.OrigenClasePrincipal2.nombreClase + j;
+				sp+= "\n\t\tthis." + clase.OrigenClasePrincipal2.nombreClase + j + " = " + clase.OrigenClasePrincipal2.nombreClase + j + ";";
+				sg+= "\n\n    public " + clase.OrigenClasePrincipal2.nombreClase + " get" + clase.OrigenClasePrincipal2.nombreClase + j + "() {\n        return " + clase.OrigenClasePrincipal2.nombreClase + j + ";\n    }\n\n    public void set" + clase.OrigenClasePrincipal2.nombreClase + j + "(" + clase.OrigenClasePrincipal1.nombreClase + " " + clase.OrigenClasePrincipal2.nombreClase + j + ") {\n        this." + clase.OrigenClasePrincipal2.nombreClase + j + " = " + clase.OrigenClasePrincipal2.nombreClase + j + ";" + "\n    }";
+				j++;
+			}
+
+			WriteLine("");
+			//Constructor
+			WriteLine("    public " + clase.nombreClase + "(" + st + ") {");
+			WriteLine("        " + sp);
+			WriteLine("    }");
+
+			WriteLine("");
+			WriteLine(sg);
 			WriteLine("");
 			//Escribir operaciones
 			foreach(Operacion o in clase.Operacion){

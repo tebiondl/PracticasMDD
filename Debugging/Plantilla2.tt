@@ -1,3 +1,120 @@
 ﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
 <#@ output extension=".txt" #>
 <#@ MBRDCMDMI processor="MBRDCMDMIDirectiveProcessor" requires="fileName='pr.MBRDCMDMI_DSLPracticaMDDIPS'" #>
+
+<#
+	createClassHTML();
+#>
+
+<#+
+	private void createClassHTML(){
+		foreach(ClasePrincipal clase in this.TapizProyectos.Clase){
+			//Definir clase
+			WriteLine("<!-- Definir clase -->");
+			WriteLine("<html>");
+			WriteLine("\t<head>");
+			WriteLine("\t\t<title>" + clase.nombreClase + "</title>");
+			WriteLine("\t</head>");
+			WriteLine("\t<body>");
+			WriteLine("\t\t<!-- Definir margenes -->");
+			WriteLine("\t\t<div style='border:1px solid black; margin:20px'>");
+			WriteLine("\t\t\t<!-- Configurar titulo -->");
+			WriteLine("\t\t\t<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>clase.nombreClase <br />");
+			WriteLine("\t\t\t<!-- Definir formulario -->");
+			WriteLine("\t\t\t<form name='" + clase.nombreClase + "' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'> ");
+			WriteLine("\t\t\t<table>");
+			
+			//Escribir identificador
+			WriteLine("\t\t\t\t<!-- Escribir identificador padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(Identificador id in clase.OrigenClasePrincipal3.Identificador){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + id.identificador + ":</td><td><input type='text' name='" + id.identificador + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+			WriteLine("\t\t\t\t<!-- Escribir identificador -->");
+			foreach(Identificador id in clase.Identificador){
+				WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + id.identificador + ":</td><td><input type='text' name='" + id.identificador + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+			
+			//Escribir atributos
+			WriteLine("\t\t\t\t<!-- Escribir atributos padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(Atributo a in clase.OrigenClasePrincipal3.Atributo){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + a.nombreAtributo + ":</td><td><input type='text' name='" + a.nombreAtributo + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+			WriteLine("\t\t\t\t<!-- Escribir atributos -->");
+			foreach(Atributo a in clase.Atributo){
+				WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + a.nombreAtributo + ":</td><td><input type='text' name='" + a.nombreAtributo + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+
+			//Relacion asociacion
+			WriteLine("\t\t\t\t<!-- Relacion asociacion padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(ClasePrincipal clase2 in clase.OrigenClasePrincipal3.DestinoClasePrincipal){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+			WriteLine("\t\t\t\t<!-- Relacion asociacion -->");
+			foreach(ClasePrincipal clase2 in clase.DestinoClasePrincipal){
+			WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+			
+			
+			//Relacion agragacion inclusiva
+			WriteLine("\t\t\t\t<!-- Relacion agregacion inclusiva padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(ClasePrincipal clase2 in clase.OrigenClasePrincipal3.DestinoClasePrincipal1){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+			WriteLine("\t\t\t\t<!-- Relacion agregacion inclusiva -->");
+			foreach(ClasePrincipal clase2 in clase.DestinoClasePrincipal1){
+			WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+			
+			//Relacion agragacion relacional
+			WriteLine("\t\t\t\t<!-- Relacion agregacion relacional padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(ClasePrincipal clase2 in clase.OrigenClasePrincipal3.DestinoClasePrincipal2){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+			WriteLine("\t\t\t\t<!-- Relacion agregacion relacional -->");
+			foreach(ClasePrincipal clase2 in clase.DestinoClasePrincipal2){
+			WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+			
+			//Relacion herencia		
+			if(clase.OrigenClasePrincipal3 != null){
+				WriteLine("\t\t\t\t<!-- Relacion herencia hijos -->");
+				WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase.OrigenClasePrincipal3.nombreClase + ":</td><td><input type='text' name='" + clase.OrigenClasePrincipal3.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+			}
+			if(clase.DestinoClasePrincipal3.Count > 0){
+				WriteLine("\t\t\t\t<!-- Relacion herencia padre -->");
+				foreach(ClasePrincipal clase2 in clase.DestinoClasePrincipal3){
+					WriteLine("\t\t\t\t<tr><td style='color:#000000;font-family:Arial;'>" + clase2.nombreClase + ":</td><td><input type='text' name='" + clase2.nombreClase + "' style='color:#000000;font-family:Arial;' /></td></tr> ");
+				}
+			}
+
+			WriteLine("\t\t\t</table>");
+			
+			//Escribir operaciones
+			WriteLine("\t\t\t<!-- Escribir operaciones padre -->");
+			if(clase.OrigenClasePrincipal3 != null){
+				foreach(Operacion o in clase.OrigenClasePrincipal3.Operacion){
+					WriteLine("\t\t\t<input type='submit' name='" + o.operacion + "' value='" + o.operacion + "' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; ");
+				}
+			}
+			WriteLine("\t\t\t<!-- Escribir operaciones -->");
+			foreach(Operacion o in clase.Operacion){
+				WriteLine("\t\t\t<input type='submit' name='" + o.operacion + "' value='" + o.operacion + "' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; ");
+			}
+			WriteLine("\t\t\t</form>");
+			WriteLine("\t\t</div>");
+			WriteLine("\t</body>");
+			WriteLine("<html>");
+			WriteLine("");
+		}
+	}
+#>

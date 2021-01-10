@@ -1,33 +1,126 @@
 ﻿
-public class Edificio {
+public class Casa {
 
     private Enteros Id1;
-    private Enteros h1;
-    private Enteros h2;
+    private Enteros Mesas;
     public Persona Persona1;
-    public Mesa Mesa2;
+    public Persona[] Persona2;
+    public Persona[] Persona3;
 
-    public Caracteres Correr(Enteros p1, CadenaCaracteres p2) {
+    public Casa(Enteros Id1, Enteros Mesas, Persona Persona1, Persona[] Persona2, Persona[] Persona3) {
+        this.Id1 = Id1;
+		this.Mesas = Mesas;
+		this.Persona1 = Persona1;
+		this.Persona2 = Persona2;
+		this.Persona3 = Persona3;
+    }
+
+    public Enteros getId1() {
+        return Id1;
+    }
+
+    public void setId1(Enteros Id1) {
+        this.Id1 = Id1;
+    }
+
+    public Enteros getMesas() {
+        return Mesas;
+    }
+
+    public void setMesas(Enteros Mesas) {
+        this.Mesas = Mesas;
+    }
+
+    public Persona getPersona1() {
+        return Persona1;
+    }
+
+    public void setPersona1(Persona Persona1) {
+        this.Persona1 = Persona1;
+    }
+
+    public Persona getPersona2() {
+        return Persona2;
+    }
+
+    public void setPersona2(Persona Persona2) {
+        this.Persona2 = Persona2;
+    }
+
+    public Persona getPersona3() {
+        return Persona3;
+    }
+
+    public void setPersona3(Persona Persona3) {
+        this.Persona3 = Persona3;
+    }
+
+    public Enteros Correr() {
 
     }
 
 }
 
-public class Persona {
+public class Persona extends Casa {
 
     private Enteros Id2;
-    private CadenaCaracteres b1;
-    private Booleanos b2;
-    public Edificio Edificio1;
-    public Mesa Mesa2;
+    public Casa Casa1;
+    public Casa Casa2;
+    public Casa Casa3;
+
+    public Persona(Enteros Id2, Casa Casa1, Casa Casa2, Casa Casa3) {
+        this.Id2 = Id2;
+		this.Casa1 = Casa1;
+		this.Casa2 = Casa2;
+		this.Casa3 = Casa3;
+    }
+
+    public Enteros getId2() {
+        return Id2;
+    }
+
+    public void setId2(Enteros Id2) {
+        this.Id2 = Id2;
+    }
+
+    public Casa getCasa1() {
+        return Casa1;
+    }
+
+    public void setCasa1(Casa Casa1) {
+        this.Casa1 = Casa1;
+    }
+
+    public Casa getCasa2() {
+        return Casa2;
+    }
+
+    public void setCasa2(Casa Casa2) {
+        this.Casa2 = Casa2;
+    }
+
+    public Casa getCasa3() {
+        return Casa3;
+    }
+
+    public void setCasa3(Casa Casa3) {
+        this.Casa3 = Casa3;
+    }
+
+    public Enteros Volar() {
+
+    }
 
 }
 
-public class Mesa {
+public class Pepe extends Casa {
 
-    private Enteros id3;
-    public Edificio Edificio1;
-    public List<Persona> Persona2;
+
+    public Pepe() {
+        
+    }
+
+
 
 }
 

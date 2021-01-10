@@ -1,75 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7cfefa91-df00-4e03-8935-70240c7bf0a5" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
+<tapizProyectos xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="98610535-b2b3-4859-a3a4-2a49f1437d9f" xmlns="http://schemas.microsoft.com/dsltools/MBRDCMDMI">
   <clase>
-    <tapizProyectosTieneClase Id="58e0cb0b-fef4-49bd-b8ea-2ab1a71a4668">
-      <clasePrincipal Id="2848d1be-c280-47a5-a5bc-9a6e4ab6de6c" nombreClase="Edificio">
+    <tapizProyectosTieneClase Id="ac7df3f1-8c90-4f3c-aab4-9bd22f12b969">
+      <clasePrincipal Id="00a96e7e-284a-4379-bd99-16cba53075d5" nombreClase="Casa">
         <destinoClasePrincipal>
-          <cPReferenciasCP Id="0764823f-d366-420d-9ace-c3236facc771">
-            <monikerClasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" />
-          </cPReferenciasCP>
-          <cPReferenciasCP Id="12119f49-3fbe-4ba8-8bac-dc6020fdec57">
-            <monikerClasePrincipal Id="c5a658f6-bc60-4865-ac24-62449bcc16da" />
+          <cPReferenciasCP Id="f2b87787-c1ce-4488-af2c-281b0010217f">
+            <monikerClasePrincipal Id="96ed589d-3b62-4f69-a40e-084a5b26d4b1" />
           </cPReferenciasCP>
         </destinoClasePrincipal>
         <identificador>
-          <clasePrincipalTieneIdentificador Id="3e16c2c0-5142-4128-97ed-50d5a7d853aa">
-            <identificador Id="f77d3d6f-99a7-4e41-82ed-8d461d0f35e4" identificador="Id1" identificadorTipo="Enteros" />
+          <clasePrincipalTieneIdentificador Id="2f5d2034-a6bf-48cc-af0b-25be39c5c7f6">
+            <identificador Id="ff96b3dc-2d07-45f3-874b-dc2acd14a472" identificador="Id1" identificadorTipo="Enteros" />
           </clasePrincipalTieneIdentificador>
         </identificador>
         <atributo>
-          <clasePrincipalTieneAtributo Id="9d53eb23-c992-48db-a04d-480ec4abeca8">
-            <atributo Id="e0074e1e-b10f-4ab0-9226-cb74d732217e" nombreAtributo="h1" atributoTipo="Enteros" />
-          </clasePrincipalTieneAtributo>
-          <clasePrincipalTieneAtributo Id="2216a7b7-63c5-4929-894d-c07ca76f9fb3">
-            <atributo Id="0ee6ac17-42b5-4e1d-a2ed-8ebb927ea792" nombreAtributo="h2" atributoTipo="Enteros" />
+          <clasePrincipalTieneAtributo Id="b7327297-857d-4525-bcb7-17965c3071a9">
+            <atributo Id="6b9707ba-2e2a-4a36-8bab-b6ad21e84ea6" nombreAtributo="Mesas" atributoTipo="Enteros" />
           </clasePrincipalTieneAtributo>
         </atributo>
         <operacion>
-          <clasePrincipalTieneOperacion Id="7a3e46dd-f7fb-4f08-af69-e991298ac015">
-            <operacion Id="3e2d8135-164f-461c-9d81-ca0ad3db2905" operacion="Correr" tipoDevuelto="Caracteres">
-              <parametro>
-                <operacionTieneParametro Id="dd3a87ec-5fe5-4d99-99b2-5fa2d8769865">
-                  <parametro Id="5747bcc4-d68d-4feb-97c9-87aff5936ff7" nombreParametro="p1" parametroTipo="Enteros" />
-                </operacionTieneParametro>
-                <operacionTieneParametro Id="e65e2b6d-5810-44fd-8f91-b2c9368280ee">
-                  <parametro Id="4d042a18-7541-4267-baf8-be9c94ab09d1" nombreParametro="p2" parametroTipo="CadenaCaracteres" />
-                </operacionTieneParametro>
-              </parametro>
-            </operacion>
+          <clasePrincipalTieneOperacion Id="ba1ce2de-bef2-451b-84f0-4ae238eff19e">
+            <operacion Id="354ad04e-4a81-4abc-99ab-470d480e0871" operacion="Correr" tipoDevuelto="Enteros" />
+          </clasePrincipalTieneOperacion>
+        </operacion>
+        <destinoClasePrincipal1>
+          <cPAgregacionInclusivaCP Id="70c46408-6502-41bb-b877-a1f405970c0c">
+            <monikerClasePrincipal Id="96ed589d-3b62-4f69-a40e-084a5b26d4b1" />
+          </cPAgregacionInclusivaCP>
+        </destinoClasePrincipal1>
+        <destinoClasePrincipal2>
+          <cPAgregacionNoInclusivaCP Id="27b982ce-cd2d-40d3-8569-2535f805427c">
+            <monikerClasePrincipal Id="96ed589d-3b62-4f69-a40e-084a5b26d4b1" />
+          </cPAgregacionNoInclusivaCP>
+        </destinoClasePrincipal2>
+        <destinoClasePrincipal3>
+          <cPHerenciaCP Id="30c720c7-205c-4ba1-b855-3a548716ed6d">
+            <monikerClasePrincipal Id="96ed589d-3b62-4f69-a40e-084a5b26d4b1" />
+          </cPHerenciaCP>
+          <cPHerenciaCP Id="ee638275-82c7-4322-af86-de8834c6ac56">
+            <monikerClasePrincipal Id="b362e556-716b-4589-b0e5-19676efa90b0" />
+          </cPHerenciaCP>
+        </destinoClasePrincipal3>
+      </clasePrincipal>
+    </tapizProyectosTieneClase>
+    <tapizProyectosTieneClase Id="4066139b-cc51-4d96-89ca-4a43aa046ea2">
+      <clasePrincipal Id="96ed589d-3b62-4f69-a40e-084a5b26d4b1" nombreClase="Persona">
+        <identificador>
+          <clasePrincipalTieneIdentificador Id="08795dcd-2133-4c14-977e-7f4fdc709329">
+            <identificador Id="1ae2fed9-ee5e-43be-9a0a-e4783ef19eae" identificador="Id2" identificadorTipo="Enteros" />
+          </clasePrincipalTieneIdentificador>
+        </identificador>
+        <operacion>
+          <clasePrincipalTieneOperacion Id="3b98f170-cd53-4718-98bd-9f4369abc1cb">
+            <operacion Id="7a95a7c3-1c3e-41d3-9f33-c626e7acc5db" operacion="Volar" tipoDevuelto="Enteros" />
           </clasePrincipalTieneOperacion>
         </operacion>
       </clasePrincipal>
     </tapizProyectosTieneClase>
-    <tapizProyectosTieneClase Id="6777dae7-ece3-468e-bd65-c02ea4687930">
-      <clasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" nombreClase="Persona">
-        <identificador>
-          <clasePrincipalTieneIdentificador Id="f19aa648-fd32-4b7e-ae21-7d095c06276e">
-            <identificador Id="7934c3fe-e979-4755-8e62-de9d1740b94b" identificador="Id2" identificadorTipo="Enteros" />
-          </clasePrincipalTieneIdentificador>
-        </identificador>
-        <atributo>
-          <clasePrincipalTieneAtributo Id="7a2906b6-6510-40e1-b287-ca8ee6c84c46">
-            <atributo Id="925d034d-0c9c-4a76-b128-ec3ee3fa183e" nombreAtributo="b1" atributoTipo="CadenaCaracteres" />
-          </clasePrincipalTieneAtributo>
-          <clasePrincipalTieneAtributo Id="e8475357-de23-4c0d-9c8c-6225f489d714">
-            <atributo Id="f920f1e4-fb58-4a9b-bb94-7f24a9d258bf" nombreAtributo="b2" atributoTipo="Booleanos" />
-          </clasePrincipalTieneAtributo>
-        </atributo>
-      </clasePrincipal>
-    </tapizProyectosTieneClase>
-    <tapizProyectosTieneClase Id="0d26f97b-c7bf-4f24-9901-8236752c9a2e">
-      <clasePrincipal Id="c5a658f6-bc60-4865-ac24-62449bcc16da" nombreClase="Mesa">
-        <identificador>
-          <clasePrincipalTieneIdentificador Id="6e7fc6ef-a0ce-4688-ba08-98f11fc7bade">
-            <identificador Id="cc9aec4d-cdc1-487a-8028-bb2bc865d783" identificador="id3" identificadorTipo="Enteros" />
-          </clasePrincipalTieneIdentificador>
-        </identificador>
-        <destinoClasePrincipal1>
-          <cPAgregacionInclusivaCP Id="06439189-1291-4ad1-af0e-cf9ba61461d3">
-            <monikerClasePrincipal Id="058721b6-a5ac-41bd-9eb6-d1d84f539602" />
-          </cPAgregacionInclusivaCP>
-        </destinoClasePrincipal1>
-      </clasePrincipal>
+    <tapizProyectosTieneClase Id="7e06f612-7c34-4550-b1f3-767f8adf68ce">
+      <clasePrincipal Id="b362e556-716b-4589-b0e5-19676efa90b0" nombreClase="Pepe" />
     </tapizProyectosTieneClase>
   </clase>
 </tapizProyectos>

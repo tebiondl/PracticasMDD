@@ -1,1 +1,122 @@
 ﻿
+<!-- Definir clase -->
+<html>
+	<head>
+		<title>Casa</title>
+	</head>
+	<body>
+		<!-- Definir margenes -->
+		<div style='border:1px solid black; margin:20px'>
+			<!-- Configurar titulo -->
+			<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>clase.nombreClase <br />
+			<!-- Definir formulario -->
+			<form name='Casa' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'> 
+			<table>
+				<!-- Escribir identificador padre -->
+				<!-- Escribir identificador -->
+				<tr><td style='color:#000000;font-family:Arial;'>Id1:</td><td><input type='text' name='Id1' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir atributos padre -->
+				<!-- Escribir atributos -->
+				<tr><td style='color:#000000;font-family:Arial;'>Mesas:</td><td><input type='text' name='Mesas' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion asociacion padre -->
+				<!-- Relacion asociacion -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion inclusiva padre -->
+				<!-- Relacion agregacion inclusiva -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion relacional padre -->
+				<!-- Relacion agregacion relacional -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion herencia padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<tr><td style='color:#000000;font-family:Arial;'>Pepe:</td><td><input type='text' name='Pepe' style='color:#000000;font-family:Arial;' /></td></tr> 
+			</table>
+			<!-- Escribir operaciones padre -->
+			<!-- Escribir operaciones -->
+			<input type='submit' name='Correr' value='Correr' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; 
+			</form>
+		</div>
+	</body>
+<html>
+
+<!-- Definir clase -->
+<html>
+	<head>
+		<title>Persona</title>
+	</head>
+	<body>
+		<!-- Definir margenes -->
+		<div style='border:1px solid black; margin:20px'>
+			<!-- Configurar titulo -->
+			<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>clase.nombreClase <br />
+			<!-- Definir formulario -->
+			<form name='Persona' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'> 
+			<table>
+				<!-- Escribir identificador padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Id1:</td><td><input type='text' name='Id1' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir identificador -->
+				<tr><td style='color:#000000;font-family:Arial;'>Id2:</td><td><input type='text' name='Id2' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir atributos padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Mesas:</td><td><input type='text' name='Mesas' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir atributos -->
+				<!-- Relacion asociacion padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion asociacion -->
+				<!-- Relacion agregacion inclusiva padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion inclusiva -->
+				<!-- Relacion agregacion relacional padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion relacional -->
+				<!-- Relacion herencia hijos -->
+				<tr><td style='color:#000000;font-family:Arial;'>Casa:</td><td><input type='text' name='Casa' style='color:#000000;font-family:Arial;' /></td></tr> 
+			</table>
+			<!-- Escribir operaciones padre -->
+			<input type='submit' name='Correr' value='Correr' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; 
+			<!-- Escribir operaciones -->
+			<input type='submit' name='Volar' value='Volar' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; 
+			</form>
+		</div>
+	</body>
+<html>
+
+<!-- Definir clase -->
+<html>
+	<head>
+		<title>Pepe</title>
+	</head>
+	<body>
+		<!-- Definir margenes -->
+		<div style='border:1px solid black; margin:20px'>
+			<!-- Configurar titulo -->
+			<p style='background-color: #00aabb;color:#ffffff;font-weight:bold; font-family: Arial; text-align:center'>clase.nombreClase <br />
+			<!-- Definir formulario -->
+			<form name='Pepe' style='background-color:#00aabb;color:#ffffff;fontfamily:Arial;text-align:center;'> 
+			<table>
+				<!-- Escribir identificador padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Id1:</td><td><input type='text' name='Id1' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir identificador -->
+				<!-- Escribir atributos padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Mesas:</td><td><input type='text' name='Mesas' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Escribir atributos -->
+				<!-- Relacion asociacion padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion asociacion -->
+				<!-- Relacion agregacion inclusiva padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion inclusiva -->
+				<!-- Relacion agregacion relacional padre -->
+				<tr><td style='color:#000000;font-family:Arial;'>Persona:</td><td><input type='text' name='Persona' style='color:#000000;font-family:Arial;' /></td></tr> 
+				<!-- Relacion agregacion relacional -->
+				<!-- Relacion herencia hijos -->
+				<tr><td style='color:#000000;font-family:Arial;'>Casa:</td><td><input type='text' name='Casa' style='color:#000000;font-family:Arial;' /></td></tr> 
+			</table>
+			<!-- Escribir operaciones padre -->
+			<input type='submit' name='Correr' value='Correr' style='backgroundcolor:#0088ff;color:#ffffff;font-family:Arial;' />&nbsp;&nbsp; 
+			<!-- Escribir operaciones -->
+			</form>
+		</div>
+	</body>
+<html>
+
+
